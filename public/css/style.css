@@ -1,2 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: rgb(156, 126, 98) 1px solid;
+}
+h2{
+  font-family:Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+header {
+  width: 100vw;
+}
+header img {
+  width: 100%;
+}
+header p {
+  color: red;
+}
 
 /*# sourceMappingURL=style.css.map */
