@@ -1,12 +1,20 @@
 {
   "name": "ohmyfood",
   "version": "1.0.0",
-  "description": "",
+  "description": "\"# JessicaDaSilva_19_102020\"",
   "main": "index.js",
   "scripts": {
-    "sass":"sass --watch ./sass/main.scss:public/css/style.css",
-    "prefix":"postcss ./public/css/style.css --use autoprefixer -d ./public/css/prefixed"
+    "sass": "sass --watch ./sass/main.scss:style.css",
+    "prefix": "postcss .style.css --use autoprefixer -d ./public/css/prefixed"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunjads/JessicaDaSilva_19_102020.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sunjads/JessicaDaSilva_19_102020/issues"
+  },
+  "homepage": "https://github.com/sunjads/JessicaDaSilva_19_102020#readme"
 }
