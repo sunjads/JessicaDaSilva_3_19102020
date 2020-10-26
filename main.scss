@@ -1,3 +1,5 @@
+@import "./sass/pages/menu1";
+
 body{
     margin: 0;
     padding: 0;
@@ -12,7 +14,7 @@ footer h2{
 $color-primary:#9356DC;
 $color-secondary:#FF79DA;
 $color-tertiary:#99E2D0;
-$grey-background:#f1f1f1;
+$grey-background:#f3f1f1;
 
 header {
     width: 100vw;
@@ -38,14 +40,14 @@ header {
     }
     & .fas{
         color: rgb(70, 69, 69);
-        font-size: 1em; /*a replacer*/
+        font-size: 1em; 
         position: absolute;
         top: 13%;
         left: 28%;
         z-index:1;
     }
 }
-#section1{
+#section_descriptif{
     background-color: $grey-background;
     width: 100vw;
     height: 38vh;
@@ -70,9 +72,8 @@ header {
     border: none;
     box-shadow: 0px 5px 5px 1px rgb(216, 214, 214);
 }
-#section2 {
+#section_fonctionnement {
     width: 100vw;
-    height: 50vh;
     & h1{
         padding-left: 15px;
     }
@@ -113,8 +114,8 @@ header {
     width: 8px;
     padding:5px 8px 15px 10px;
 }
-
-#section3{ /*definir height*/
+/**partie vignette*/
+#section_restaurant{
     background-color: $grey-background;
     width: 100vw;
     display: flex;
@@ -124,16 +125,22 @@ header {
         padding-left: 30px;
     }
 }
-article{
+.vignette_menu{
     background-color: white;
+    border-radius: 15px 15px;
     width: 80vw;
     height: 30vh;
     margin: auto;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+}
+.nom_coeur{
+    height: 10vh;
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    border-radius: 15px;
+    grid-template-columns:  25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25% ;
+    border-radius: 0px 0px 15px 15px;
     box-shadow: rgb(221, 220, 220) 4px 4px 4px ;
     & .far {
         color: rgb(48, 48, 48);
@@ -142,38 +149,35 @@ article{
         padding-top: 10px;
     }
     & :nth-child(1){
-        background-color: rgb(80, 255, 246);
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 8;
-        grid-row-end: 10;
-        padding-left: 10px;
-        font-size: 1em;
-        width: 120%;
-    }
-    & :nth-child(2){
-        background-color: rgb(252, 255, 80);
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 9;
-        grid-row-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding-left: 10px;
+        font-size: 1em;
+        width: 100%;
+    }
+    & :nth-child(2){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
         padding-left: 10px;
         font-size: 0.9em;
     }
     & :nth-child(3){
-        background-color: rgb(211, 164, 207);
-        grid-column-start: 9;
-        grid-column-end: 11;
-        grid-row-start: 8;
-        grid-row-end: 10;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end:3;
     }
     
 }
+
 #background1 {
-    background-image: url("/public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    background-size: 100% 100%,contain;
-    width: 80vw;
-    height: 22vh;
+    background-image: url("./public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    background-size: 100% 100%, contain;
+    height: 20vh;
     position: relative;
     border-radius: 15px 15px 0px 0px;
     & p{
@@ -193,12 +197,37 @@ article{
 
 #background2{
     background-image: url("/public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    background-size: 100% 100%, contain;
+    height: 20vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+    & p{
+        font-size: 1em;
+        position: absolute;
+        width: 28%;
+        height: 18%;
+        text-align: center;
+        padding: 5px 0px 0px 0px;
+        border-radius: 3px;
+        background-color: rgb(136, 219, 191);
+        color:  rgb(42, 148, 113);
+        top: 0%;
+        right: 5%;
+    }
 }
 #background3{
     background-image: url("/public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    background-size: 100% 100%, contain;
+    height: 20vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
 }
 #background4{
     background-image: url("/public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-size: 100% 100%, contain;
+    height: 20vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
 }
 footer{
     background-color: rgb(66, 66, 66);
