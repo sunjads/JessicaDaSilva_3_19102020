@@ -1,9 +1,13 @@
+@import "./layout/header";
+@import "./layout/footer";
+
 @import "./pages/menu1";
 @import "./pages/menu2";
 @import "./pages/menu3";
+@import "./pages/menu4";
 
+@import "./utils/_mixins.scss";
 @import "./utils/variables";
-@import "/sass/utils/mixins";
 
 body{
     margin: 0;
@@ -12,50 +16,16 @@ body{
 }
 #lapage{
     font-family: 'Roboto', sans-serif;
+}
 
-}
-footer h2{
-    font-family: 'Shrikhand', cursive;
-}
-header {
-    width: 100vw;
-    height: 18vh;
-    background-color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: column; 
-    & img {
-        width: 45%; 
-        height: 30%;
-        margin: auto;
-        padding-top: 20px;
-    }
-    & p{
-        background-color: rgb(230, 226, 240);
-        box-shadow:inset rgb(209, 208, 208) 2px 3px 5px 1px;
-        color: rgb(70, 69, 69);
-        width: 100%;
-        padding: 15px 0px 15px 0px;
-        font-size: 1em;
-        position: relative;
-    }
-    & .fas{
-        color: rgb(70, 69, 69);
-        font-size: 1em; /*a replacer*/
-        position: absolute;
-        top: 13%;
-        left: 28%;
-        z-index:1;
-    }
-}
-#section1{
+/*partie description ohmyfood*/
+#section_descriptif{
     background-color: $grey-background;
     width: 100vw;
-    height: 38vh;
     text-align: center;
+    padding: 50px 0px 60px 0px;
     & h1{
         margin: auto;
-        padding-top: 40px;
         width: 70%;
     }
     & p {
@@ -63,26 +33,56 @@ header {
         font-size: 1.1em;
     }
 }
+/*le bouton linear gradient*/
 #bouton {
-    @include bouton;
+    background: linear-gradient($color-secondary, $color-primary);
+    color: white;
+    font-size: 1em;
+    height: 7vh;
+    width: 55vw;
+    border-radius:30px;
+    border: none;
+    box-shadow: 0px 5px 5px 1px rgb(216, 214, 214);
+    &:link {
+        outline: none; /*pour retirer contour noir lors du click*/
+        border:none;
+    }
+    &:visited {
+        outline: none;
+        border: none;
+    }
+    &:focus {
+        outline: none; 
+        border: none;
+    }
+    &:hover{
+        outline: none;
+        border: none;
+    }
+    &:active{
+        outline: none; 
+        border: none;
+    }
 }
-#section2 {
+
+/*partie fonctionnement d'ohmyfood*/
+#section_fonctionnement {
     width: 100vw;
-    height: 50vh;
+    padding-bottom: 50px;
     & h1{
-        padding-left: 15px;
+        padding: 30px 0px 5px 10px;
+
+    }
+    & ul{
+        width: 100vw;
     }
     & ul li{
         background-color: $grey-background;
         list-style-type: none;
-        width: 90%;
+        width: 80%;
         border-radius: 20px;
         box-shadow: rgb(211, 209, 209)1px 6px 12px 0px;
-        margin-bottom: 15px;
-    }
-    & a {
-        list-style-type: none;
-        text-decoration: none;
+        margin-bottom: 25px;
     }
 }
 .fonctionnement{
@@ -92,54 +92,70 @@ header {
     align-items: center;
     justify-content: space-evenly;
     position: relative;
-
+    margin: auto;
     & h2{
-        font-size: 0.9em;
+        font-size: 1em;
         color: black;
         padding:10px 10px;
     }
     & .fas {
-        padding-left: 28px;
-        color: grey;
-        font-size: 17px;
+        color: gray;
+        font-size: 20px;
+    }
+    & .fas:hover{
+       color: $color-primary; 
     }
 }
-.fonctionnement .fas:hover{
-    color: indigo;
-}
 .purple-num{
-    border-radius:30px 30px;
-    font-size: 0.8;
+    border-radius:40px 40px;
     background-color: $color-primary;
     height: 5px;
     font-size: 0.8em;
     color: white;
-    width: 8px;
-    padding:5px 8px 14px 8px;
+    width: 5px;
+    padding:8px 12px 15px 11px;
     position: absolute;
-    left: -4%;
+    left: -40px;
 }
 
-#section3{ /*definir height*/
+/*partie vignette*/
+#section_restaurant{
     background-color: $grey-background;
     width: 100vw;
     display: flex;
     flex-direction: column;
+    padding-bottom: 50px;
     & h1{
         padding-top: 20px;
         padding-left: 30px;
     }
 }
-article{
+.vignette_menu{
     background-color: white;
+    border-radius: 15px 15px;
     width: 80vw;
     height: 30vh;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+    & a{
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    }
+    & a:hover {
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+    }
+}
+.nom_coeur{
+    height: 10vh;
     display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
-    border-radius: 15px;
+    grid-template-columns:  25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25% ;
+    border-radius: 0px 0px 15px 15px;
     box-shadow: rgb(221, 220, 220) 4px 4px 4px ;
     & .far {
         color: rgb(48, 48, 48);
@@ -148,123 +164,45 @@ article{
         padding-top: 10px;
     }
     & :nth-child(1){
-        background-color: rgb(80, 255, 246);
-        grid-column-start: 1;
-        grid-column-end: 5;
-        grid-row-start: 8;
-        grid-row-end: 10;
-        padding-left: 10px;
-        font-size: 1em;
-        width: 120%;
-    }
-    & :nth-child(2){
-        background-color: rgb(252, 255, 80);
         grid-column-start: 1;
         grid-column-end: 3;
-        grid-row-start: 9;
-        grid-row-end: 11;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        padding-left: 10px;
+        font-size: 1em;
+        width: 100%;
+    }
+    & :nth-child(2){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
         padding-left: 10px;
         font-size: 0.9em;
+        padding-top: 5px;
     }
     & :nth-child(3){
-        background-color: rgb(211, 164, 207);
-        grid-column-start: 9;
-        grid-column-end: 11;
-        grid-row-start: 8;
-        grid-row-end: 10;
-    }
-    
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end:3;
+    } 
 }
 #background1 {
-    background-image: url("/ohmyfood/public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-    background-size: 100% 100%,contain;
-    width: 80vw;
-    height: 22vh;
-    position: relative;
-    border-radius: 15px 15px 0px 0px;
-    & p{
-        font-size: 1em;
-        position: absolute;
-        width: 28%;
-        height: 18%;
-        text-align: center;
-        padding: 5px 0px 0px 0px;
-        border-radius: 3px;
-        background-color: rgb(136, 219, 191);
-        color:  rgb(42, 148, 113);
-        top: 0%;
-        right: 5%;
-    }
+    background-image: url("/public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+    @include background-nouveau;
 }
 
 #background2{
-    background-image: url("/ohmyfood/public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-    background-size: 100% 100%,contain;
-    width: 80vw;
-    height: 22vh;
-    position: relative;
-    border-radius: 15px 15px 0px 0px;
-    & p{
-        font-size: 1em;
-        position: absolute;
-        width: 28%;
-        height: 18%;
-        text-align: center;
-        padding: 5px 0px 0px 0px;
-        border-radius: 3px;
-        background-color: rgb(136, 219, 191);
-        color:  rgb(42, 148, 113);
-        top: 0%;
-        right: 5%;
-    }
+    background-image: url("/public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+    @include background-nouveau;
 }
 #background3{
-    background-image: url("/ohmyfood/public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-    background-size: 100% 100%,contain;
-    width: 80vw;
-    height: 22vh;
-    border-radius: 15px 15px 0px 0px;
-    & p {
-        display: none;
-    }
+    background-image: url("/public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+    @include background-sans-nouveau;
 }
 #background4{
-    background-image: url("/ohmyfood/public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-    background-size: 100% 100%,contain;
-    width: 80vw;
-    height: 22vh;
-    border-radius: 15px 15px 0px 0px;
-    & p {
-        display: none;
-    }
+    background-image: url("/public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    @include background-sans-nouveau;
 }
-footer{
-    background-color: rgb(66, 66, 66);
-    height: 50vh;
-    width: 100vw;
-    & h2{
-        color: white;
-        padding: 20px 0px 0px 30px;
-    }
-    & ul li {
-        color: white;
-        background-color:rgb(66, 66, 66);
-        border: none;
-        box-shadow: none;
-        font-weight: normal;
-        list-style-type: none;
-        text-decoration: none;
-        border: red 2px solid;
-        & a {
-            color: white;
-            list-style-type: none;
-            text-decoration: none;
-        }
-        & .fas {
-            background-color: lightcoral;
-            font-size: 17px;
-            padding: 0px 8px ;
-        }
-    }
-}
-  
+ 

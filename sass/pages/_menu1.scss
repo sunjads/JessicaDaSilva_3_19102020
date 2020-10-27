@@ -33,8 +33,12 @@ body{
 }
 .menu_détails{
     @include slide-card-menu;
+    & h2{
+        padding-top: 15px;
+    }
 }
 
+/* descriptif des plats - h3 et p*/
 .menu_prix {
     height: 5vh;
     margin: -30px 20px 0px 10px;
@@ -43,7 +47,7 @@ body{
     flex-direction: row;
     justify-content: space-between;
     & p{
-        font-weight:lighter;
+        font-weight:400;
     }
     & .leprix{
         font-weight: bold;
@@ -72,14 +76,14 @@ body{
     background-color: $grey-background;
     border-radius: 50px 50px 0px 0px;
     margin-top: -90px;
-    height: 180vh;
+    height: 190vh;
 }
-form {
-    border: hotpink 2px solid;
-    height: 15%;
+.form-commander {
+    border: red 1px solid;
+    height: 20vh;
     text-align: center;
-    padding-top: 70px;
+    padding:30px 0px;
 }
 #bouton-commander{
-    @include bouton;
+    @include bouton-linear-gradient;
 }

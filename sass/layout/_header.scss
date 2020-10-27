@@ -1,0 +1,31 @@
+header {
+    width: 100vw;
+    height: 18vh;
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column; 
+    & img {
+        width: 45%; 
+        height: 30%;
+        margin: auto;
+        padding-top: 20px;
+    }
+    & p{
+        background-color: rgb(230, 226, 240);
+        box-shadow:inset rgb(209, 208, 208) 2px 3px 5px 1px;
+        color: rgb(70, 69, 69);
+        width: 100%;
+        padding: 15px 0px 15px 0px;
+        font-size: 1em;
+        position: relative;
+    }
+    & .fas{
+        color: rgb(70, 69, 69);
+        font-size: 1em;
+        position: absolute;
+        top: 13%;
+        left: 28%;
+        z-index:1;
+    }
+}

@@ -4,7 +4,6 @@
     background-color: $grey-background;
     margin-top: 0px;
     & h2{
-        font-weight: 400;
         font-size: 1.2em;
         padding-left: 10px;
     }
@@ -17,14 +16,14 @@
         width: 95%;
         margin: auto;
         list-style-type: none;
-        box-shadow: rgb(235, 233, 233)1px 6px 15px 5px;
+        box-shadow: rgb(218, 216, 216)1px 6px 15px 5px;
         border-radius: 15px;
     }
     & h3{
         padding: 12px 7px 0px 7px;
     }
 }
-@mixin bouton {
+@mixin bouton-linear-gradient {
     background: linear-gradient($color-secondary, $color-primary);
     color: white;
     font-size: 1em;
@@ -32,6 +31,34 @@
     width: 55vw;
     border-radius:30px;
     border: none;
-    box-shadow: 0px 5px 5px 1px rgb(216, 214, 214);
-    
+    box-shadow: 0px 5px 5px 1px rgb(216, 214, 214);  
+}
+@mixin background-nouveau {
+    background-size: 100% 100%,contain;
+    width: 80vw;
+    height: 22vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+    & p{
+        font-size: 1em;
+        position: absolute;
+        width: 28%;
+        height: 18%;
+        text-align: center;
+        padding: 5px 0px 0px 0px;
+        border-radius: 3px;
+        background-color: rgb(136, 219, 191);
+        color:  rgb(42, 148, 113);
+        top: 0%;
+        right: 5%;
+    }
+}
+@mixin background-sans-nouveau {
+    background-size: 100% 100%,contain;
+    width: 80vw;
+    height: 22vh;
+    border-radius: 15px 15px 0px 0px;
+    & p{
+        visibility: hidden
+    } 
 }
