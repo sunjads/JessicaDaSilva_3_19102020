@@ -51,7 +51,7 @@ body {
   width: 95%;
   margin: auto;
   list-style-type: none;
-  box-shadow: #ebe9e9 1px 6px 12px 0px;
+  box-shadow: #ebe9e9 1px 6px 15px 5px;
   border-radius: 15px;
 }
 .menu_détails h3 {
@@ -97,10 +97,25 @@ body {
   background-color: #f1f1f1;
   border-radius: 50px 50px 0px 0px;
   margin-top: -90px;
+  height: 180vh;
 }
 
-.menu_détails {
-  background-color: #f1f1f1;
+form {
+  border: hotpink 2px solid;
+  height: 15%;
+  text-align: center;
+  padding-top: 70px;
+}
+
+#bouton-commander {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-size: 1em;
+  height: 7vh;
+  width: 55vw;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 5px 5px 1px #d8d6d6;
 }
 
 body {

@@ -1,13 +1,10 @@
+@import "../utils/mixins";
+@import "../utils/variables";
 body{
     box-sizing: border-box;
     margin: 0;
     padding:0;
 }
-$color-primary:#9356DC;
-$color-secondary:#FF79DA;
-$color-tertiary:#99E2D0;
-$grey-background:#f1f1f1;
-
 .header_menu{
     width: 100vw;
     height: 8vh;
@@ -35,29 +32,9 @@ $grey-background:#f1f1f1;
     }
 }
 .menu_détails{
-    background-color: $grey-background;
-    margin-top: 0px;
-    & h2{
-        font-weight: 400;
-        font-size: 1.2em;
-        padding-left: 10px;
-    }
-    & ul {
-        padding: 0;
-        width: 100vw;
-    }
-    & ul li{
-        background-color: white;
-        width: 95%;
-        margin: auto;
-        list-style-type: none;
-        box-shadow: rgb(235, 233, 233)1px 6px 12px 0px;
-        border-radius: 15px;
-    }
-    & h3{
-        padding: 12px 7px 0px 7px;
-    }
+    @include slide-card-menu;
 }
+
 .menu_prix {
     height: 5vh;
     margin: -30px 20px 0px 10px;
@@ -95,7 +72,14 @@ $grey-background:#f1f1f1;
     background-color: $grey-background;
     border-radius: 50px 50px 0px 0px;
     margin-top: -90px;
+    height: 180vh;
 }
-.menu_détails{
-    background-color: $grey-background;
+form {
+    border: hotpink 2px solid;
+    height: 15%;
+    text-align: center;
+    padding-top: 70px;
+}
+#bouton-commander{
+    @include bouton;
 }
