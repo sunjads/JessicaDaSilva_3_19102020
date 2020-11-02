@@ -31,17 +31,27 @@ body{
         height: 100%;
     }
 }
+.description_menu{
+    background-color: $grey-background;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: -50px;
+    height: 190vh;
+}
+/* partie plats, entrées, desserts*/
 .menu_détails{
     @include slide-card-menu;
+    & ul li {
+    box-shadow: rgb(218, 216, 216)1px 3px 5px 2px;
+    }
     & h2{
-        padding-top: 15px;
+        padding: 30px 0px 20px 20px;
     }
 }
 
 /* descriptif des plats - h3 et p*/
 .menu_prix {
     height: 5vh;
-    margin: -30px 20px 0px 10px;
+    margin: 5px 20px 15px 10px;
     padding: 0px 0px 10px 0px;
     display: flex;
     flex-direction: row;
@@ -63,7 +73,7 @@ body{
         background-color:$grey-background;
         border-radius: 30px 30px 0px 0px;
         position: relative;
-        width: 95vw;
+        
     }
     & .far {
         position: absolute;
@@ -72,17 +82,11 @@ body{
         font-size: 25px;  
     }
 }
-.description_menu{
-    background-color: $grey-background;
-    border-radius: 50px 50px 0px 0px;
-    margin-top: -90px;
-    height: 190vh;
-}
+
 .form-commander {
-    border: red 1px solid;
     height: 20vh;
     text-align: center;
-    padding:30px 0px;
+    padding:40px 0px;
 }
 #bouton-commander{
     @include bouton-linear-gradient;

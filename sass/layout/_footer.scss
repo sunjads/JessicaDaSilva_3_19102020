@@ -9,7 +9,7 @@ footer{
         font-family: 'Shrikhand', cursive;
     }
     & ul{
-        padding: 0px 0px 0px 25px; 
+        padding: 20px 0px 0px 25px; 
     }
     & ul li {
         color: white;
@@ -19,6 +19,7 @@ footer{
         font-weight: normal;
         list-style-type: none;
         text-decoration: none;
+        padding: 10px 0px 0px 0px;
         & a {
             color: white;
             list-style-type: none;

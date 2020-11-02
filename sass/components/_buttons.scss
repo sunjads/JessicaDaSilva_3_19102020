@@ -1,0 +1,49 @@
+@import "../utils/variables";
+
+/*le bouton linear gradient*/
+#bouton {
+    background: linear-gradient($color-secondary, $color-primary);
+    color: white;
+    font-size: 1em;
+    height: 7vh;
+    width: 55vw;
+    border-radius:30px;
+    border: none;
+    box-shadow: 0px 5px 5px 1px rgb(216, 214, 214);
+    margin: 30px 0px 0px 0px;
+    &:link {
+        outline: none; /*pour retirer contour noir lors du click*/
+        border:none;
+    }
+    &:visited {
+        outline: none;
+        border: none;
+    }
+    &:focus {
+        outline: none; 
+        border: none;
+    }
+    &:hover{
+        outline: none;
+        border: none;
+        background-color: lighten($color-primary);
+    }
+    &:active{
+        outline: none; 
+        border: none;
+    }
+}
+
+/*Le numéro violet dans la page d'acceuil*/
+.purple-num{
+    border-radius:40px 40px;
+    background-color: $color-primary;
+    height: 5px;
+    font-size: 0.7em;
+    color: white;
+    width: 5px;
+    padding:5px 15px 18px 8px;
+    position: absolute;
+    left: -17%;
+    top: 25%;
+}

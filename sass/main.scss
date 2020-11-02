@@ -1,3 +1,5 @@
+@import "./components/buttons";
+
 @import "./layout/header";
 @import "./layout/footer";
 
@@ -9,7 +11,7 @@
 @import "./utils/_mixins.scss";
 @import "./utils/variables";
 
-body{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -33,58 +35,37 @@ body{
         font-size: 1.1em;
     }
 }
-/*le bouton linear gradient*/
-#bouton {
-    background: linear-gradient($color-secondary, $color-primary);
-    color: white;
-    font-size: 1em;
-    height: 7vh;
-    width: 55vw;
-    border-radius:30px;
-    border: none;
-    box-shadow: 0px 5px 5px 1px rgb(216, 214, 214);
-    &:link {
-        outline: none; /*pour retirer contour noir lors du click*/
-        border:none;
-    }
-    &:visited {
-        outline: none;
-        border: none;
-    }
-    &:focus {
-        outline: none; 
-        border: none;
-    }
-    &:hover{
-        outline: none;
-        border: none;
-    }
-    &:active{
-        outline: none; 
-        border: none;
-    }
-}
 
-/*partie fonctionnement d'ohmyfood*/
+/*partie fonctionnement du site ohmyfood*/
 #section_fonctionnement {
     width: 100vw;
     padding-bottom: 50px;
     & h1{
-        padding: 30px 0px 5px 10px;
+        padding: 30px 0px 20px 10px;
 
     }
     & ul{
         width: 100vw;
+
+        padding-left: 50px;
     }
     & ul li{
         background-color: $grey-background;
         list-style-type: none;
-        width: 80%;
+        width: 90%;
+        height: 9vh;
         border-radius: 20px;
         box-shadow: rgb(211, 209, 209)1px 6px 12px 0px;
+        padding-top: 7px;
         margin-bottom: 25px;
+    & a{
+        list-style-type: none;
+        text-decoration: none;
+  
+    }
     }
 }
+/*dans la partie fonctionnement -> vignette purple num, icone et phrases */
 .fonctionnement{
     width: 80%;
     display: flex;
@@ -106,17 +87,6 @@ body{
        color: $color-primary; 
     }
 }
-.purple-num{
-    border-radius:40px 40px;
-    background-color: $color-primary;
-    height: 5px;
-    font-size: 0.8em;
-    color: white;
-    width: 5px;
-    padding:8px 12px 15px 11px;
-    position: absolute;
-    left: -40px;
-}
 
 /*partie vignette*/
 #section_restaurant{
@@ -126,8 +96,7 @@ body{
     flex-direction: column;
     padding-bottom: 50px;
     & h1{
-        padding-top: 20px;
-        padding-left: 30px;
+       padding: 30px 0px 20px 34px;
     }
 }
 .vignette_menu{
@@ -150,6 +119,7 @@ body{
         color: black;
     }
 }
+/*descriptif des vignettes + le coeur*/
 .nom_coeur{
     height: 10vh;
     display: grid;
@@ -168,7 +138,7 @@ body{
         grid-column-end: 3;
         grid-row-start: 1;
         grid-row-end: 2;
-        padding-left: 10px;
+        padding: 10px 0px 0px 10px;
         font-size: 1em;
         width: 100%;
     }
@@ -179,7 +149,7 @@ body{
         grid-row-end: 3;
         padding-left: 10px;
         font-size: 0.9em;
-        padding-top: 5px;
+        padding-top: 15px;
     }
     & :nth-child(3){
         grid-column-start: 4;
