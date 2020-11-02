@@ -1,22 +1,650 @@
-/* Error: Missing argument $amount.
- *   ,--> sass\components\_buttons.scss
- * 29|         background-color: lighten($color-primary);
- *   |                           ^^^^^^^^^^^^^^^^^^^^^^^ invocation
- *   '
- *   ,--> sass:color
- * 1 | @function lighten($color, $amount) {
- *   |           ======================== declaration
- *   '
- *   sass\components\_buttons.scss 29:27  @import
- *   sass\main.scss 1:9                   root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Missing argument $amount.\a   \250c \2500 \2500 > sass\\components\\_buttons.scss\a 29\2502          background-color: lighten($color-primary);\d\a   \2502                            ^^^^^^^^^^^^^^^^^^^^^^^ invocation\a   \2575 \a   \250c \2500 \2500 > sass:color\a 1 \2502  @function lighten($color, $amount) {\a   \2502            \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501 \2501  declaration\a   \2575 \a   sass\\components\\_buttons.scss 29:27  @import\a   sass\\main.scss 1:9                   root stylesheet";
+@charset "UTF-8";
+/*le bouton linear gradient*/
+#bouton {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-size: 1em;
+  height: 7vh;
+  width: 55vw;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 5px 5px 1px #d8d6d6;
 }
+#bouton:link {
+  outline: none;
+  /*pour retirer contour noir lors du click*/
+  border: none;
+}
+#bouton:visited {
+  outline: none;
+  border: none;
+}
+#bouton:focus {
+  outline: none;
+  border: none;
+}
+#bouton:hover {
+  outline: none;
+  border: none;
+  background: linear-gradient(#ffb2f3, #ce52ff);
+  box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
+  -webkit-transition: box-shadow 1s ease;
+  transition: box-shadow 1s ease;
+}
+#bouton:active {
+  outline: none;
+  border: none;
+}
+
+#bouton-commander {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-size: 1em;
+  height: 7vh;
+  width: 55vw;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 5px 5px 1px #d8d6d6;
+}
+#bouton-commander:link {
+  outline: none;
+  /*pour retirer contour noir lors du click*/
+  border: none;
+}
+#bouton-commander:visited {
+  outline: none;
+  border: none;
+}
+#bouton-commander:focus {
+  outline: none;
+  border: none;
+}
+#bouton-commander:hover {
+  outline: none;
+  border: none;
+  background: linear-gradient(#ffb2f3, #ce52ff);
+  box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
+  -webkit-transition: box-shadow 1s ease;
+  transition: box-shadow 1s ease;
+}
+#bouton-commander:active {
+  outline: none;
+  border: none;
+}
+
+/*Le numéro violet dans la page d'acceuil*/
+.purple-num {
+  border-radius: 40px 40px;
+  background-color: #9356DC;
+  height: 5px;
+  font-size: 0.7em;
+  color: white;
+  width: 5px;
+  padding: 5px 15px 18px 8px;
+  position: absolute;
+  left: -17%;
+  top: 25%;
+}
+
+header {
+  width: 100vw;
+  height: 18vh;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+header img {
+  width: 45%;
+  height: 45%;
+  margin: auto;
+  padding-top: 20px;
+}
+header p {
+  background-color: #e6e2f0;
+  box-shadow: inset #d1d0d0 2px 3px 5px 1px;
+  color: #464545;
+  width: 100%;
+  padding: 15px 0px 15px 0px;
+  font-size: 1em;
+  position: relative;
+}
+header .fas {
+  color: #464545;
+  font-size: 1em;
+  position: absolute;
+  top: 13%;
+  left: 28%;
+  z-index: 1;
+}
+
+footer {
+  background-color: #424242;
+  width: 100vw;
+  height: 38vh;
+}
+footer h2 {
+  color: white;
+  padding: 20px 0px 0px 30px;
+  font-family: "Shrikhand", cursive;
+}
+footer ul {
+  padding: 20px 0px 0px 25px;
+}
+footer ul li {
+  color: white;
+  background-color: #424242;
+  border: none;
+  box-shadow: none;
+  font-weight: normal;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 10px 0px 0px 0px;
+}
+footer ul li a {
+  color: white;
+  list-style-type: none;
+  text-decoration: none;
+}
+footer ul li .fas {
+  font-size: 14px;
+  width: 25px;
+}
+
+/*le bouton linear gradient*/
+#bouton {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-size: 1em;
+  height: 7vh;
+  width: 55vw;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 5px 5px 1px #d8d6d6;
+}
+#bouton:link {
+  outline: none;
+  /*pour retirer contour noir lors du click*/
+  border: none;
+}
+#bouton:visited {
+  outline: none;
+  border: none;
+}
+#bouton:focus {
+  outline: none;
+  border: none;
+}
+#bouton:hover {
+  outline: none;
+  border: none;
+  background: linear-gradient(#ffb2f3, #ce52ff);
+  box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
+  -webkit-transition: box-shadow 1s ease;
+  transition: box-shadow 1s ease;
+}
+#bouton:active {
+  outline: none;
+  border: none;
+}
+
+#bouton-commander {
+  background: linear-gradient(#FF79DA, #9356DC);
+  color: white;
+  font-size: 1em;
+  height: 7vh;
+  width: 55vw;
+  border-radius: 30px;
+  border: none;
+  box-shadow: 0px 5px 5px 1px #d8d6d6;
+}
+#bouton-commander:link {
+  outline: none;
+  /*pour retirer contour noir lors du click*/
+  border: none;
+}
+#bouton-commander:visited {
+  outline: none;
+  border: none;
+}
+#bouton-commander:focus {
+  outline: none;
+  border: none;
+}
+#bouton-commander:hover {
+  outline: none;
+  border: none;
+  background: linear-gradient(#ffb2f3, #ce52ff);
+  box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
+  -webkit-transition: box-shadow 1s ease;
+  transition: box-shadow 1s ease;
+}
+#bouton-commander:active {
+  outline: none;
+  border: none;
+}
+
+/*Le numéro violet dans la page d'acceuil*/
+.purple-num {
+  border-radius: 40px 40px;
+  background-color: #9356DC;
+  height: 5px;
+  font-size: 0.7em;
+  color: white;
+  width: 5px;
+  padding: 5px 15px 18px 8px;
+  position: absolute;
+  left: -17%;
+  top: 25%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header_menu {
+  width: 100vw;
+  height: 8vh;
+  background-color: white;
+}
+.header_menu img {
+  width: 45%;
+  height: 60%;
+  margin: auto;
+  padding-top: 0px;
+  position: relative;
+}
+.header_menu .fas {
+  color: #4d4d4d;
+  position: absolute;
+  top: 3%;
+  left: 8%;
+}
+
+.img-principale {
+  width: 100vw;
+  height: 40vh;
+}
+.img-principale img {
+  width: 100%;
+  height: 100%;
+}
+
+.description_menu {
+  background-color: #f1f1f1;
+  border-radius: 50px 50px 0px 0px;
+  margin-top: -50px;
+  height: 190vh;
+}
+
+/* partie plats, entrées, desserts*/
+.menu_détails {
+  background-color: #f1f1f1;
+  margin-top: 0px;
+  animation: slide-menu 1.5s ease;
+}
+.menu_détails h2 {
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+.menu_détails ul {
+  padding: 0;
+  width: 100vw;
+}
+.menu_détails ul li {
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  list-style-type: none;
+  box-shadow: #dad8d8 1px 6px 15px 5px;
+  border-radius: 15px;
+}
+.menu_détails h3 {
+  padding: 12px 7px 0px 7px;
+}
+.menu_détails ul li {
+  box-shadow: #dad8d8 1px 3px 5px 2px;
+}
+.menu_détails h2 {
+  padding: 30px 0px 20px 20px;
+}
+
+.menu_détails_plats {
+  background-color: #f1f1f1;
+  margin-top: 0px;
+  animation: slide-menu 2s ease;
+  transition-delay: 1000ms;
+}
+.menu_détails_plats h2 {
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+.menu_détails_plats ul {
+  padding: 0;
+  width: 100vw;
+}
+.menu_détails_plats ul li {
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  list-style-type: none;
+  box-shadow: #dad8d8 1px 6px 15px 5px;
+  border-radius: 15px;
+}
+.menu_détails_plats h3 {
+  padding: 12px 7px 0px 7px;
+}
+.menu_détails_plats ul li {
+  box-shadow: #dad8d8 1px 3px 5px 2px;
+}
+.menu_détails_plats h2 {
+  padding: 30px 0px 20px 20px;
+}
+
+.menu_détails_desserts {
+  background-color: #f1f1f1;
+  margin-top: 0px;
+  animation: slide-menu 2.5s ease;
+  transition-delay: 1000ms;
+}
+.menu_détails_desserts h2 {
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+.menu_détails_desserts ul {
+  padding: 0;
+  width: 100vw;
+}
+.menu_détails_desserts ul li {
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  list-style-type: none;
+  box-shadow: #dad8d8 1px 6px 15px 5px;
+  border-radius: 15px;
+}
+.menu_détails_desserts h3 {
+  padding: 12px 7px 0px 7px;
+}
+.menu_détails_desserts ul li {
+  box-shadow: #dad8d8 1px 3px 5px 2px;
+}
+.menu_détails_desserts h2 {
+  padding: 30px 0px 20px 20px;
+}
+
+@keyframes slide-menu {
+  0% {
+    transform: translate(0, 5%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  100% {
+    transform: translate(0, 0%);
+    opacity: 1;
+  }
+}
+/*& :hover{
+    transform: translate(0, -100% );   
+    transition: transform  0.5ms ease-in;*/
+/* descriptif des plats - h3 et p*/
+.menu_prix {
+  height: 5vh;
+  margin: 5px 20px 15px 10px;
+  padding: 0px 0px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.menu_prix p {
+  font-weight: 400;
+}
+.menu_prix .leprix {
+  font-weight: bold;
+}
+
+.title_menu {
+  height: 10vh;
+}
+.title_menu h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.9em;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 30px 30px 0px 0px;
+  position: relative;
+}
+.title_menu .far {
+  position: absolute;
+  top: 44%;
+  left: 85%;
+  font-size: 25px;
+}
+
+.form-commander {
+  height: 20vh;
+  text-align: center;
+  padding: 40px 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#lapage {
+  font-family: "Roboto", sans-serif;
+}
+
+/*partie description ohmyfood*/
+#section_descriptif {
+  background-color: #f1f1f1;
+  width: 100vw;
+  text-align: center;
+  padding: 50px 0px 60px 0px;
+}
+#section_descriptif h1 {
+  margin: auto;
+  width: 70%;
+}
+#section_descriptif p {
+  font-weight: 300;
+  font-size: 1.1em;
+}
+
+/*partie fonctionnement du site ohmyfood*/
+#section_fonctionnement {
+  width: 100vw;
+  padding-bottom: 50px;
+}
+#section_fonctionnement h1 {
+  padding: 30px 0px 20px 10px;
+}
+#section_fonctionnement ul {
+  width: 100vw;
+  padding-left: 50px;
+}
+#section_fonctionnement ul li {
+  background-color: #f1f1f1;
+  list-style-type: none;
+  width: 90%;
+  height: 9vh;
+  border-radius: 20px;
+  box-shadow: #d3d1d1 1px 6px 12px 0px;
+  padding-top: 7px;
+  margin-bottom: 25px;
+}
+#section_fonctionnement ul li a {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+/*dans la partie fonctionnement -> vignette purple num, icone et phrases */
+.fonctionnement {
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  position: relative;
+  margin: auto;
+}
+.fonctionnement h2 {
+  font-size: 1em;
+  color: black;
+  padding: 10px 10px;
+}
+.fonctionnement .fas {
+  color: gray;
+  font-size: 20px;
+}
+.fonctionnement .fas:hover {
+  color: #9356DC;
+}
+
+/*partie vignette*/
+#section_restaurant {
+  background-color: #f1f1f1;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+#section_restaurant h1 {
+  padding: 30px 0px 20px 34px;
+}
+
+.vignette_menu {
+  background-color: white;
+  border-radius: 15px 15px;
+  width: 80vw;
+  height: 30vh;
+  margin: auto;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+.vignette_menu a {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+.vignette_menu a:hover {
+  list-style-type: none;
+  text-decoration: none;
+  color: black;
+}
+
+/*descriptif des vignettes + le coeur*/
+.nom_coeur {
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
+  border-radius: 0px 0px 15px 15px;
+  box-shadow: #dddcdc 4px 4px 4px;
+}
+.nom_coeur .far {
+  color: #303030;
+  font-size: 18px;
+  text-align: center;
+  padding-top: 10px;
+}
+.nom_coeur :nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding: 10px 0px 0px 10px;
+  font-size: 1em;
+  width: 100%;
+}
+.nom_coeur :nth-child(2) {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  padding-left: 10px;
+  font-size: 0.9em;
+  padding-top: 15px;
+}
+.nom_coeur :nth-child(3) {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+#background1 {
+  background-image: url("/public/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+  background-size: 100% 100%, contain;
+  width: 80vw;
+  height: 22vh;
+  position: relative;
+  border-radius: 15px 15px 0px 0px;
+}
+#background1 p {
+  font-size: 1em;
+  position: absolute;
+  width: 28%;
+  height: 18%;
+  text-align: center;
+  padding: 5px 0px 0px 0px;
+  border-radius: 3px;
+  background-color: #88dbbf;
+  color: #2a9471;
+  top: 10%;
+  right: 5%;
+}
+
+#background2 {
+  background-image: url("/public/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-size: 100% 100%, contain;
+  width: 80vw;
+  height: 22vh;
+  position: relative;
+  border-radius: 15px 15px 0px 0px;
+}
+#background2 p {
+  font-size: 1em;
+  position: absolute;
+  width: 28%;
+  height: 18%;
+  text-align: center;
+  padding: 5px 0px 0px 0px;
+  border-radius: 3px;
+  background-color: #88dbbf;
+  color: #2a9471;
+  top: 10%;
+  right: 5%;
+}
+
+#background3 {
+  background-image: url("/public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+  background-size: 100% 100%, contain;
+  width: 80vw;
+  height: 22vh;
+  border-radius: 15px 15px 0px 0px;
+}
+#background3 p {
+  visibility: hidden;
+}
+
+#background4 {
+  background-image: url("/public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-size: 100% 100%, contain;
+  width: 80vw;
+  height: 22vh;
+  border-radius: 15px 15px 0px 0px;
+}
+#background4 p {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=style.css.map */

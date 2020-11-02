@@ -31,8 +31,33 @@
     width: 55vw;
     border-radius:30px;
     border: none;
-    box-shadow: 0px 5px 5px 1px rgb(216, 214, 214);  
-}
+    box-shadow: 0px 5px 5px 1px rgb(216, 214, 214);
+    &:link {
+        outline: none; /*pour retirer contour noir lors du click*/
+        border:none;
+    }
+    &:visited {
+        outline: none;
+        border: none;
+    }
+    &:focus {
+        outline: none; 
+        border: none;
+    }
+    &:hover{
+        outline: none;
+        border: none;
+        background: linear-gradient( rgb(255, 178, 243),rgb(206, 82, 255));
+        box-shadow: 0px 4px 4px rgba(34,62,66,.5);
+        -webkit-transition: box-shadow 1s ease;
+        transition: box-shadow 1s ease;
+    }
+    &:active{
+        outline: none; 
+        border: none;
+    }
+}  
+
 @mixin background-nouveau {
     background-size: 100% 100%,contain;
     width: 80vw;
