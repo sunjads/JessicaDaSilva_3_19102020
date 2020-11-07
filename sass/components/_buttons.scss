@@ -22,3 +22,42 @@
     left: -17%;
     top: 25%;
 }
+/* le bouton coeur qui se remplie en hover */
+
+.fa-heart{
+    font-size: 20px;
+  }
+.container{
+    width: 8vw;
+    height: 10vh;
+    overflow: hidden;
+}
+  .far{
+    position:relative;
+    z-index:1;
+    cursor: pointer;
+    -webkit-text-stroke: 1px white;
+  }
+  .fas{
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:-1;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity:0;
+    transform: scale(0);
+    transition:.3s ease;
+  }
+  .far:hover .fas{
+    transform:scale(1);
+    opacity:4;
+  }
+  .far:hover{
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px white;
+  }
+  
