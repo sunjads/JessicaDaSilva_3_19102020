@@ -96,15 +96,13 @@
   height: 10vh;
   overflow: hidden;
 }
-
-.far {
+.container .far {
   position: relative;
   z-index: 1;
   cursor: pointer;
   -webkit-text-stroke: 1px white;
 }
-
-.fas {
+.container .fas {
   position: absolute;
   left: 0;
   top: 0;
@@ -116,19 +114,67 @@
   transform: scale(0);
   transition: 0.3s ease;
 }
-
-.far:hover .fas {
+.container .far:hover .fas {
   transform: scale(1);
   opacity: 4;
 }
-
-.far:hover {
+.container .far:hover {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px white;
 }
 
+@media screen and (min-width: 768px) {
+  #bouton, #bouton-commander {
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    font-size: 1em;
+    height: 7vh;
+    width: 40vw;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 5px 1px #d8d6d6;
+  }
+  #bouton:link, #bouton-commander:link {
+    outline: none;
+    /*pour retirer contour noir lors du click*/
+    border: none;
+  }
+  #bouton:visited, #bouton-commander:visited {
+    outline: none;
+    border: none;
+  }
+  #bouton:focus, #bouton-commander:focus {
+    outline: none;
+    border: none;
+  }
+  #bouton:hover, #bouton-commander:hover {
+    outline: none;
+    border: none;
+    background: linear-gradient(#ffb2f3, #ce52ff);
+    box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
+    -webkit-transition: box-shadow 1s ease;
+    transition: box-shadow 1s ease;
+  }
+  #bouton:active, #bouton-commander:active {
+    outline: none;
+    border: none;
+  }
+
+  .purple-num {
+    border-radius: 40px 40px;
+    background-color: #9356DC;
+    height: 5px;
+    font-size: 0.7em;
+    color: white;
+    width: 5px;
+    padding: 5px 15px 18px 8px;
+    position: absolute;
+    left: -16%;
+    top: 25%;
+  }
+}
 /*.background-loading{
     width: 100vw;
     height: 100vh;
@@ -198,6 +244,48 @@ header .fas {
   z-index: 1;
 }
 
+@media screen and (min-width: 768px) {
+  header {
+    width: 100vw;
+    height: 25vh;
+  }
+  header img {
+    width: 30%;
+    height: 30%;
+    margin: auto;
+    padding-top: 10px;
+  }
+  header p {
+    background-color: #e6e2f0;
+    box-shadow: inset #d1d0d0 2px 3px 5px 1px;
+    color: #464545;
+    width: 100%;
+    height: 10vh;
+    padding: 22px 0px 15px 0px;
+    font-size: 1.3em;
+    position: relative;
+  }
+  header .fas {
+    color: #464545;
+    font-size: 1.1em;
+    position: absolute;
+    top: 19%;
+    left: 38%;
+    z-index: 1;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    width: 100vw;
+    height: 25vh;
+  }
+  header img {
+    width: 20%;
+    height: 40%;
+    margin: auto;
+    padding-top: 10px;
+  }
+}
 footer {
   background-color: #424242;
   width: 100vw;
@@ -231,6 +319,79 @@ footer ul li .fas {
   width: 25px;
 }
 
+@media screen and (min-width: 768px) {
+  footer {
+    background-color: #424242;
+    width: 100vw;
+    height: 38vh;
+    padding-left: 15px;
+  }
+  footer h2 {
+    font-size: 35px;
+    color: white;
+    padding: 20px 0px 0px 30px;
+    font-family: "Shrikhand", cursive;
+  }
+  footer ul {
+    padding: 20px 0px 0px 25px;
+  }
+  footer ul li {
+    color: white;
+    background-color: #424242;
+    border: none;
+    box-shadow: none;
+    font-weight: normal;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 10px 0px 0px 0px;
+  }
+  footer ul li a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  footer ul li .fas {
+    font-size: 14px;
+    width: 25px;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  footer {
+    background-color: #424242;
+    width: 100vw;
+    height: 38vh;
+    padding-left: 15px;
+    text-align: center;
+  }
+  footer h2 {
+    font-size: 35px;
+    color: white;
+    padding: 20px 0px 0px 30px;
+    font-family: "Shrikhand", cursive;
+  }
+  footer ul {
+    padding: 20px 0px 0px 25px;
+  }
+  footer ul li {
+    color: white;
+    background-color: #424242;
+    border: none;
+    box-shadow: none;
+    font-weight: normal;
+    list-style-type: none;
+    text-decoration: none;
+    padding: 10px 0px 0px 0px;
+  }
+  footer ul li a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  footer ul li .fas {
+    font-size: 14px;
+    width: 25px;
+  }
+}
 .form-explorer {
   padding: 25px 0px 0px 0px;
 }
@@ -434,6 +595,253 @@ footer ul li .fas {
   visibility: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  /*partie fonctionnement du site ohmyfood*/
+  #section_fonctionnement {
+    width: 100vw;
+    padding-bottom: 50px;
+  }
+  #section_fonctionnement h1 {
+    padding: 30px 0px 20px 40px;
+  }
+  #section_fonctionnement ul {
+    width: 100vw;
+    padding-left: 50px;
+  }
+  #section_fonctionnement ul li {
+    background-color: #f1f1f1;
+    list-style-type: none;
+    width: 60%;
+    height: 9vh;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: #d3d1d1 1px 6px 12px 0px;
+    padding-top: 7px;
+    margin-bottom: 25px;
+  }
+  #section_fonctionnement ul li a {
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+  /*partie vignette*/
+  #section_restaurant {
+    background-color: #f1f1f1;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-bottom: 50px;
+  }
+  #section_restaurant h1 {
+    padding: 30px 0px 30px 34px;
+    width: 100%;
+  }
+
+  .vignette_menu {
+    background-color: white;
+    border-radius: 15px 15px;
+    width: 40vw;
+    height: 30vh;
+    margin: auto;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .vignette_menu a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+  }
+  .vignette_menu a:hover {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+  }
+
+  #background1 {
+    background-size: 100% 100%, contain;
+    width: 40vw;
+    height: 22vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #background1 p {
+    font-size: 0.9em;
+    position: absolute;
+    width: 28%;
+    height: 25%;
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+    border-radius: 3px;
+    background-color: #88dbbf;
+    color: #2a9471;
+    top: 10%;
+    right: 5%;
+  }
+
+  #background2 {
+    background-size: 100% 100%, contain;
+    width: 40vw;
+    height: 22vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #background2 p {
+    font-size: 0.9em;
+    position: absolute;
+    width: 28%;
+    height: 25%;
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+    border-radius: 3px;
+    background-color: #88dbbf;
+    color: #2a9471;
+    top: 10%;
+    right: 5%;
+  }
+
+  #background3 {
+    background-size: 100% 100%, contain;
+    width: 40vw;
+    height: 22vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #background3 p {
+    font-size: 0.9em;
+    position: absolute;
+    width: 28%;
+    height: 25%;
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+    border-radius: 3px;
+    background-color: #88dbbf;
+    color: #2a9471;
+    top: 10%;
+    right: 5%;
+  }
+
+  #background4 {
+    background-size: 100% 100%, contain;
+    width: 40vw;
+    height: 22vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #background4 p {
+    font-size: 0.9em;
+    position: absolute;
+    width: 28%;
+    height: 25%;
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+    border-radius: 3px;
+    background-color: #88dbbf;
+    color: #2a9471;
+    top: 10%;
+    right: 5%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /*partie vignette*/
+  .vignette_menu {
+    background-color: white;
+    border-radius: 15px 15px;
+    width: 22vw;
+    height: 45vh;
+    margin: auto;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .vignette_menu a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+  }
+  .vignette_menu a:hover {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+  }
+
+  #background1, #background2 {
+    background-size: 100% 100%, contain;
+    width: 22vw;
+    height: 45vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #background1 p, #background2 p {
+    font-size: 0.8em;
+    position: absolute;
+    width: 28%;
+    height: 15%;
+    text-align: center;
+    padding: 8px 5px 0px 5px;
+    border-radius: 3px;
+    background-color: #88dbbf;
+    color: #2a9471;
+    top: 10%;
+    right: 10%;
+  }
+
+  #background3, #background4 {
+    background-size: 100% 100%, contain;
+    width: 22vw;
+    height: 45vh;
+    position: relative;
+    border-radius: 15px 15px 0px 0px;
+  }
+  #background3 p, #background4 p {
+    font-size: 0.9em;
+    position: absolute;
+    width: 28%;
+    height: 25%;
+    text-align: center;
+    padding: 5px 0px 0px 0px;
+    border-radius: 3px;
+    background-color: #88dbbf;
+    color: #2a9471;
+    top: 10%;
+    right: 5%;
+  }
+
+  /*descriptif des vignettes + le coeur*/
+  .nom_coeur {
+    height: 10vh;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: #dddcdc 4px 4px 4px;
+  }
+  .nom_coeur :nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    padding: 10px 0px 0px 10px;
+    font-size: 0.9em;
+    width: 100%;
+  }
+  .nom_coeur :nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    padding-left: 10px;
+    font-size: 0.8em;
+    padding-top: 15px;
+  }
+  .nom_coeur :nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
 /*le bouton linear gradient*/
 #bouton {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -531,15 +939,13 @@ footer ul li .fas {
   height: 10vh;
   overflow: hidden;
 }
-
-.far {
+.container .far {
   position: relative;
   z-index: 1;
   cursor: pointer;
   -webkit-text-stroke: 1px white;
 }
-
-.fas {
+.container .fas {
   position: absolute;
   left: 0;
   top: 0;
@@ -551,19 +957,67 @@ footer ul li .fas {
   transform: scale(0);
   transition: 0.3s ease;
 }
-
-.far:hover .fas {
+.container .far:hover .fas {
   transform: scale(1);
   opacity: 4;
 }
-
-.far:hover {
+.container .far:hover {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px white;
 }
 
+@media screen and (min-width: 768px) {
+  #bouton, #bouton-commander {
+    background: linear-gradient(#FF79DA, #9356DC);
+    color: white;
+    font-size: 1em;
+    height: 7vh;
+    width: 40vw;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 5px 5px 1px #d8d6d6;
+  }
+  #bouton:link, #bouton-commander:link {
+    outline: none;
+    /*pour retirer contour noir lors du click*/
+    border: none;
+  }
+  #bouton:visited, #bouton-commander:visited {
+    outline: none;
+    border: none;
+  }
+  #bouton:focus, #bouton-commander:focus {
+    outline: none;
+    border: none;
+  }
+  #bouton:hover, #bouton-commander:hover {
+    outline: none;
+    border: none;
+    background: linear-gradient(#ffb2f3, #ce52ff);
+    box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
+    -webkit-transition: box-shadow 1s ease;
+    transition: box-shadow 1s ease;
+  }
+  #bouton:active, #bouton-commander:active {
+    outline: none;
+    border: none;
+  }
+
+  .purple-num {
+    border-radius: 40px 40px;
+    background-color: #9356DC;
+    height: 5px;
+    font-size: 0.7em;
+    color: white;
+    width: 5px;
+    padding: 5px 15px 18px 8px;
+    position: absolute;
+    left: -16%;
+    top: 25%;
+  }
+}
 body {
   box-sizing: border-box;
   margin: 0;
@@ -583,7 +1037,7 @@ body {
   position: relative;
 }
 .header_menu .fas {
-  color: #4d4d4d;
+  color: #2e2e2e;
   position: absolute;
   top: 3%;
   left: 8%;
@@ -758,6 +1212,81 @@ body {
   padding: 40px 0px;
 }
 
+@media screen and (min-width: 768px) {
+  .header_menu {
+    width: 100vw;
+    height: 12vh;
+    background-color: white;
+  }
+  .header_menu img {
+    width: 28%;
+    height: 42%;
+    margin: auto;
+    padding-top: 0px;
+    position: relative;
+  }
+  .header_menu .fas {
+    color: #2e2e2e;
+    font-size: 22px;
+    position: absolute;
+    top: 4%;
+    left: 9%;
+  }
+
+  .img-principale {
+    width: 100vw;
+    height: 50vh;
+  }
+  .img-principale img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .title_menu {
+    height: 10vh;
+  }
+  .title_menu h1 {
+    font-family: "Shrikhand", cursive;
+    font-size: 2em;
+    padding-top: 20px;
+    padding-left: 20px;
+    background-color: #f1f1f1;
+    border-radius: 30px 30px 0px 0px;
+    position: relative;
+  }
+  .title_menu .far {
+    position: absolute;
+    top: 58%;
+    left: 85%;
+    font-size: 35px;
+  }
+
+  .menu_détails, .menu_détails_plats, .menu_détails_desserts {
+    background-color: #f1f1f1;
+    margin-top: 0px;
+  }
+  .menu_détails h2, .menu_détails_plats h2, .menu_détails_desserts h2 {
+    font-size: 1.6em;
+    padding-left: 20px;
+  }
+  .menu_détails ul, .menu_détails_plats ul, .menu_détails_desserts ul {
+    padding: 0;
+    width: 100vw;
+  }
+  .menu_détails ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    list-style-type: none;
+    box-shadow: #dad8d8 1px 6px 15px 5px;
+    border-radius: 15px;
+    font-size: 0.9em;
+  }
+  .menu_détails h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
+    padding: 12px 7px 0px 7px;
+    font-size: 1.2em;
+  }
+}
 * {
   margin: 0;
   padding: 0;

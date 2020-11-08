@@ -23,7 +23,6 @@
     top: 25%;
 }
 /* le bouton coeur qui se remplie en hover */
-
 .fa-heart{
     font-size: 20px;
   }
@@ -31,14 +30,13 @@
     width: 8vw;
     height: 10vh;
     overflow: hidden;
-}
-  .far{
+  & .far{
     position:relative;
     z-index:1;
     cursor: pointer;
     -webkit-text-stroke: 1px white;
   }
-  .fas{
+  & .fas{
     position:absolute;
     left:0;
     top:0;
@@ -50,14 +48,32 @@
     transform: scale(0);
     transition:.3s ease;
   }
-  .far:hover .fas{
+  & .far:hover .fas{
     transform:scale(1);
     opacity:4;
   }
-  .far:hover{
+  & .far:hover{
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0px white;
   }
-  
+}
+
+@media screen and (min-width: 768px){
+  #bouton, #bouton-commander {
+    @include bouton-linear-gradient-tablet
+  }
+  .purple-num{
+    border-radius:40px 40px;
+    background-color: $color-primary;
+    height: 5px;
+    font-size: 0.7em;
+    color: white;
+    width: 5px;
+    padding:5px 15px 18px 8px;
+    position: absolute;
+    left: -16%;
+    top: 25%;
+}
+}

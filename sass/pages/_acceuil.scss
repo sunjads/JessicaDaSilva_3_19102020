@@ -148,4 +148,142 @@
     background-image: url("/public/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     @include background-sans-nouveau;
 }
- 
+
+@media screen and (min-width: 768px){
+    /*partie fonctionnement du site ohmyfood*/
+#section_fonctionnement {
+    width: 100vw;
+    padding-bottom: 50px;
+    & h1{
+        padding: 30px 0px 20px 40px;
+    }
+    & ul{
+        width: 100vw;
+        padding-left: 50px;
+    }
+    & ul li{
+        background-color: $grey-background;
+        list-style-type: none;
+        width: 60%;
+        height: 9vh;
+        margin: auto;
+        border-radius: 20px;
+        box-shadow: rgb(211, 209, 209)1px 6px 12px 0px;
+        padding-top: 7px;
+        margin-bottom: 25px;
+    & a{
+        list-style-type: none;
+        text-decoration: none;
+    }
+    }
+    }
+    /*partie vignette*/
+    #section_restaurant{
+        background-color: $grey-background;
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-bottom: 50px;
+    & h1{
+        padding: 30px 0px 30px 34px;
+        width: 100%;
+    }
+}
+    .vignette_menu{
+        background-color: white;
+        border-radius: 15px 15px;
+        width: 40vw;
+        height: 30vh;
+        margin: auto;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column-reverse;
+        & a{
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+        }
+        & a:hover {
+            list-style-type: none;
+            text-decoration: none;
+            color: black;
+    }
+}
+    #background1 {  
+        @include background-nouveau-tablet;
+    }
+
+    #background2{
+        @include background-nouveau-tablet;
+    }
+    #background3{
+        @include background-sans-nouveau-tablet;
+    }
+    #background4{
+        @include background-sans-nouveau-tablet;
+    }
+
+}
+@media screen and (min-width: 1024px){
+    /*partie vignette*/
+    .vignette_menu{
+        background-color: white;
+        border-radius: 15px 15px;
+        width: 22vw;
+        height: 45vh;
+        margin: auto;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column-reverse;
+        & a{
+        list-style-type: none;
+        text-decoration: none;
+        color: black;
+        }
+        & a:hover {
+            list-style-type: none;
+            text-decoration: none;
+            color: black;
+    }
+}
+    #background1, #background2{
+        @include background-nouveau-desktop
+        }
+    #background3, #background4{
+        @include background-sans-nouveau-desktop
+    }
+    /*descriptif des vignettes + le coeur*/
+.nom_coeur{
+    height: 10vh;
+    display: grid;
+    grid-template-columns:  25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25% ;
+    border-radius: 0px 0px 15px 15px;
+    box-shadow: rgb(221, 220, 220) 4px 4px 4px ;
+    & :nth-child(1){
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 4;
+        padding: 10px 0px 0px 10px;
+        font-size: 0.9em;
+        width: 100%;
+    }
+    & :nth-child(2){
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding-left: 10px;
+        font-size: 0.8em;
+        padding-top: 15px;
+    }
+    & :nth-child(3){
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end:3;
+    }  
+}
+}
