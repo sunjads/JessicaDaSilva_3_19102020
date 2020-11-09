@@ -7,67 +7,48 @@ header {
     flex-direction: column; 
     & img {
         width: 45%; 
-        height: 45%;
+        height:26%;
         margin: auto;
-        padding-top: 20px;
+        max-width: 222px;
+        max-height: 29px;   
     }
-    & p{
+.paris_belleville{
         background-color: rgb(230, 226, 240);
         box-shadow:inset rgb(209, 208, 208) 2px 3px 5px 1px;
         color: rgb(70, 69, 69);
         width: 100%;
-        padding: 15px 0px 15px 0px;
-        font-size: 1em;
-        position: relative;
+        height: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 15px 0px;
+    }
+    & p{
+        font-size: 1.1em;
     }
     & .fas{ 
         color: rgb(70, 69, 69);
         font-size: 1em;
-        position: absolute;
-        top: 13%;
-        left: 28%;
-        z-index:1;
+        padding-right: 12px;
     }
 }
 @media screen and (min-width: 768px){
     header{
         width: 100vw;
         height: 25vh;
-        & img {
-            width: 30%; 
-            height: 30%;
-            margin: auto;
-            padding-top: 10px;
-        }
-        & p{
-            background-color: rgb(230, 226, 240);
-            box-shadow:inset rgb(209, 208, 208) 2px 3px 5px 1px;
-            color: rgb(70, 69, 69);
-            width: 100%;
-            height: 10vh;
-            padding: 22px 0px 15px 0px;
-            font-size: 1.3em;
-            position: relative;
-        }
-        & .fas{
-            color: rgb(70, 69, 69);
-            font-size: 1.1em;
-            position: absolute;
-            top: 19%;
-            left: 38%;
-            z-index:1;
-        }
     }
+    .paris_belleville .fas{ 
+            font-size:16px;
+            padding:3px 12px 0px 0px;
+        }
+    .paris_belleville p{
+            font-size: 1.3em;
+        }
 }
+
 @media screen and (min-width: 1024px){
     header{
         width: 100vw;
         height: 25vh;
-        & img {
-            width: 20%; 
-            height: 40%;
-            margin: auto;
-            padding-top: 10px;
-        }
 }
 }

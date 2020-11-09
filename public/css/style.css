@@ -87,16 +87,13 @@
 }
 
 /* le bouton coeur qui se remplie en hover */
-.fa-heart {
-  font-size: 20px;
-}
-
 .container {
-  width: 8vw;
+  width: 10vw;
   height: 10vh;
   overflow: hidden;
 }
 .container .far {
+  font-size: 19px;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -174,6 +171,93 @@
     left: -16%;
     top: 25%;
   }
+
+  /* le bouton coeur qui se remplie en hover */
+  .container {
+    width: 7vw;
+    height: 7vh;
+    overflow: hidden;
+  }
+  .container .far {
+    font-size: 21px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-text-stroke: 1px white;
+  }
+  .container .fas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s ease;
+  }
+  .container .far:hover .fas {
+    transform: scale(1);
+    opacity: 4;
+  }
+  .container .far:hover {
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px white;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /*Le numéro violet dans la page d'acceuil*/
+  .purple-num {
+    border-radius: 40px 40px;
+    background-color: #9356DC;
+    height: 5px;
+    font-size: 0.7em;
+    color: white;
+    width: 5px;
+    padding: 5px 15px 18px 8px;
+    position: absolute;
+    left: -15%;
+    top: 25%;
+  }
+
+  /* le bouton coeur qui se remplie en hover */
+  .container {
+    width: 4vw;
+    height: 7vh;
+    overflow: hidden;
+  }
+  .container .far {
+    font-size: 21px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-text-stroke: 1px white;
+  }
+  .container .fas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s ease;
+  }
+  .container .far:hover .fas {
+    transform: scale(1);
+    opacity: 4;
+  }
+  .container .far:hover {
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px white;
+  }
 }
 /*.background-loading{
     width: 100vw;
@@ -222,26 +306,29 @@ header {
 }
 header img {
   width: 45%;
-  height: 45%;
+  height: 26%;
   margin: auto;
-  padding-top: 20px;
+  max-width: 222px;
+  max-height: 29px;
 }
-header p {
+header .paris_belleville {
   background-color: #e6e2f0;
   box-shadow: inset #d1d0d0 2px 3px 5px 1px;
   color: #464545;
   width: 100%;
-  padding: 15px 0px 15px 0px;
-  font-size: 1em;
-  position: relative;
+  height: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px 0px;
+}
+header p {
+  font-size: 1.1em;
 }
 header .fas {
   color: #464545;
   font-size: 1em;
-  position: absolute;
-  top: 13%;
-  left: 28%;
-  z-index: 1;
+  padding-right: 12px;
 }
 
 @media screen and (min-width: 768px) {
@@ -249,41 +336,20 @@ header .fas {
     width: 100vw;
     height: 25vh;
   }
-  header img {
-    width: 30%;
-    height: 30%;
-    margin: auto;
-    padding-top: 10px;
+
+  .paris_belleville .fas {
+    font-size: 16px;
+    padding: 3px 12px 0px 0px;
   }
-  header p {
-    background-color: #e6e2f0;
-    box-shadow: inset #d1d0d0 2px 3px 5px 1px;
-    color: #464545;
-    width: 100%;
-    height: 10vh;
-    padding: 22px 0px 15px 0px;
+
+  .paris_belleville p {
     font-size: 1.3em;
-    position: relative;
-  }
-  header .fas {
-    color: #464545;
-    font-size: 1.1em;
-    position: absolute;
-    top: 19%;
-    left: 38%;
-    z-index: 1;
   }
 }
 @media screen and (min-width: 1024px) {
   header {
     width: 100vw;
     height: 25vh;
-  }
-  header img {
-    width: 20%;
-    height: 40%;
-    margin: auto;
-    padding-top: 10px;
   }
 }
 footer {
@@ -325,6 +391,7 @@ footer ul li .fas {
     width: 100vw;
     height: 38vh;
     padding-left: 15px;
+    text-align: center;
   }
   footer h2 {
     font-size: 35px;
@@ -360,17 +427,15 @@ footer ul li .fas {
     background-color: #424242;
     width: 100vw;
     height: 38vh;
-    padding-left: 15px;
-    text-align: center;
   }
   footer h2 {
     font-size: 35px;
     color: white;
-    padding: 20px 0px 0px 30px;
+    padding: 20px 0px 0px 0px;
     font-family: "Shrikhand", cursive;
   }
   footer ul {
-    padding: 20px 0px 0px 25px;
+    padding: 20px 0px 0px 0px;
   }
   footer ul li {
     color: white;
@@ -418,7 +483,7 @@ footer ul li .fas {
   padding-bottom: 50px;
 }
 #section_fonctionnement h1 {
-  padding: 30px 0px 20px 10px;
+  padding: 30px 0px 20px 20px;
 }
 #section_fonctionnement ul {
   width: 100vw;
@@ -595,6 +660,7 @@ footer ul li .fas {
   visibility: hidden;
 }
 
+/*format desktop*/
 @media screen and (min-width: 768px) {
   /*partie fonctionnement du site ohmyfood*/
   #section_fonctionnement {
@@ -659,15 +725,15 @@ footer ul li .fas {
     color: black;
   }
 
-  #background1 {
+  #background1, #background2 {
     background-size: 100% 100%, contain;
     width: 40vw;
     height: 22vh;
     position: relative;
     border-radius: 15px 15px 0px 0px;
   }
-  #background1 p {
-    font-size: 0.9em;
+  #background1 p, #background2 p {
+    font-size: 1em;
     position: absolute;
     width: 28%;
     height: 25%;
@@ -680,56 +746,14 @@ footer ul li .fas {
     right: 5%;
   }
 
-  #background2 {
+  #background3, #background4 {
     background-size: 100% 100%, contain;
     width: 40vw;
     height: 22vh;
     position: relative;
     border-radius: 15px 15px 0px 0px;
   }
-  #background2 p {
-    font-size: 0.9em;
-    position: absolute;
-    width: 28%;
-    height: 25%;
-    text-align: center;
-    padding: 5px 0px 0px 0px;
-    border-radius: 3px;
-    background-color: #88dbbf;
-    color: #2a9471;
-    top: 10%;
-    right: 5%;
-  }
-
-  #background3 {
-    background-size: 100% 100%, contain;
-    width: 40vw;
-    height: 22vh;
-    position: relative;
-    border-radius: 15px 15px 0px 0px;
-  }
-  #background3 p {
-    font-size: 0.9em;
-    position: absolute;
-    width: 28%;
-    height: 25%;
-    text-align: center;
-    padding: 5px 0px 0px 0px;
-    border-radius: 3px;
-    background-color: #88dbbf;
-    color: #2a9471;
-    top: 10%;
-    right: 5%;
-  }
-
-  #background4 {
-    background-size: 100% 100%, contain;
-    width: 40vw;
-    height: 22vh;
-    position: relative;
-    border-radius: 15px 15px 0px 0px;
-  }
-  #background4 p {
+  #background3 p, #background4 p {
     font-size: 0.9em;
     position: absolute;
     width: 28%;
@@ -743,6 +767,7 @@ footer ul li .fas {
     right: 5%;
   }
 }
+/*format desktop*/
 @media screen and (min-width: 1024px) {
   /*partie vignette*/
   .vignette_menu {
@@ -765,16 +790,15 @@ footer ul li .fas {
     text-decoration: none;
     color: black;
   }
-
-  #background1, #background2 {
+  .vignette_menu #background1, .vignette_menu #background2 {
     background-size: 100% 100%, contain;
     width: 22vw;
     height: 45vh;
     position: relative;
     border-radius: 15px 15px 0px 0px;
   }
-  #background1 p, #background2 p {
-    font-size: 0.8em;
+  .vignette_menu #background1 p, .vignette_menu #background2 p {
+    font-size: 1em;
     position: absolute;
     width: 28%;
     height: 15%;
@@ -786,15 +810,14 @@ footer ul li .fas {
     top: 10%;
     right: 10%;
   }
-
-  #background3, #background4 {
+  .vignette_menu #background3, .vignette_menu #background4 {
     background-size: 100% 100%, contain;
     width: 22vw;
     height: 45vh;
     position: relative;
     border-radius: 15px 15px 0px 0px;
   }
-  #background3 p, #background4 p {
+  .vignette_menu #background3 p, .vignette_menu #background4 p {
     font-size: 0.9em;
     position: absolute;
     width: 28%;
@@ -810,36 +833,16 @@ footer ul li .fas {
 
   /*descriptif des vignettes + le coeur*/
   .nom_coeur {
-    height: 10vh;
-    display: grid;
-    grid-template-columns: 25% 25% 25% 25%;
-    grid-template-rows: 25% 25% 25% 25%;
-    border-radius: 0px 0px 15px 15px;
-    box-shadow: #dddcdc 4px 4px 4px;
+    height: 12vh;
   }
   .nom_coeur :nth-child(1) {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
-    grid-row-end: 4;
-    padding: 10px 0px 0px 10px;
-    font-size: 0.9em;
-    width: 100%;
-  }
-  .nom_coeur :nth-child(2) {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 3;
-    padding-left: 10px;
-    font-size: 0.8em;
-    padding-top: 15px;
+    grid-row-end: 2;
   }
   .nom_coeur :nth-child(3) {
-    grid-column-start: 4;
-    grid-column-end: 5;
-    grid-row-start: 2;
-    grid-row-end: 3;
+    padding: 0px 0px 0px 10px;
   }
 }
 /*le bouton linear gradient*/
@@ -930,16 +933,13 @@ footer ul li .fas {
 }
 
 /* le bouton coeur qui se remplie en hover */
-.fa-heart {
-  font-size: 20px;
-}
-
 .container {
-  width: 8vw;
+  width: 10vw;
   height: 10vh;
   overflow: hidden;
 }
 .container .far {
+  font-size: 19px;
   position: relative;
   z-index: 1;
   cursor: pointer;
@@ -1016,6 +1016,93 @@ footer ul li .fas {
     position: absolute;
     left: -16%;
     top: 25%;
+  }
+
+  /* le bouton coeur qui se remplie en hover */
+  .container {
+    width: 7vw;
+    height: 7vh;
+    overflow: hidden;
+  }
+  .container .far {
+    font-size: 21px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-text-stroke: 1px white;
+  }
+  .container .fas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s ease;
+  }
+  .container .far:hover .fas {
+    transform: scale(1);
+    opacity: 4;
+  }
+  .container .far:hover {
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px white;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /*Le numéro violet dans la page d'acceuil*/
+  .purple-num {
+    border-radius: 40px 40px;
+    background-color: #9356DC;
+    height: 5px;
+    font-size: 0.7em;
+    color: white;
+    width: 5px;
+    padding: 5px 15px 18px 8px;
+    position: absolute;
+    left: -15%;
+    top: 25%;
+  }
+
+  /* le bouton coeur qui se remplie en hover */
+  .container {
+    width: 4vw;
+    height: 7vh;
+    overflow: hidden;
+  }
+  .container .far {
+    font-size: 21px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    -webkit-text-stroke: 1px white;
+  }
+  .container .fas {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.3s ease;
+  }
+  .container .far:hover .fas {
+    transform: scale(1);
+    opacity: 4;
+  }
+  .container .far:hover {
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 0px white;
   }
 }
 body {
@@ -1272,6 +1359,9 @@ body {
   .menu_détails ul, .menu_détails_plats ul, .menu_détails_desserts ul {
     padding: 0;
     width: 100vw;
+    max-width: 568px;
+    max-height: 243px;
+    margin: auto;
   }
   .menu_détails ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
     background-color: white;
@@ -1281,6 +1371,8 @@ body {
     box-shadow: #dad8d8 1px 6px 15px 5px;
     border-radius: 15px;
     font-size: 0.9em;
+    max-width: 540px;
+    max-height: 71px;
   }
   .menu_détails h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
     padding: 12px 7px 0px 7px;
@@ -1291,6 +1383,10 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
 }
 
 #lapage {

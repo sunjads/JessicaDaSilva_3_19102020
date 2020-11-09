@@ -37,6 +37,7 @@ footer{
         width: 100vw;
         height: 38vh;
         padding-left: 15px;
+        text-align: center;
     
         & h2{
             font-size: 35px;
@@ -72,18 +73,14 @@ footer{
         background-color: rgb(66, 66, 66);
         width: 100vw;
         height: 38vh;
-        padding-left: 15px;
-        text-align: center;
-    
         & h2{
             font-size: 35px;
             color: white;
-            padding: 20px 0px 0px 30px;
+            padding: 20px 0px 0px 0px;
             font-family: 'Shrikhand', cursive;
         }
         & ul{
-            padding: 20px 0px 0px 25px; 
-            
+            padding: 20px 0px 0px 0px; 
         }
         & ul li {
             color: white;
