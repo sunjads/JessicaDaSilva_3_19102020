@@ -1,36 +1,47 @@
-/*.background-loading{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    animation: transition-loading 3s ease-in-out;
+#lapage{
+    animation: transition-loading 1.5s linear ; 
+    opacity: 1;
 }
 @keyframes transition-loading{
-    0%,90%{
-        opacity: 1;
-    }
-    100%{
+    0%{
         opacity: 0;
     }
-}*/
+    99%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
 .loader {
-    display: none;
     border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid #db34b7; /* Blue */
+    border-top: 16px solid $color-primary;
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    animation: spin 2.5s linear  infinite;
+    animation: spin 1s linear;
     position: absolute;
     top: 50%;
     left: 50%;
+    opacity: 0;
   }
   
   @keyframes spin {
     0% { 
         transform: rotate(0deg);
+        opacity: 1;
+     }
+     10%{
+        border-top: 16px solid $color-secondary; 
+     }
+     90%{
+        transform: rotate(360deg); 
+        opacity: 1;
+        border-top: 16px solid $color-tertiary; 
      }
     100% { 
         transform: rotate(360deg); 
+        opacity: 0;
     }
   }
 

@@ -121,8 +121,8 @@
     width: 5px;
     padding:5px 15px 18px 8px;
     position: absolute;
-    left: -15%;
-  top: 25%;
+    left: -14%;
+    top: 25%;
 }
 /* le bouton coeur qui se remplie en hover */
 .container{
@@ -158,5 +158,8 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: 0px white;
 }
+}
+#bouton, #bouton-commander {
+  @include bouton-linear-gradient-desktop;
 }
 }

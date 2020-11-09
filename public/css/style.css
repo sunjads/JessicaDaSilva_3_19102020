@@ -6,6 +6,7 @@
   font-size: 1em;
   height: 7vh;
   width: 55vw;
+  max-width: 308px;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
@@ -42,6 +43,7 @@
   font-size: 1em;
   height: 7vh;
   width: 55vw;
+  max-width: 308px;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
@@ -124,39 +126,9 @@
 
 @media screen and (min-width: 768px) {
   #bouton, #bouton-commander {
-    background: linear-gradient(#FF79DA, #9356DC);
-    color: white;
     font-size: 1em;
     height: 7vh;
     width: 40vw;
-    border-radius: 30px;
-    border: none;
-    box-shadow: 0px 5px 5px 1px #d8d6d6;
-  }
-  #bouton:link, #bouton-commander:link {
-    outline: none;
-    /*pour retirer contour noir lors du click*/
-    border: none;
-  }
-  #bouton:visited, #bouton-commander:visited {
-    outline: none;
-    border: none;
-  }
-  #bouton:focus, #bouton-commander:focus {
-    outline: none;
-    border: none;
-  }
-  #bouton:hover, #bouton-commander:hover {
-    outline: none;
-    border: none;
-    background: linear-gradient(#ffb2f3, #ce52ff);
-    box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
-    -webkit-transition: box-shadow 1s ease;
-    transition: box-shadow 1s ease;
-  }
-  #bouton:active, #bouton-commander:active {
-    outline: none;
-    border: none;
   }
 
   .purple-num {
@@ -219,7 +191,7 @@
     width: 5px;
     padding: 5px 15px 18px 8px;
     position: absolute;
-    left: -15%;
+    left: -14%;
     top: 25%;
   }
 
@@ -258,42 +230,59 @@
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0px white;
   }
+
+  #bouton, #bouton-commander {
+    font-size: 1.2em;
+    height: 7vh;
+    width: 25vw;
+  }
 }
-/*.background-loading{
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-    animation: transition-loading 3s ease-in-out;
+#lapage {
+  animation: transition-loading 1.5s linear;
+  opacity: 1;
 }
-@keyframes transition-loading{
-    0%,90%{
-        opacity: 1;
-    }
-    100%{
-        opacity: 0;
-    }
-}*/
+
+@keyframes transition-loading {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .loader {
-  display: none;
   border: 16px solid #f3f3f3;
   /* Light grey */
-  border-top: 16px solid #db34b7;
-  /* Blue */
+  border-top: 16px solid #9356DC;
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  animation: spin 2.5s linear infinite;
+  animation: spin 1s linear;
   position: absolute;
   top: 50%;
   left: 50%;
+  opacity: 0;
 }
 
 @keyframes spin {
   0% {
     transform: rotate(0deg);
+    opacity: 1;
+  }
+  10% {
+    border-top: 16px solid #FF79DA;
+  }
+  90% {
+    transform: rotate(360deg);
+    opacity: 1;
+    border-top: 16px solid #99E2D0;
   }
   100% {
     transform: rotate(360deg);
+    opacity: 0;
   }
 }
 header {
@@ -355,7 +344,7 @@ header .fas {
 footer {
   background-color: #424242;
   width: 100vw;
-  height: 38vh;
+  height: 35vh;
 }
 footer h2 {
   color: white;
@@ -852,6 +841,7 @@ footer ul li .fas {
   font-size: 1em;
   height: 7vh;
   width: 55vw;
+  max-width: 308px;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
@@ -888,6 +878,7 @@ footer ul li .fas {
   font-size: 1em;
   height: 7vh;
   width: 55vw;
+  max-width: 308px;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
@@ -970,39 +961,9 @@ footer ul li .fas {
 
 @media screen and (min-width: 768px) {
   #bouton, #bouton-commander {
-    background: linear-gradient(#FF79DA, #9356DC);
-    color: white;
     font-size: 1em;
     height: 7vh;
     width: 40vw;
-    border-radius: 30px;
-    border: none;
-    box-shadow: 0px 5px 5px 1px #d8d6d6;
-  }
-  #bouton:link, #bouton-commander:link {
-    outline: none;
-    /*pour retirer contour noir lors du click*/
-    border: none;
-  }
-  #bouton:visited, #bouton-commander:visited {
-    outline: none;
-    border: none;
-  }
-  #bouton:focus, #bouton-commander:focus {
-    outline: none;
-    border: none;
-  }
-  #bouton:hover, #bouton-commander:hover {
-    outline: none;
-    border: none;
-    background: linear-gradient(#ffb2f3, #ce52ff);
-    box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
-    -webkit-transition: box-shadow 1s ease;
-    transition: box-shadow 1s ease;
-  }
-  #bouton:active, #bouton-commander:active {
-    outline: none;
-    border: none;
   }
 
   .purple-num {
@@ -1065,7 +1026,7 @@ footer ul li .fas {
     width: 5px;
     padding: 5px 15px 18px 8px;
     position: absolute;
-    left: -15%;
+    left: -14%;
     top: 25%;
   }
 
@@ -1103,6 +1064,12 @@ footer ul li .fas {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0px white;
+  }
+
+  #bouton, #bouton-commander {
+    font-size: 1.2em;
+    height: 7vh;
+    width: 25vw;
   }
 }
 body {
@@ -1215,6 +1182,13 @@ body {
   margin-top: 0px;
   animation: slide-menu 2.5s ease;
   transition-delay: 1000ms;
+  /*& h2::after {
+      content: "";
+      position:absolute;
+      bottom: 25%;
+      height: 50%;
+      border-bottom: blue 4px solid;
+  }*/
 }
 .menu_détails_desserts h2 {
   font-size: 1.2em;
@@ -1239,7 +1213,8 @@ body {
   box-shadow: #dad8d8 1px 3px 5px 2px;
 }
 .menu_détails_desserts h2 {
-  padding: 30px 0px 20px 20px;
+  padding: 30px 0px 10px 20px;
+  position: relative;
 }
 
 @keyframes slide-menu {
@@ -1255,9 +1230,6 @@ body {
     opacity: 1;
   }
 }
-/*& :hover{
-    transform: translate(0, -100% );   
-    transition: transform  0.5ms ease-in;*/
 /* descriptif des plats - h3 et p*/
 .menu_prix {
   height: 5vh;
@@ -1294,9 +1266,9 @@ body {
 }
 
 .form-commander {
-  height: 20vh;
+  height: 25vh;
   text-align: center;
-  padding: 40px 0px;
+  padding: 20px 0px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1322,7 +1294,7 @@ body {
 
   .img-principale {
     width: 100vw;
-    height: 50vh;
+    height: 60vh;
   }
   .img-principale img {
     width: 100%;
@@ -1343,7 +1315,7 @@ body {
   }
   .title_menu .far {
     position: absolute;
-    top: 58%;
+    top: 68%;
     left: 85%;
     font-size: 35px;
   }
@@ -1351,10 +1323,14 @@ body {
   .menu_détails, .menu_détails_plats, .menu_détails_desserts {
     background-color: #f1f1f1;
     margin-top: 0px;
+    height: max-content;
   }
   .menu_détails h2, .menu_détails_plats h2, .menu_détails_desserts h2 {
+    width: 100vw;
     font-size: 1.6em;
-    padding-left: 20px;
+    padding-left: 110px;
+    max-width: 768px;
+    margin: auto;
   }
   .menu_détails ul, .menu_détails_plats ul, .menu_détails_desserts ul {
     padding: 0;
@@ -1373,10 +1349,61 @@ body {
     font-size: 0.9em;
     max-width: 540px;
     max-height: 71px;
+    margin-bottom: 10px;
   }
   .menu_détails h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
     padding: 12px 7px 0px 7px;
     font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .img-principale {
+    height: 70vh;
+  }
+
+  .title_menu .far {
+    position: absolute;
+    top: 78%;
+    left: 85%;
+    font-size: 35px;
+  }
+}
+/* partie plats, entrées, desserts*/
+.menu_détails {
+  background-color: #f1f1f1;
+  margin-top: 0px;
+  animation: slide-menu 1.5s ease;
+  height: max-content;
+}
+.menu_détails h2 {
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+.menu_détails ul {
+  padding: 0;
+  width: 100vw;
+}
+.menu_détails ul li {
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  list-style-type: none;
+  box-shadow: #dad8d8 1px 6px 15px 5px;
+  border-radius: 15px;
+}
+.menu_détails h3 {
+  padding: 12px 7px 0px 7px;
+}
+.menu_détails ul li {
+  box-shadow: #dad8d8 1px 3px 5px 2px;
+}
+.menu_détails h2 {
+  padding: 30px 0px 20px 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu_détails {
+    height: 68vh;
   }
 }
 * {
