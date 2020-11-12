@@ -153,31 +153,25 @@
 @media screen and (min-width: 768px){
 /*partie fonctionnement du site ohmyfood*/
     #section_fonctionnement {
+    width: 100vw;
+    padding-bottom: 50px;
+    & h1{
+        padding: 30px 0px 20px 40px;
+    }
+    & ul{
         width: 100vw;
-        padding-bottom: 50px;
-        & h1{
-            padding: 30px 0px 20px 40px;
-        }
-        & ul{
-            width: 100vw;
-            padding-left: 50px;
-        }
-        & ul li{
-            background-color: $grey-background;
-            list-style-type: none;
-            width: 60%;
-            height: 9vh;
-            margin: auto;
-            border-radius: 20px;
-            box-shadow: rgb(211, 209, 209)1px 6px 12px 0px;
-            padding-top: 7px;
-            margin-bottom: 25px;
-        & a{
-            list-style-type: none;
-            text-decoration: none;
-        }
-        }
-        }
+        padding-left: 50px;
+    }
+    & ul li{
+        background-color: $grey-background;
+        list-style-type: none;
+        width: 60%;
+        height: 9vh;
+        margin: auto;
+        padding-top: 7px;
+        margin-bottom: 25px;
+    }
+}
 /*partie vignette*/
     #section_restaurant{
         background-color: $grey-background;
@@ -221,6 +215,31 @@
 
 /*format desktop*/
 @media screen and (min-width: 1024px){
+    #section_fonctionnement {
+        width: 100vw;
+        padding-bottom: 50px;
+        & h1{
+            padding: 30px 0px 20px 40px;
+        }
+        & ul{
+            width: 100vw;
+            padding-left: 50px;
+            max-width: 1034px;
+            max-height: 221px;
+            margin: auto;
+        }
+        & ul li{
+            background-color: $grey-background;
+            list-style-type: none;
+            width: 60%;
+            height: 9vh;
+            margin: auto;
+            padding-top: 7px;
+            margin-bottom: 25px;
+            max-width: 590px;
+            max-height: 57px;
+        }
+        }
 /*partie vignette*/
     .vignette_menu{
         background-color: white;

@@ -3,10 +3,17 @@
 
 /*le bouton linear gradient*/
 #bouton {
-    @include bouton-linear-gradient;}
+    @include bouton-linear-gradient;
+  }
 
 #bouton-commander{
     @include bouton-linear-gradient;
+    margin-top: 30px;
+}
+.form-commander {
+  height: 25vh;
+  text-align: center;
+  padding:20px 0px;
 }
 
 /*Le numéro violet dans la page d'acceuil*/

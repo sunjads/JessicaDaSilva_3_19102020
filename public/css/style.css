@@ -1,4 +1,11 @@
 @charset "UTF-8";
+/*carte menu format portable pour menu1,3,4*/
+/*carte menu format portable pour la page 2*/
+/*carte menu format tablette dans les pages menu1,3,4*/
+/*carte menu format tablet dans la page 2*/
+/*carte menu format desktop pour page1,3,4*/
+/*carte menu format desktop dans la page 2*/
+/*bouton linear gradient*/
 /*le bouton linear gradient*/
 #bouton {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -47,6 +54,7 @@
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
+  margin-top: 30px;
 }
 #bouton-commander:link {
   outline: none;
@@ -72,6 +80,12 @@
 #bouton-commander:active {
   outline: none;
   border: none;
+}
+
+.form-commander {
+  height: 25vh;
+  text-align: center;
+  padding: 20px 0px;
 }
 
 /*Le numéro violet dans la page d'acceuil*/
@@ -297,8 +311,6 @@ header img {
   width: 45%;
   height: 26%;
   margin: auto;
-  max-width: 222px;
-  max-height: 29px;
 }
 header .paris_belleville {
   background-color: #e6e2f0;
@@ -669,14 +681,8 @@ footer ul li .fas {
     width: 60%;
     height: 9vh;
     margin: auto;
-    border-radius: 20px;
-    box-shadow: #d3d1d1 1px 6px 12px 0px;
     padding-top: 7px;
     margin-bottom: 25px;
-  }
-  #section_fonctionnement ul li a {
-    list-style-type: none;
-    text-decoration: none;
   }
 
   /*partie vignette*/
@@ -758,6 +764,32 @@ footer ul li .fas {
 }
 /*format desktop*/
 @media screen and (min-width: 1024px) {
+  #section_fonctionnement {
+    width: 100vw;
+    padding-bottom: 50px;
+  }
+  #section_fonctionnement h1 {
+    padding: 30px 0px 20px 40px;
+  }
+  #section_fonctionnement ul {
+    width: 100vw;
+    padding-left: 50px;
+    max-width: 1034px;
+    max-height: 221px;
+    margin: auto;
+  }
+  #section_fonctionnement ul li {
+    background-color: #f1f1f1;
+    list-style-type: none;
+    width: 60%;
+    height: 9vh;
+    margin: auto;
+    padding-top: 7px;
+    margin-bottom: 25px;
+    max-width: 590px;
+    max-height: 57px;
+  }
+
   /*partie vignette*/
   .vignette_menu {
     background-color: white;
@@ -834,6 +866,20 @@ footer ul li .fas {
     padding: 0px 0px 0px 10px;
   }
 }
+/*carte menu format portable pour menu1,3,4*/
+/*carte menu format portable pour la page 2*/
+/*carte menu format tablette dans les pages menu1,3,4*/
+/*carte menu format tablet dans la page 2*/
+/*carte menu format desktop pour page1,3,4*/
+/*carte menu format desktop dans la page 2*/
+/*bouton linear gradient*/
+/*carte menu format portable pour menu1,3,4*/
+/*carte menu format portable pour la page 2*/
+/*carte menu format tablette dans les pages menu1,3,4*/
+/*carte menu format tablet dans la page 2*/
+/*carte menu format desktop pour page1,3,4*/
+/*carte menu format desktop dans la page 2*/
+/*bouton linear gradient*/
 /*le bouton linear gradient*/
 #bouton {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -882,6 +928,7 @@ footer ul li .fas {
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
+  margin-top: 30px;
 }
 #bouton-commander:link {
   outline: none;
@@ -907,6 +954,12 @@ footer ul li .fas {
 #bouton-commander:active {
   outline: none;
   border: none;
+}
+
+.form-commander {
+  height: 25vh;
+  text-align: center;
+  padding: 20px 0px;
 }
 
 /*Le numéro violet dans la page d'acceuil*/
@@ -1110,45 +1163,53 @@ body {
   background-color: #f1f1f1;
   border-radius: 50px 50px 0px 0px;
   margin-top: -50px;
-  height: 190vh;
+  height: max-content;
 }
 
 /* partie plats, entrées, desserts*/
-.menu_détails {
+.menu_détails_entrées {
   background-color: #f1f1f1;
   margin-top: 0px;
-  animation: slide-menu 1.5s ease;
+  height: max-content;
+  animation: slide-menu 2s ease;
 }
-.menu_détails h2 {
+.menu_détails_entrées h2 {
   font-size: 1.2em;
   padding-left: 10px;
 }
-.menu_détails ul {
+.menu_détails_entrées ul {
   padding: 0;
   width: 100vw;
+  max-width: 568px;
+  max-height: 243px;
+  margin: auto;
 }
-.menu_détails ul li {
+.menu_détails_entrées ul li {
   background-color: white;
   width: 95%;
   margin: auto;
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
   border-radius: 15px;
+  max-width: 539px;
+  max-height: 71px;
+  margin-bottom: 15px;
 }
-.menu_détails h3 {
+.menu_détails_entrées h3 {
   padding: 12px 7px 0px 7px;
 }
-.menu_détails ul li {
+.menu_détails_entrées ul li {
   box-shadow: #dad8d8 1px 3px 5px 2px;
 }
-.menu_détails h2 {
+.menu_détails_entrées h2 {
   padding: 30px 0px 20px 20px;
 }
 
 .menu_détails_plats {
   background-color: #f1f1f1;
   margin-top: 0px;
-  animation: slide-menu 2s ease;
+  height: max-content;
+  animation: slide-menu 2.5s ease;
   transition-delay: 1000ms;
 }
 .menu_détails_plats h2 {
@@ -1158,6 +1219,9 @@ body {
 .menu_détails_plats ul {
   padding: 0;
   width: 100vw;
+  max-width: 568px;
+  max-height: 243px;
+  margin: auto;
 }
 .menu_détails_plats ul li {
   background-color: white;
@@ -1166,6 +1230,9 @@ body {
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
   border-radius: 15px;
+  max-width: 539px;
+  max-height: 71px;
+  margin-bottom: 15px;
 }
 .menu_détails_plats h3 {
   padding: 12px 7px 0px 7px;
@@ -1180,7 +1247,8 @@ body {
 .menu_détails_desserts {
   background-color: #f1f1f1;
   margin-top: 0px;
-  animation: slide-menu 2.5s ease;
+  height: max-content;
+  animation: slide-menu 3s ease;
   transition-delay: 1000ms;
   /*& h2::after {
       content: "";
@@ -1197,6 +1265,9 @@ body {
 .menu_détails_desserts ul {
   padding: 0;
   width: 100vw;
+  max-width: 568px;
+  max-height: 243px;
+  margin: auto;
 }
 .menu_détails_desserts ul li {
   background-color: white;
@@ -1205,6 +1276,9 @@ body {
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
   border-radius: 15px;
+  max-width: 539px;
+  max-height: 71px;
+  margin-bottom: 15px;
 }
 .menu_détails_desserts h3 {
   padding: 12px 7px 0px 7px;
@@ -1246,6 +1320,7 @@ body {
   font-weight: bold;
 }
 
+/* titre du menu et icone coeur */
 .title_menu {
   height: 10vh;
 }
@@ -1265,13 +1340,75 @@ body {
   font-size: 25px;
 }
 
-.form-commander {
-  height: 25vh;
-  text-align: center;
-  padding: 20px 0px;
-}
-
+/*format tablette*/
 @media screen and (min-width: 768px) {
+  .menu_détails_entrées {
+    background-color: #f1f1f1;
+    margin-top: 0px;
+    height: max-content;
+  }
+  .menu_détails_entrées h2 {
+    font-size: 1.2em;
+    padding-left: 10px;
+  }
+  .menu_détails_entrées ul {
+    padding: 0;
+    width: 100vw;
+    max-width: 568px;
+    max-height: 243px;
+    margin: auto;
+  }
+  .menu_détails_entrées ul li {
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    list-style-type: none;
+    box-shadow: #dad8d8 1px 6px 15px 5px;
+    border-radius: 15px;
+    max-width: 539px;
+    max-height: 71px;
+    margin-bottom: 15px;
+  }
+  .menu_détails_entrées h3 {
+    padding: 12px 7px 0px 7px;
+  }
+
+  .menu_détails_plats, .menu_détails_desserts {
+    background-color: #f1f1f1;
+    margin-top: 0px;
+  }
+  .menu_détails_plats h2, .menu_détails_desserts h2 {
+    width: 100vw;
+    font-size: 1.6em;
+    padding-left: 20px;
+    max-width: 768px;
+    margin: auto;
+  }
+  .menu_détails_plats ul, .menu_détails_desserts ul {
+    padding: 0;
+    width: 100vw;
+    max-width: none;
+    max-height: none;
+    margin: auto;
+    background: rebeccapurple;
+  }
+  .menu_détails_plats ul li, .menu_détails_desserts ul li {
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    list-style-type: none;
+    box-shadow: #dad8d8 1px 6px 15px 5px;
+    border-radius: 15px;
+    font-size: 0.9em;
+    max-width: 1000px;
+    max-height: 100px;
+    margin-bottom: 10px;
+  }
+  .menu_détails_plats h3, .menu_détails_desserts h3 {
+    padding: 12px 7px 0px 7px;
+    font-size: 1.4em;
+  }
+
   .header_menu {
     width: 100vw;
     height: 12vh;
@@ -1319,93 +1456,254 @@ body {
     left: 85%;
     font-size: 35px;
   }
-
-  .menu_détails, .menu_détails_plats, .menu_détails_desserts {
-    background-color: #f1f1f1;
+}
+@media screen and (min-width: 768px) and (min-width: 1024px) {
+  .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts {
     margin-top: 0px;
-    height: max-content;
   }
-  .menu_détails h2, .menu_détails_plats h2, .menu_détails_desserts h2 {
+  .menu_détails_entrées h2, .menu_détails_plats h2, .menu_détails_desserts h2 {
     width: 100vw;
-    font-size: 1.6em;
-    padding-left: 110px;
+    font-size: 1.7em;
     max-width: 768px;
-    margin: auto;
+    padding-left: 80px;
+    margin: 0;
   }
-  .menu_détails ul, .menu_détails_plats ul, .menu_détails_desserts ul {
+  .menu_détails_entrées ul, .menu_détails_plats ul, .menu_détails_desserts ul {
     padding: 0;
     width: 100vw;
-    max-width: 568px;
-    max-height: 243px;
+    max-width: none;
+    max-height: none;
     margin: auto;
   }
-  .menu_détails ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
+  .menu_détails_entrées ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
     background-color: white;
     width: 95%;
     margin: auto;
     list-style-type: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
     border-radius: 15px;
-    font-size: 0.9em;
-    max-width: 540px;
-    max-height: 71px;
-    margin-bottom: 10px;
+    max-width: 1000px;
+    max-height: 100px;
+    margin-bottom: 15px;
   }
-  .menu_détails h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
+  .menu_détails_entrées h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
     padding: 12px 7px 0px 7px;
-    font-size: 1.2em;
   }
-}
-@media screen and (min-width: 1024px) {
+
+  .description_menu {
+    background-color: #f1f1f1;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: -100px;
+    height: max-content;
+  }
+
   .img-principale {
-    height: 70vh;
+    height: 78vh;
+  }
+
+  .title_menu h1 {
+    font-family: "Shrikhand", cursive;
+    font-size: 2.5em;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-left: 60px;
   }
 
   .title_menu .far {
     position: absolute;
-    top: 78%;
-    left: 85%;
-    font-size: 35px;
+    top: 82%;
+    left: 92%;
+    font-size: 38px;
   }
 }
 /* partie plats, entrées, desserts*/
-.menu_détails {
+.menu_détails_entrées_plus {
   background-color: #f1f1f1;
   margin-top: 0px;
-  animation: slide-menu 1.5s ease;
   height: max-content;
+  animation: slide-menu 1.5s ease;
+  max-height: 515px;
 }
-.menu_détails h2 {
+.menu_détails_entrées_plus h2 {
+  font-size: 1.2em;
+  padding: 30px 0px 20px 20px;
+}
+.menu_détails_entrées_plus ul {
+  padding: 0;
+  width: 100vw;
+  max-width: 568px;
+  max-height: none;
+  margin: auto;
+  background: yellow;
+}
+.menu_détails_entrées_plus ul li {
+  background-color: pink;
+  width: 95%;
+  list-style-type: none;
+  box-shadow: #dad8d8 1px 6px 15px 5px;
+  border-radius: 15px;
+  max-width: 539px;
+  max-height: 71px;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.menu_détails_entrées_plus h3 {
+  padding: 12px 7px 0px 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .menu_détails_entrées_plus {
+    margin-top: 0px;
+    height: 68vh;
+  }
+  .menu_détails_entrées_plus h2 {
+    width: 100vw;
+    font-size: 1.6em;
+    padding-left: 20px;
+    max-width: 768px;
+    margin: auto;
+  }
+  .menu_détails_entrées_plus ul {
+    max-width: none;
+    max-height: none;
+    padding: 0;
+    width: 100vw;
+    margin: auto;
+  }
+  .menu_détails_entrées_plus ul li {
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    list-style-type: none;
+    box-shadow: #dad8d8 1px 6px 15px 5px;
+    border-radius: 15px;
+    max-width: 1000px;
+    max-height: 100px;
+    margin-bottom: 15px;
+  }
+  .menu_détails_entrées_plus h3 {
+    padding: 12px 7px 0px 7px;
+    font-size: 1.4em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu_détails_entrées_plus {
+    margin-top: 0px;
+  }
+  .menu_détails_entrées_plus h2 {
+    width: 100vw;
+    font-size: 1.7em;
+    max-width: 768px;
+    padding-left: 80px;
+    margin: 0;
+  }
+  .menu_détails_entrées_plus ul {
+    padding: 0;
+    width: 100vw;
+    max-width: none;
+    max-height: none;
+    margin: auto;
+  }
+  .menu_détails_entrées_plus ul li {
+    background-color: white;
+    width: 95%;
+    margin: auto;
+    list-style-type: none;
+    box-shadow: #dad8d8 1px 6px 15px 5px;
+    border-radius: 15px;
+    max-width: 1000px;
+    max-height: 100px;
+    margin-bottom: 15px;
+  }
+  .menu_détails_entrées_plus h3 {
+    padding: 12px 7px 0px 7px;
+  }
+}
+/* partie plats, entrées, desserts*/
+.menu_détails_entrées {
+  background-color: #f1f1f1;
+  margin-top: 0px;
+  height: max-content;
+  animation: slide-menu 1.5s ease;
+}
+.menu_détails_entrées h2 {
   font-size: 1.2em;
   padding-left: 10px;
 }
-.menu_détails ul {
+.menu_détails_entrées ul {
   padding: 0;
   width: 100vw;
+  max-width: 568px;
+  max-height: 243px;
+  margin: auto;
 }
-.menu_détails ul li {
+.menu_détails_entrées ul li {
   background-color: white;
   width: 95%;
   margin: auto;
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
   border-radius: 15px;
+  max-width: 539px;
+  max-height: 71px;
+  margin-bottom: 15px;
 }
-.menu_détails h3 {
+.menu_détails_entrées h3 {
   padding: 12px 7px 0px 7px;
 }
-.menu_détails ul li {
+.menu_détails_entrées ul li {
   box-shadow: #dad8d8 1px 3px 5px 2px;
 }
-.menu_détails h2 {
+.menu_détails_entrées h2 {
   padding: 30px 0px 20px 20px;
 }
 
-@media screen and (min-width: 768px) {
-  .menu_détails {
-    height: 68vh;
-  }
+/* partie plats, entrées, desserts*/
+.menu_détails_entrées {
+  background-color: #f1f1f1;
+  margin-top: 0px;
+  height: max-content;
+  animation: slide-menu 1.5s ease;
 }
+.menu_détails_entrées h2 {
+  font-size: 1.2em;
+  padding-left: 10px;
+}
+.menu_détails_entrées ul {
+  padding: 0;
+  width: 100vw;
+  max-width: 568px;
+  max-height: 243px;
+  margin: auto;
+}
+.menu_détails_entrées ul li {
+  background-color: white;
+  width: 95%;
+  margin: auto;
+  list-style-type: none;
+  box-shadow: #dad8d8 1px 6px 15px 5px;
+  border-radius: 15px;
+  max-width: 539px;
+  max-height: 71px;
+  margin-bottom: 15px;
+}
+.menu_détails_entrées h3 {
+  padding: 12px 7px 0px 7px;
+}
+.menu_détails_entrées ul li {
+  box-shadow: #dad8d8 1px 3px 5px 2px;
+}
+.menu_détails_entrées h2 {
+  padding: 30px 0px 20px 20px;
+}
+
+/*carte menu format portable pour menu1,3,4*/
+/*carte menu format portable pour la page 2*/
+/*carte menu format tablette dans les pages menu1,3,4*/
+/*carte menu format tablet dans la page 2*/
+/*carte menu format desktop pour page1,3,4*/
+/*carte menu format desktop dans la page 2*/
+/*bouton linear gradient*/
 * {
   margin: 0;
   padding: 0;

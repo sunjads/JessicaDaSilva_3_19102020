@@ -37,12 +37,12 @@ body{
     background-color: $grey-background;
     border-radius: 50px 50px 0px 0px;
     margin-top: -50px;
-    height: 190vh;
+    height: max-content;
 }
 /* partie plats, entrées, desserts*/
-.menu_détails{
+.menu_détails_entrées{
     @include slide-card-menu;
-    animation: slide-menu 1.5s ease;
+    animation: slide-menu 2s  ease;
     & ul li {
     box-shadow: rgb(218, 216, 216)1px 3px 5px 2px;
     }
@@ -52,7 +52,7 @@ body{
 }
 .menu_détails_plats{
     @include slide-card-menu;
-    animation: slide-menu 2s ease;
+    animation: slide-menu 2.5s ease;
     transition-delay: 1000ms;
     & ul li {
         box-shadow: rgb(218, 216, 216)1px 3px 5px 2px;
@@ -63,7 +63,7 @@ body{
 }
 .menu_détails_desserts{
     @include slide-card-menu;
-    animation: slide-menu 2.5s ease;
+    animation: slide-menu 3s ease;
     transition-delay: 1000ms;
     & ul li {
         box-shadow: rgb(218, 216, 216)1px 3px 5px 2px;
@@ -80,7 +80,7 @@ body{
             border-bottom: blue 4px solid;
         }*/
 }
-
+ 
 @keyframes slide-menu{
     0%{
         transform: translate(0,5%);
@@ -110,6 +110,7 @@ body{
         font-weight: bold;
     }
 }
+/* titre du menu et icone coeur */
 .title_menu {
     height: 10vh;
     & h1{
@@ -130,12 +131,14 @@ body{
     }
 }
 
-.form-commander {
-    height: 25vh;
-    text-align: center;
-    padding:20px 0px;
-}
+/*format tablette*/
 @media screen and (min-width: 768px){
+    .menu_détails_entrées{
+        @include slide-card-menu;
+    }
+    .menu_détails_plats, .menu_détails_desserts{
+        @include slide-card-menu-tablet;
+    } 
     .header_menu{
         width: 100vw;
         height: 12vh;
@@ -182,18 +185,33 @@ body{
             font-size: 35px;  
         }
     }
-    .menu_détails, .menu_détails_plats, .menu_détails_desserts{
-        @include slide-card-menu-tablet
-        }
-}
+    
+
 @media screen and (min-width: 1024px){
+    .menu_détails_entrées,.menu_détails_plats, .menu_détails_desserts{
+        @include slide-card-menu-plus-desktop;
+    }
+    .description_menu{
+        background-color: $grey-background;
+        border-radius: 50px 50px 0px 0px;
+        margin-top: -100px;
+        height: max-content;
+    }
     .img-principale{
-        height: 70vh;
+        height: 78vh;
         }
+        .title_menu h1{
+            font-family: 'Shrikhand', cursive;
+            font-size:2.5em;
+            padding-top: 20px;
+            padding-bottom: 25px;
+            padding-left: 60px;
+        }  
         .title_menu .far {
             position: absolute;
-            top: 78%;
-            left: 85%;
-            font-size: 35px;  
+            top: 82%;
+            left: 92%;
+            font-size: 38px;  
         }
+    }
 }
