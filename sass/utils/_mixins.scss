@@ -7,14 +7,25 @@
     height: max-content;
     & h2{
         font-size: 1.2em;
-        padding-left: 10px;
+        padding: 30px 0px 20px 20px; 
+        position: relative;
+        max-width: 425px;
+    }
+    & h2::after {
+        position: absolute;
+        content: ""; 
+        left: 20px;
+        top: 85%;
+        width: 12%;
+        border-bottom: 5px $color-tertiary solid;
     }
     & ul {
         padding: 0;
         width: 100vw;
         max-width: 568px;
-        max-height: 243px;
+        max-height: 260px;
         margin: auto;
+        padding-top: 15px;
     }
     & ul li{
         background-color: white;
@@ -39,17 +50,26 @@
     & h2{
         font-size: 1.2em;
         padding: 30px 0px 20px 20px; 
+        max-width: 425px;
+        position: relative;
+    }
+    & h2::after {
+        position: absolute;
+        content: ""; 
+        left: 20px;
+        top: 85%;
+        width: 12%;
+        border-bottom: 5px $color-tertiary solid;
     }
     & ul {
         padding: 0;
         width: 100vw;
         max-width: 568px;
-        max-height: none;
         margin: auto;
-        background: yellow;
+        padding: 10px 0px 0px 0px;
     }
     & ul li{
-        background-color:pink;
+        background-color:white;
         width: 95%;
         list-style-type: none;
         box-shadow: rgb(218, 216, 216)1px 6px 15px 5px;
@@ -70,9 +90,16 @@
     & h2{
         width: 100vw;
         font-size: 1.6em;
-        padding-left: 20px;
-        max-width: 768px;
-        margin:auto;
+        padding:10px 0px 15px 20px;
+        max-width: 425px;
+    }
+    & h2::after {
+        position: absolute;
+        content: ""; 
+        left: 20px;
+        top: 85%;
+        width: 12%;
+        border-bottom: 5px $color-tertiary solid;
     }
     & ul {
         padding: 0;
@@ -80,7 +107,7 @@
         max-width: none;
         max-height: none;
         margin: auto;
-        background: rebeccapurple;
+        padding-top: 30px;
     }
     & ul li{
         background-color: white;
@@ -92,7 +119,7 @@
         font-size: 0.9em;
         max-width: 1000px;
         max-height: 100px;
-        margin-bottom: 10px; 
+        margin-bottom: 15px; 
     }
     & h3{
         padding: 12px 7px 0px 7px;
@@ -105,10 +132,18 @@
     height: 68vh;
     & h2{
         width: 100vw;
+        height: 10vh;
         font-size: 1.6em;
         padding-left: 20px;
-        max-width: 768px;
-        margin:auto;
+        max-width: 425px;
+    }
+    & h2::after {
+        position: absolute;
+        content: ""; 
+        left: 20px;
+        top: 65%;
+        width: 12%;
+        border-bottom: 5px $color-tertiary solid;
     }
     & ul {
         max-width: none;
@@ -134,14 +169,21 @@
     }
 }
 /*carte menu format desktop pour page1,3,4*/
-@mixin slide-card-menu-plus-desktop{
+@mixin slide-card-menu-desktop{
     margin-top: 0px;
     & h2{
         width: 100vw;
-        font-size: 1.7em;
-        max-width: 768px;
-        padding-left: 80px;
+        font-size: 1.8em;
+        padding-left: 20px;
         margin:0;
+    }
+    & h2::after {
+        position: absolute;
+        content: ""; 
+        left: 20px;
+        top: 85%;
+        width: 12%;
+        border-bottom: 5px $color-tertiary solid;
     }
     & ul {
         padding: 0;
@@ -149,6 +191,8 @@
         max-width: none;
         max-height: none;
         margin: auto;
+        padding-top: 30px;
+        padding-bottom: 20px;
     }
     & ul li{
         background-color: white;
@@ -174,6 +218,14 @@
         max-width: 768px;
         padding-left: 80px;
         margin:0;
+    }
+    & h2::after {
+        position: absolute;
+        content: ""; 
+        left: 20px;
+        top: 85%;
+        width: 12%;
+        border-bottom: 5px $color-tertiary solid;
     }
     & ul {
         padding: 0;

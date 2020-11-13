@@ -337,6 +337,10 @@ header .fas {
     width: 100vw;
     height: 25vh;
   }
+  header img {
+    max-width: 345px;
+    max-height: 41px;
+  }
 
   .paris_belleville .fas {
     font-size: 16px;
@@ -1159,11 +1163,32 @@ body {
   height: 100%;
 }
 
+/*le contenant titre menu + coeur*/
 .description_menu {
   background-color: #f1f1f1;
   border-radius: 50px 50px 0px 0px;
   margin-top: -50px;
   height: max-content;
+}
+
+/* titre du menu + coeur */
+.title_menu {
+  height: 10vh;
+}
+.title_menu h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.9em;
+  padding-top: 20px;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+  border-radius: 30px 30px 0px 0px;
+  position: relative;
+}
+.title_menu .far {
+  position: absolute;
+  top: 44%;
+  left: 85%;
+  font-size: 25px;
 }
 
 /* partie plats, entrées, desserts*/
@@ -1175,14 +1200,25 @@ body {
 }
 .menu_détails_entrées h2 {
   font-size: 1.2em;
-  padding-left: 10px;
+  padding: 30px 0px 20px 20px;
+  position: relative;
+  max-width: 425px;
+}
+.menu_détails_entrées h2::after {
+  position: absolute;
+  content: "";
+  left: 20px;
+  top: 85%;
+  width: 12%;
+  border-bottom: 5px #99E2D0 solid;
 }
 .menu_détails_entrées ul {
   padding: 0;
   width: 100vw;
   max-width: 568px;
-  max-height: 243px;
+  max-height: 260px;
   margin: auto;
+  padding-top: 15px;
 }
 .menu_détails_entrées ul li {
   background-color: white;
@@ -1198,12 +1234,6 @@ body {
 .menu_détails_entrées h3 {
   padding: 12px 7px 0px 7px;
 }
-.menu_détails_entrées ul li {
-  box-shadow: #dad8d8 1px 3px 5px 2px;
-}
-.menu_détails_entrées h2 {
-  padding: 30px 0px 20px 20px;
-}
 
 .menu_détails_plats {
   background-color: #f1f1f1;
@@ -1214,14 +1244,25 @@ body {
 }
 .menu_détails_plats h2 {
   font-size: 1.2em;
-  padding-left: 10px;
+  padding: 30px 0px 20px 20px;
+  position: relative;
+  max-width: 425px;
+}
+.menu_détails_plats h2::after {
+  position: absolute;
+  content: "";
+  left: 20px;
+  top: 85%;
+  width: 12%;
+  border-bottom: 5px #99E2D0 solid;
 }
 .menu_détails_plats ul {
   padding: 0;
   width: 100vw;
   max-width: 568px;
-  max-height: 243px;
+  max-height: 260px;
   margin: auto;
+  padding-top: 15px;
 }
 .menu_détails_plats ul li {
   background-color: white;
@@ -1237,12 +1278,6 @@ body {
 .menu_détails_plats h3 {
   padding: 12px 7px 0px 7px;
 }
-.menu_détails_plats ul li {
-  box-shadow: #dad8d8 1px 3px 5px 2px;
-}
-.menu_détails_plats h2 {
-  padding: 30px 0px 20px 20px;
-}
 
 .menu_détails_desserts {
   background-color: #f1f1f1;
@@ -1250,24 +1285,28 @@ body {
   height: max-content;
   animation: slide-menu 3s ease;
   transition-delay: 1000ms;
-  /*& h2::after {
-      content: "";
-      position:absolute;
-      bottom: 25%;
-      height: 50%;
-      border-bottom: blue 4px solid;
-  }*/
 }
 .menu_détails_desserts h2 {
   font-size: 1.2em;
-  padding-left: 10px;
+  padding: 30px 0px 20px 20px;
+  position: relative;
+  max-width: 425px;
+}
+.menu_détails_desserts h2::after {
+  position: absolute;
+  content: "";
+  left: 20px;
+  top: 85%;
+  width: 12%;
+  border-bottom: 5px #99E2D0 solid;
 }
 .menu_détails_desserts ul {
   padding: 0;
   width: 100vw;
   max-width: 568px;
-  max-height: 243px;
+  max-height: 260px;
   margin: auto;
+  padding-top: 15px;
 }
 .menu_détails_desserts ul li {
   background-color: white;
@@ -1282,13 +1321,6 @@ body {
 }
 .menu_détails_desserts h3 {
   padding: 12px 7px 0px 7px;
-}
-.menu_détails_desserts ul li {
-  box-shadow: #dad8d8 1px 3px 5px 2px;
-}
-.menu_détails_desserts h2 {
-  padding: 30px 0px 10px 20px;
-  position: relative;
 }
 
 @keyframes slide-menu {
@@ -1320,59 +1352,8 @@ body {
   font-weight: bold;
 }
 
-/* titre du menu et icone coeur */
-.title_menu {
-  height: 10vh;
-}
-.title_menu h1 {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.9em;
-  padding-top: 20px;
-  padding-left: 20px;
-  background-color: #f1f1f1;
-  border-radius: 30px 30px 0px 0px;
-  position: relative;
-}
-.title_menu .far {
-  position: absolute;
-  top: 44%;
-  left: 85%;
-  font-size: 25px;
-}
-
 /*format tablette*/
 @media screen and (min-width: 768px) {
-  .menu_détails_entrées {
-    background-color: #f1f1f1;
-    margin-top: 0px;
-    height: max-content;
-  }
-  .menu_détails_entrées h2 {
-    font-size: 1.2em;
-    padding-left: 10px;
-  }
-  .menu_détails_entrées ul {
-    padding: 0;
-    width: 100vw;
-    max-width: 568px;
-    max-height: 243px;
-    margin: auto;
-  }
-  .menu_détails_entrées ul li {
-    background-color: white;
-    width: 95%;
-    margin: auto;
-    list-style-type: none;
-    box-shadow: #dad8d8 1px 6px 15px 5px;
-    border-radius: 15px;
-    max-width: 539px;
-    max-height: 71px;
-    margin-bottom: 15px;
-  }
-  .menu_détails_entrées h3 {
-    padding: 12px 7px 0px 7px;
-  }
-
   .menu_détails_plats, .menu_détails_desserts {
     background-color: #f1f1f1;
     margin-top: 0px;
@@ -1380,9 +1361,16 @@ body {
   .menu_détails_plats h2, .menu_détails_desserts h2 {
     width: 100vw;
     font-size: 1.6em;
-    padding-left: 20px;
-    max-width: 768px;
-    margin: auto;
+    padding: 10px 0px 15px 20px;
+    max-width: 425px;
+  }
+  .menu_détails_plats h2::after, .menu_détails_desserts h2::after {
+    position: absolute;
+    content: "";
+    left: 20px;
+    top: 85%;
+    width: 12%;
+    border-bottom: 5px #99E2D0 solid;
   }
   .menu_détails_plats ul, .menu_détails_desserts ul {
     padding: 0;
@@ -1390,7 +1378,7 @@ body {
     max-width: none;
     max-height: none;
     margin: auto;
-    background: rebeccapurple;
+    padding-top: 30px;
   }
   .menu_détails_plats ul li, .menu_détails_desserts ul li {
     background-color: white;
@@ -1402,7 +1390,7 @@ body {
     font-size: 0.9em;
     max-width: 1000px;
     max-height: 100px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   .menu_détails_plats h3, .menu_détails_desserts h3 {
     padding: 12px 7px 0px 7px;
@@ -1458,24 +1446,33 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
-  .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts {
+  .menu_détails_plats, .menu_détails_desserts {
     margin-top: 0px;
   }
-  .menu_détails_entrées h2, .menu_détails_plats h2, .menu_détails_desserts h2 {
+  .menu_détails_plats h2, .menu_détails_desserts h2 {
     width: 100vw;
-    font-size: 1.7em;
-    max-width: 768px;
-    padding-left: 80px;
+    font-size: 1.8em;
+    padding-left: 20px;
     margin: 0;
   }
-  .menu_détails_entrées ul, .menu_détails_plats ul, .menu_détails_desserts ul {
+  .menu_détails_plats h2::after, .menu_détails_desserts h2::after {
+    position: absolute;
+    content: "";
+    left: 20px;
+    top: 85%;
+    width: 12%;
+    border-bottom: 5px #99E2D0 solid;
+  }
+  .menu_détails_plats ul, .menu_détails_desserts ul {
     padding: 0;
     width: 100vw;
     max-width: none;
     max-height: none;
     margin: auto;
+    padding-top: 30px;
+    padding-bottom: 20px;
   }
-  .menu_détails_entrées ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
+  .menu_détails_plats ul li, .menu_détails_desserts ul li {
     background-color: white;
     width: 95%;
     margin: auto;
@@ -1486,7 +1483,7 @@ body {
     max-height: 100px;
     margin-bottom: 15px;
   }
-  .menu_détails_entrées h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
+  .menu_détails_plats h3, .menu_détails_desserts h3 {
     padding: 12px 7px 0px 7px;
   }
 
@@ -1527,17 +1524,26 @@ body {
 .menu_détails_entrées_plus h2 {
   font-size: 1.2em;
   padding: 30px 0px 20px 20px;
+  max-width: 425px;
+  position: relative;
+}
+.menu_détails_entrées_plus h2::after {
+  position: absolute;
+  content: "";
+  left: 20px;
+  top: 85%;
+  width: 12%;
+  border-bottom: 5px #99E2D0 solid;
 }
 .menu_détails_entrées_plus ul {
   padding: 0;
   width: 100vw;
   max-width: 568px;
-  max-height: none;
   margin: auto;
-  background: yellow;
+  padding: 10px 0px 0px 0px;
 }
 .menu_détails_entrées_plus ul li {
-  background-color: pink;
+  background-color: white;
   width: 95%;
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
@@ -1558,10 +1564,18 @@ body {
   }
   .menu_détails_entrées_plus h2 {
     width: 100vw;
+    height: 10vh;
     font-size: 1.6em;
     padding-left: 20px;
-    max-width: 768px;
-    margin: auto;
+    max-width: 425px;
+  }
+  .menu_détails_entrées_plus h2::after {
+    position: absolute;
+    content: "";
+    left: 20px;
+    top: 65%;
+    width: 12%;
+    border-bottom: 5px #99E2D0 solid;
   }
   .menu_détails_entrées_plus ul {
     max-width: none;
@@ -1597,6 +1611,14 @@ body {
     padding-left: 80px;
     margin: 0;
   }
+  .menu_détails_entrées_plus h2::after {
+    position: absolute;
+    content: "";
+    left: 20px;
+    top: 85%;
+    width: 12%;
+    border-bottom: 5px #99E2D0 solid;
+  }
   .menu_détails_entrées_plus ul {
     padding: 0;
     width: 100vw;
@@ -1628,14 +1650,25 @@ body {
 }
 .menu_détails_entrées h2 {
   font-size: 1.2em;
-  padding-left: 10px;
+  padding: 30px 0px 20px 20px;
+  position: relative;
+  max-width: 425px;
+}
+.menu_détails_entrées h2::after {
+  position: absolute;
+  content: "";
+  left: 20px;
+  top: 85%;
+  width: 12%;
+  border-bottom: 5px #99E2D0 solid;
 }
 .menu_détails_entrées ul {
   padding: 0;
   width: 100vw;
   max-width: 568px;
-  max-height: 243px;
+  max-height: 260px;
   margin: auto;
+  padding-top: 15px;
 }
 .menu_détails_entrées ul li {
   background-color: white;
@@ -1667,14 +1700,25 @@ body {
 }
 .menu_détails_entrées h2 {
   font-size: 1.2em;
-  padding-left: 10px;
+  padding: 30px 0px 20px 20px;
+  position: relative;
+  max-width: 425px;
+}
+.menu_détails_entrées h2::after {
+  position: absolute;
+  content: "";
+  left: 20px;
+  top: 85%;
+  width: 12%;
+  border-bottom: 5px #99E2D0 solid;
 }
 .menu_détails_entrées ul {
   padding: 0;
   width: 100vw;
   max-width: 568px;
-  max-height: 243px;
+  max-height: 260px;
   margin: auto;
+  padding-top: 15px;
 }
 .menu_détails_entrées ul li {
   background-color: white;
