@@ -108,7 +108,7 @@ body{
 
 /*format tablette*/
 @media screen and (min-width: 768px){
-    .menu_détails_plats, .menu_détails_desserts{
+    .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts{
         @include slide-card-menu-tablet;
     } 
     .header_menu{
@@ -159,7 +159,7 @@ body{
     
 
 @media screen and (min-width: 1024px){
-    .menu_détails_plats, .menu_détails_desserts{
+    .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts{
         @include slide-card-menu-desktop;
     }
     .description_menu{

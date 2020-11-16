@@ -6,7 +6,7 @@
     margin-top: 0px;
     height: max-content;
     & h2{
-        font-size: 1.2em;
+        font-weight: lighter;
         padding: 30px 0px 20px 20px; 
         position: relative;
         max-width: 425px;
@@ -22,8 +22,6 @@
     & ul {
         padding: 0;
         width: 100vw;
-        max-width: 568px;
-        max-height: 260px;
         margin: auto;
         padding-top: 15px;
     }
@@ -34,8 +32,6 @@
         list-style-type: none;
         box-shadow: rgb(218, 216, 216)1px 6px 15px 5px;
         border-radius: 15px;
-        max-width: 539px;
-        max-height: 71px;
         margin-bottom:15px;
     }
     & h3{
@@ -48,10 +44,10 @@
     margin-top: 0px;
     height: max-content;
     & h2{
-        font-size: 1.2em;
+        font-weight: lighter;
         padding: 30px 0px 20px 20px; 
-        max-width: 425px;
         position: relative;
+        max-width: 425px;
     }
     & h2::after {
         position: absolute;
@@ -87,12 +83,6 @@
 @mixin slide-card-menu-tablet {
     background-color: $grey-background;
     margin-top: 0px;
-    & h2{
-        width: 100vw;
-        font-size: 1.6em;
-        padding:10px 0px 15px 20px;
-        max-width: 425px;
-    }
     & h2::after {
         position: absolute;
         content: ""; 
@@ -104,21 +94,19 @@
     & ul {
         padding: 0;
         width: 100vw;
-        max-width: none;
-        max-height: none;
+        max-width: 1000px;
         margin: auto;
         padding-top: 30px;
     }
     & ul li{
         background-color: white;
         width: 95%;
+        max-width: 950px;
         margin: auto;
         list-style-type: none;
         box-shadow: rgb(218, 216, 216)1px 6px 15px 5px;
         border-radius: 15px;
         font-size: 0.9em;
-        max-width: 1000px;
-        max-height: 100px;
         margin-bottom: 15px; 
     }
     & h3{
@@ -130,13 +118,6 @@
 @mixin slide-card-menu-plus-tablet{
     margin-top: 0px;
     height: 68vh;
-    & h2{
-        width: 100vw;
-        height: 10vh;
-        font-size: 1.6em;
-        padding-left: 20px;
-        max-width: 425px;
-    }
     & h2::after {
         position: absolute;
         content: ""; 
@@ -172,10 +153,7 @@
 @mixin slide-card-menu-desktop{
     margin-top: 0px;
     & h2{
-        width: 100vw;
-        font-size: 1.8em;
-        padding-left: 20px;
-        margin:0;
+        margin: auto;
     }
     & h2::after {
         position: absolute;
@@ -188,8 +166,6 @@
     & ul {
         padding: 0;
         width: 100vw;
-        max-width: none;
-        max-height: none;
         margin: auto;
         padding-top: 30px;
         padding-bottom: 20px;
@@ -201,8 +177,6 @@
         list-style-type: none;
         box-shadow: rgb(218, 216, 216)1px 6px 15px 5px;
         border-radius: 15px;
-        max-width: 1000px;
-        max-height: 100px;
         margin-bottom:15px;
     }
     & h3{

@@ -189,7 +189,7 @@
   }
   .container .far:hover {
     background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0px white;
   }
@@ -1067,7 +1067,7 @@ footer ul li .fas {
   }
   .container .far:hover {
     background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0px white;
   }
@@ -1199,7 +1199,7 @@ body {
   animation: slide-menu 2s ease;
 }
 .menu_détails_entrées h2 {
-  font-size: 1.2em;
+  font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
@@ -1215,8 +1215,6 @@ body {
 .menu_détails_entrées ul {
   padding: 0;
   width: 100vw;
-  max-width: 568px;
-  max-height: 260px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1227,8 +1225,6 @@ body {
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
   border-radius: 15px;
-  max-width: 539px;
-  max-height: 71px;
   margin-bottom: 15px;
 }
 .menu_détails_entrées h3 {
@@ -1243,7 +1239,7 @@ body {
   transition-delay: 1000ms;
 }
 .menu_détails_plats h2 {
-  font-size: 1.2em;
+  font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
@@ -1259,8 +1255,6 @@ body {
 .menu_détails_plats ul {
   padding: 0;
   width: 100vw;
-  max-width: 568px;
-  max-height: 260px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1271,8 +1265,6 @@ body {
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
   border-radius: 15px;
-  max-width: 539px;
-  max-height: 71px;
   margin-bottom: 15px;
 }
 .menu_détails_plats h3 {
@@ -1287,7 +1279,7 @@ body {
   transition-delay: 1000ms;
 }
 .menu_détails_desserts h2 {
-  font-size: 1.2em;
+  font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
@@ -1303,8 +1295,6 @@ body {
 .menu_détails_desserts ul {
   padding: 0;
   width: 100vw;
-  max-width: 568px;
-  max-height: 260px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1315,8 +1305,6 @@ body {
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
   border-radius: 15px;
-  max-width: 539px;
-  max-height: 71px;
   margin-bottom: 15px;
 }
 .menu_détails_desserts h3 {
@@ -1354,17 +1342,11 @@ body {
 
 /*format tablette*/
 @media screen and (min-width: 768px) {
-  .menu_détails_plats, .menu_détails_desserts {
+  .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts {
     background-color: #f1f1f1;
     margin-top: 0px;
   }
-  .menu_détails_plats h2, .menu_détails_desserts h2 {
-    width: 100vw;
-    font-size: 1.6em;
-    padding: 10px 0px 15px 20px;
-    max-width: 425px;
-  }
-  .menu_détails_plats h2::after, .menu_détails_desserts h2::after {
+  .menu_détails_entrées h2::after, .menu_détails_plats h2::after, .menu_détails_desserts h2::after {
     position: absolute;
     content: "";
     left: 20px;
@@ -1372,27 +1354,25 @@ body {
     width: 12%;
     border-bottom: 5px #99E2D0 solid;
   }
-  .menu_détails_plats ul, .menu_détails_desserts ul {
+  .menu_détails_entrées ul, .menu_détails_plats ul, .menu_détails_desserts ul {
     padding: 0;
     width: 100vw;
-    max-width: none;
-    max-height: none;
+    max-width: 1000px;
     margin: auto;
     padding-top: 30px;
   }
-  .menu_détails_plats ul li, .menu_détails_desserts ul li {
+  .menu_détails_entrées ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
     background-color: white;
     width: 95%;
+    max-width: 950px;
     margin: auto;
     list-style-type: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
     border-radius: 15px;
     font-size: 0.9em;
-    max-width: 1000px;
-    max-height: 100px;
     margin-bottom: 15px;
   }
-  .menu_détails_plats h3, .menu_détails_desserts h3 {
+  .menu_détails_entrées h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
     padding: 12px 7px 0px 7px;
     font-size: 1.4em;
   }
@@ -1446,16 +1426,13 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
-  .menu_détails_plats, .menu_détails_desserts {
+  .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts {
     margin-top: 0px;
   }
-  .menu_détails_plats h2, .menu_détails_desserts h2 {
-    width: 100vw;
-    font-size: 1.8em;
-    padding-left: 20px;
-    margin: 0;
+  .menu_détails_entrées h2, .menu_détails_plats h2, .menu_détails_desserts h2 {
+    margin: auto;
   }
-  .menu_détails_plats h2::after, .menu_détails_desserts h2::after {
+  .menu_détails_entrées h2::after, .menu_détails_plats h2::after, .menu_détails_desserts h2::after {
     position: absolute;
     content: "";
     left: 20px;
@@ -1463,27 +1440,23 @@ body {
     width: 12%;
     border-bottom: 5px #99E2D0 solid;
   }
-  .menu_détails_plats ul, .menu_détails_desserts ul {
+  .menu_détails_entrées ul, .menu_détails_plats ul, .menu_détails_desserts ul {
     padding: 0;
     width: 100vw;
-    max-width: none;
-    max-height: none;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 20px;
   }
-  .menu_détails_plats ul li, .menu_détails_desserts ul li {
+  .menu_détails_entrées ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
     background-color: white;
     width: 95%;
     margin: auto;
     list-style-type: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
     border-radius: 15px;
-    max-width: 1000px;
-    max-height: 100px;
     margin-bottom: 15px;
   }
-  .menu_détails_plats h3, .menu_détails_desserts h3 {
+  .menu_détails_entrées h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
     padding: 12px 7px 0px 7px;
   }
 
@@ -1513,134 +1486,22 @@ body {
     font-size: 38px;
   }
 }
-/* partie plats, entrées, desserts*/
-.menu_détails_entrées_plus {
-  background-color: #f1f1f1;
-  margin-top: 0px;
-  height: max-content;
-  animation: slide-menu 1.5s ease;
-  max-height: 515px;
+/* partie plats, entrées, desserts
+.menu_détails_entrées_plus{
+    @include slide-card-menu-plus;
+    animation: slide-menu 1.5s ease;
+    max-height: 515px;
 }
-.menu_détails_entrées_plus h2 {
-  font-size: 1.2em;
-  padding: 30px 0px 20px 20px;
-  max-width: 425px;
-  position: relative;
+@media screen and (min-width: 768px){
+    .menu_détails_entrées_plus{
+      @include  slide-card-menu-plus-tablet ;
+    }
 }
-.menu_détails_entrées_plus h2::after {
-  position: absolute;
-  content: "";
-  left: 20px;
-  top: 85%;
-  width: 12%;
-  border-bottom: 5px #99E2D0 solid;
-}
-.menu_détails_entrées_plus ul {
-  padding: 0;
-  width: 100vw;
-  max-width: 568px;
-  margin: auto;
-  padding: 10px 0px 0px 0px;
-}
-.menu_détails_entrées_plus ul li {
-  background-color: white;
-  width: 95%;
-  list-style-type: none;
-  box-shadow: #dad8d8 1px 6px 15px 5px;
-  border-radius: 15px;
-  max-width: 539px;
-  max-height: 71px;
-  margin: auto;
-  margin-bottom: 15px;
-}
-.menu_détails_entrées_plus h3 {
-  padding: 12px 7px 0px 7px;
-}
-
-@media screen and (min-width: 768px) {
-  .menu_détails_entrées_plus {
-    margin-top: 0px;
-    height: 68vh;
-  }
-  .menu_détails_entrées_plus h2 {
-    width: 100vw;
-    height: 10vh;
-    font-size: 1.6em;
-    padding-left: 20px;
-    max-width: 425px;
-  }
-  .menu_détails_entrées_plus h2::after {
-    position: absolute;
-    content: "";
-    left: 20px;
-    top: 65%;
-    width: 12%;
-    border-bottom: 5px #99E2D0 solid;
-  }
-  .menu_détails_entrées_plus ul {
-    max-width: none;
-    max-height: none;
-    padding: 0;
-    width: 100vw;
-    margin: auto;
-  }
-  .menu_détails_entrées_plus ul li {
-    background-color: white;
-    width: 95%;
-    margin: auto;
-    list-style-type: none;
-    box-shadow: #dad8d8 1px 6px 15px 5px;
-    border-radius: 15px;
-    max-width: 1000px;
-    max-height: 100px;
-    margin-bottom: 15px;
-  }
-  .menu_détails_entrées_plus h3 {
-    padding: 12px 7px 0px 7px;
-    font-size: 1.4em;
-  }
-}
-@media screen and (min-width: 1024px) {
-  .menu_détails_entrées_plus {
-    margin-top: 0px;
-  }
-  .menu_détails_entrées_plus h2 {
-    width: 100vw;
-    font-size: 1.7em;
-    max-width: 768px;
-    padding-left: 80px;
-    margin: 0;
-  }
-  .menu_détails_entrées_plus h2::after {
-    position: absolute;
-    content: "";
-    left: 20px;
-    top: 85%;
-    width: 12%;
-    border-bottom: 5px #99E2D0 solid;
-  }
-  .menu_détails_entrées_plus ul {
-    padding: 0;
-    width: 100vw;
-    max-width: none;
-    max-height: none;
-    margin: auto;
-  }
-  .menu_détails_entrées_plus ul li {
-    background-color: white;
-    width: 95%;
-    margin: auto;
-    list-style-type: none;
-    box-shadow: #dad8d8 1px 6px 15px 5px;
-    border-radius: 15px;
-    max-width: 1000px;
-    max-height: 100px;
-    margin-bottom: 15px;
-  }
-  .menu_détails_entrées_plus h3 {
-    padding: 12px 7px 0px 7px;
-  }
-}
+@media screen and (min-width: 1024px){
+    .menu_détails_entrées_plus{
+      @include  slide-card-menu-plus-desktop ;
+    }
+}*/
 /* partie plats, entrées, desserts*/
 .menu_détails_entrées {
   background-color: #f1f1f1;
@@ -1649,7 +1510,7 @@ body {
   animation: slide-menu 1.5s ease;
 }
 .menu_détails_entrées h2 {
-  font-size: 1.2em;
+  font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
@@ -1665,8 +1526,6 @@ body {
 .menu_détails_entrées ul {
   padding: 0;
   width: 100vw;
-  max-width: 568px;
-  max-height: 260px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1677,8 +1536,6 @@ body {
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
   border-radius: 15px;
-  max-width: 539px;
-  max-height: 71px;
   margin-bottom: 15px;
 }
 .menu_détails_entrées h3 {
@@ -1699,7 +1556,7 @@ body {
   animation: slide-menu 1.5s ease;
 }
 .menu_détails_entrées h2 {
-  font-size: 1.2em;
+  font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
@@ -1715,8 +1572,6 @@ body {
 .menu_détails_entrées ul {
   padding: 0;
   width: 100vw;
-  max-width: 568px;
-  max-height: 260px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1727,8 +1582,6 @@ body {
   list-style-type: none;
   box-shadow: #dad8d8 1px 6px 15px 5px;
   border-radius: 15px;
-  max-width: 539px;
-  max-height: 71px;
   margin-bottom: 15px;
 }
 .menu_détails_entrées h3 {
