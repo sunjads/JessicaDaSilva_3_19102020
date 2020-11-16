@@ -60,36 +60,49 @@ body{
         font-size: 25px;  
     }
 }
-/* partie plats, entrées, desserts*/
+/* partie  entrées*/ 
 .menu_détails_entrées{
     @include slide-card-menu;
-    animation: slide-menu 2s  ease;
+    animation: slide-menu 2s ease;
+    position: relative;
 }
-.menu_détails_plats{
-    @include slide-card-menu;
-    animation: slide-menu 2.5s ease;
-    transition-delay: 1000ms;
+.menu_détails_entrées ul li{
+    position: relative;
+    overflow: hidden;
 }
-.menu_détails_desserts{
-    @include slide-card-menu;
-    animation: slide-menu 3s ease;
-    transition-delay: 1000ms;
+.green-check {
+    background-color: $color-tertiary;
+    border-radius: 0px 15px 15px 0px;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
 }
- 
-@keyframes slide-menu{
-    0%{
-        transform: translate(0,5%);
-        opacity: 0;
-    }
-    50%{
-        opacity: 0.1;
-    }
-    100%{
-        transform: translate(0,0%);
-        opacity: 1;
-    }
+.green-check .fas{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
 }
-
+.menu_détails_entrées ul li:hover .green-check{
+    transform: translate(-100%);
+    transition-duration: 0.5s;
+}
+.menu_détails_entrées ul li:hover .green-check .fas{
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+} 
+.menu_détails_entrées ul li:hover .menu_prix{
+    width: 75%;
+}
+.menu_détails_entrées ul li:hover .menu_prix p{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 /* descriptif des plats - h3 et p*/
 .menu_prix {
     height: 5vh;
@@ -103,6 +116,74 @@ body{
     }
     & .leprix{
         font-weight: bold;
+    }
+}
+/*partie plats*/
+.menu_détails_plats{
+    @include slide-card-menu;
+    animation: slide-menu 2.5s ease;
+    transition-delay: 1000ms;
+}
+.menu_détails_plats ul li{
+    position: relative;
+    overflow: hidden;
+}
+.menu_détails_plats ul li:hover .green-check{
+    transform: translate(-100%);
+    transition-duration: 0.5s;
+}
+.menu_détails_plats ul li:hover .green-check .fas{
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+} 
+.menu_détails_plats ul li:hover .menu_prix{
+    width: 75%;
+}
+.menu_détails_plats ul li:hover .menu_prix p{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*partie desserts*/
+.menu_détails_desserts{
+    @include slide-card-menu;
+    animation: slide-menu 3s ease;
+    transition-delay: 1000ms;
+}
+.menu_détails_desserts ul li{
+    position: relative;
+    overflow: hidden;
+}
+.menu_détails_desserts ul li:hover .green-check{
+    transform: translate(-100%);
+    transition-duration: 0.5s;
+}
+.menu_détails_desserts ul li:hover .green-check .fas{
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+} 
+.menu_détails_desserts ul li:hover .menu_prix{
+    width: 75%;
+}
+.menu_détails_desserts ul li:hover .menu_prix p{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ 
+@keyframes slide-menu{
+    0%{
+        transform: translate(0,5%);
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.1;
+    }
+    100%{
+        transform: translate(0,0%);
+        opacity: 1;
     }
 }
 
@@ -162,6 +243,7 @@ body{
     .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts{
         @include slide-card-menu-desktop;
     }
+
     .description_menu{
         background-color: $grey-background;
         border-radius: 50px 50px 0px 0px;
@@ -180,7 +262,7 @@ body{
         }  
         .title_menu .far {
             position: absolute;
-            top: 82%;
+            top: 80%;
             left: 92%;
             font-size: 38px;  
         }

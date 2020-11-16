@@ -1,8 +1,48 @@
-/* partie plats, entrées, desserts
+
+/*partie plats, entrées, desserts*/
 .menu_détails_entrées_plus{
     @include slide-card-menu-plus;
     animation: slide-menu 1.5s ease;
     max-height: 515px;
+    position: relative;
+}
+
+.menu_détails_entrées_plus ul li{
+  position: relative;
+  overflow: hidden;
+}
+.green-check {
+  background-color: $color-tertiary;
+  border-radius: 0px 15px 15px 0px;
+  width: 20%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 100%;
+}
+.green-check .fas{
+  color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 30%;
+  left: 25%;
+}
+.menu_détails_entrées_plus ul li:hover .green-check{
+  transform: translate(-100%);
+  transition-duration: 0.5s;
+}
+.menu_détails_entrées_plus ul li:hover .green-check .fas{
+  transform: rotate(360deg);
+  transition-duration: 0.5s;
+} 
+.menu_détails_entrées_plus ul li:hover .menu_prix{
+  width: 75%;
+}
+.menu_détails_entrées_plus ul li:hover .menu_prix p{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 @media screen and (min-width: 768px){
     .menu_détails_entrées_plus{
@@ -13,4 +53,4 @@
     .menu_détails_entrées_plus{
       @include  slide-card-menu-plus-desktop ;
     }
-}*/
+}

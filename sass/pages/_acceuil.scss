@@ -24,7 +24,6 @@
     }
     & ul{
         width: 100vw;
-
         padding-left: 50px;
     }
     & ul li{
@@ -36,6 +35,9 @@
         box-shadow: rgb(211, 209, 209)1px 6px 12px 0px;
         padding-top: 7px;
         margin-bottom: 25px;
+        &:hover{
+            background-color: rgb(184, 220, 236);
+        }
     & a{
         list-style-type: none;
         text-decoration: none;

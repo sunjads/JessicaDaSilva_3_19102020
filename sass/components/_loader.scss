@@ -1,5 +1,5 @@
 #lapage{
-    animation: transition-loading 1.5s linear ; 
+    animation: transition-loading 1.2s linear ; 
     opacity: 1;
 }
 @keyframes transition-loading{
@@ -14,12 +14,12 @@
     }
 }
 .loader {
-    border: 16px solid #f3f3f3; /* Light grey */
-    border-top: 16px solid $color-primary;
+    border: 16px solid #f3f2f2;
+    border-top: 16px groove $color-primary;
     border-radius: 50%;
     width: 120px;
     height: 120px;
-    animation: spin 1s linear;
+    animation: spin 850ms linear;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -32,12 +32,13 @@
         opacity: 1;
      }
      10%{
-        border-top: 16px solid $color-secondary; 
+        border-top: 16px groove $color-secondary; 
      }
      90%{
         transform: rotate(360deg); 
         opacity: 1;
-        border-top: 16px solid $color-tertiary; 
+        border-top: 16px groove $color-tertiary; 
+        
      }
     100% { 
         transform: rotate(360deg); 

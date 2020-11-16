@@ -1,11 +1,101 @@
+@import "../utils/mixins";
+
 /* partie plats, entrées, desserts*/
 .menu_détails_entrées{
     @include slide-card-menu;
     animation: slide-menu 1.5s ease;
-    & ul li {
-    box-shadow: rgb(218, 216, 216)1px 3px 5px 2px;
-    }
-    & h2{
-        padding: 30px 0px 20px 20px; 
-    }
+    position: relative;
 }
+.menu_détails_entrées ul li{
+    position: relative;
+    overflow: hidden;
+}
+.green-check {
+    background-color: $color-tertiary;
+    border-radius: 0px 15px 15px 0px;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 100%;
+}
+.green-check .fas{
+    color: white;
+    font-size: 25px;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+.menu_détails_entrées ul li:hover .green-check{
+    transform: translate(-100%);
+    transition-duration: 0.5s;
+}
+.menu_détails_entrées ul li:hover .green-check .fas{
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+} 
+.menu_détails_entrées ul li:hover .menu_prix{
+    width: 75%;
+}
+.menu_détails_entrées ul li:hover .menu_prix p{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*partie plats*/
+
+.menu_détails_plats{
+    @include slide-card-menu;
+    animation: slide-menu 2.5s ease;
+    transition-delay: 1000ms;
+}
+.menu_détails_plats ul li{
+    position: relative;
+    overflow: hidden;
+}
+.menu_détails_plats ul li:hover .green-check{
+    transform: translate(-100%);
+    transition-duration: 0.5s;
+}
+.menu_détails_plats ul li:hover .green-check .fas{
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+} 
+.menu_détails_plats ul li:hover .menu_prix{
+    width: 75%;
+}
+.menu_détails_plats ul li:hover .menu_prix p{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*partie desserts*/
+.menu_détails_desserts{
+    @include slide-card-menu;
+    animation: slide-menu 3s ease;
+    transition-delay: 1000ms;
+}
+.menu_détails_desserts ul li{
+    position: relative;
+    overflow: hidden;
+}
+.menu_détails_desserts ul li:hover .green-check{
+    transform: translate(-100%);
+    transition-duration: 0.5s;
+}
+.menu_détails_desserts ul li:hover .green-check .fas{
+    transform: rotate(360deg);
+    transition-duration: 0.5s;
+} 
+.menu_détails_desserts ul li:hover .menu_prix{
+    width: 75%;
+}
+.menu_détails_desserts ul li:hover .menu_prix p{
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+ 
