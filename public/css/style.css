@@ -268,8 +268,8 @@
   }
 }
 .loader {
-  border: 16px solid #f3f2f2;
-  border-top: 16px groove #9356DC;
+  border: 10px solid #141414;
+  border-top: 10px solid #9356DC;
   border-radius: 50%;
   width: 120px;
   height: 120px;
@@ -278,6 +278,7 @@
   top: 50%;
   left: 50%;
   opacity: 0;
+  margin: auto;
 }
 
 @keyframes spin {
@@ -286,12 +287,12 @@
     opacity: 1;
   }
   10% {
-    border-top: 16px groove #FF79DA;
+    border-top: 10px solid #FF79DA;
   }
   90% {
     transform: rotate(360deg);
     opacity: 1;
-    border-top: 16px groove #99E2D0;
+    border-top: 10px solid #99E2D0;
   }
   100% {
     transform: rotate(360deg);
@@ -504,7 +505,7 @@ footer ul li .fas {
   margin-bottom: 25px;
 }
 #section_fonctionnement ul li:hover {
-  background-color: #b8dcec;
+  background-color: #e1e8ff;
 }
 #section_fonctionnement ul li a {
   list-style-type: none;
@@ -1176,6 +1177,7 @@ body {
 /* titre du menu + coeur */
 .title_menu {
   height: 10vh;
+  position: relative;
 }
 .title_menu h1 {
   font-family: "Shrikhand", cursive;
@@ -1184,7 +1186,6 @@ body {
   padding-left: 20px;
   background-color: #f1f1f1;
   border-radius: 30px 30px 0px 0px;
-  position: relative;
 }
 .title_menu .far {
   position: absolute;
@@ -1518,6 +1519,7 @@ body {
 
   .title_menu {
     height: 10vh;
+    position: relative;
   }
   .title_menu h1 {
     font-family: "Shrikhand", cursive;
@@ -1526,12 +1528,11 @@ body {
     padding-left: 20px;
     background-color: #f1f1f1;
     border-radius: 30px 30px 0px 0px;
-    position: relative;
   }
   .title_menu .far {
     position: absolute;
-    top: 68%;
-    left: 85%;
+    top: 18%;
+    left: 87%;
     font-size: 35px;
   }
 }
@@ -1584,6 +1585,10 @@ body {
     height: 78vh;
   }
 
+  .title_menu {
+    height: 100%;
+  }
+
   .title_menu h1 {
     font-family: "Shrikhand", cursive;
     font-size: 2.5em;
@@ -1594,7 +1599,7 @@ body {
 
   .title_menu .far {
     position: absolute;
-    top: 80%;
+    top: 28%;
     left: 92%;
     font-size: 38px;
   }
@@ -1722,6 +1727,7 @@ body {
   }
   .menu_détails_entrées_plus h2 {
     margin: auto;
+    background-color: pink;
   }
   .menu_détails_entrées_plus h2::after {
     position: absolute;

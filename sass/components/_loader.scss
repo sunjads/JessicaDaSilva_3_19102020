@@ -14,8 +14,8 @@
     }
 }
 .loader {
-    border: 16px solid #f3f2f2;
-    border-top: 16px groove $color-primary;
+    border: 10px solid #141414;
+    border-top: 10px solid $color-primary;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -24,6 +24,7 @@
     top: 50%;
     left: 50%;
     opacity: 0;
+    margin: auto;
   }
   
   @keyframes spin {
@@ -32,12 +33,12 @@
         opacity: 1;
      }
      10%{
-        border-top: 16px groove $color-secondary; 
+        border-top: 10px solid $color-secondary; 
      }
      90%{
         transform: rotate(360deg); 
         opacity: 1;
-        border-top: 16px groove $color-tertiary; 
+        border-top: 10px solid $color-tertiary; 
         
      }
     100% { 
