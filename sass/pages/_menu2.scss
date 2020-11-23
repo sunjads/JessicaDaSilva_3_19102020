@@ -50,6 +50,13 @@
     }
 }
 @media screen and (min-width: 1024px){
+
+  .menus-plus-position{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
     .menu_détails_entrées_plus{
       @include  slide-card-menu-plus-desktop ;
     }

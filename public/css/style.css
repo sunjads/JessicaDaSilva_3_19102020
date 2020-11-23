@@ -125,7 +125,7 @@
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transform: scale(0);
-  transition: 0.3s ease;
+  transition: all 1s ease;
 }
 .container .far:hover .fas {
   transform: scale(1);
@@ -164,7 +164,7 @@
     height: 7vh;
     overflow: hidden;
   }
-  .container .far {
+  .container .container .far {
     font-size: 21px;
     position: relative;
     z-index: 1;
@@ -179,9 +179,6 @@
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transform: scale(0);
-    transition: 0.3s ease;
   }
   .container .far:hover .fas {
     transform: scale(1);
@@ -221,28 +218,6 @@
     z-index: 1;
     cursor: pointer;
     -webkit-text-stroke: 1px white;
-  }
-  .container .fas {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transform: scale(0);
-    transition: 0.3s ease;
-  }
-  .container .far:hover .fas {
-    transform: scale(1);
-    opacity: 4;
-  }
-  .container .far:hover {
-    background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0px white;
   }
 
   #bouton, #bouton-commander {
@@ -698,6 +673,7 @@ footer ul li .fas {
     width: 100vw;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     flex-wrap: wrap;
     padding-bottom: 50px;
   }
@@ -712,7 +688,7 @@ footer ul li .fas {
     width: 40vw;
     height: 30vh;
     margin: auto;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     display: flex;
     flex-direction: column-reverse;
   }
@@ -1006,7 +982,7 @@ footer ul li .fas {
   -webkit-text-fill-color: transparent;
   opacity: 0;
   transform: scale(0);
-  transition: 0.3s ease;
+  transition: all 1s ease;
 }
 .container .far:hover .fas {
   transform: scale(1);
@@ -1045,7 +1021,7 @@ footer ul li .fas {
     height: 7vh;
     overflow: hidden;
   }
-  .container .far {
+  .container .container .far {
     font-size: 21px;
     position: relative;
     z-index: 1;
@@ -1060,9 +1036,6 @@ footer ul li .fas {
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transform: scale(0);
-    transition: 0.3s ease;
   }
   .container .far:hover .fas {
     transform: scale(1);
@@ -1102,28 +1075,6 @@ footer ul li .fas {
     z-index: 1;
     cursor: pointer;
     -webkit-text-stroke: 1px white;
-  }
-  .container .fas {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
-    background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0;
-    transform: scale(0);
-    transition: 0.3s ease;
-  }
-  .container .far:hover .fas {
-    transform: scale(1);
-    opacity: 4;
-  }
-  .container .far:hover {
-    background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0px white;
   }
 
   #bouton, #bouton-commander {
@@ -1250,6 +1201,7 @@ body {
   position: absolute;
   top: 0%;
   left: 100%;
+  transition: all 1s;
 }
 
 .green-check .fas {
@@ -1468,14 +1420,14 @@ body {
   .menu_détails_entrées ul, .menu_détails_plats ul, .menu_détails_desserts ul {
     padding: 0;
     width: 100vw;
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
     padding-top: 30px;
   }
   .menu_détails_entrées ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
     background-color: white;
     width: 95%;
-    max-width: 950px;
+    max-width: 760px;
     margin: auto;
     list-style-type: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
@@ -1537,10 +1489,20 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
+  .menus-position {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+  }
+
   .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts {
+    padding-left: 50px;
     margin-top: 0px;
+    padding-top: 50px;
   }
   .menu_détails_entrées h2, .menu_détails_plats h2, .menu_détails_desserts h2 {
+    width: 100vw;
     margin: auto;
   }
   .menu_détails_entrées h2::after, .menu_détails_plats h2::after, .menu_détails_desserts h2::after {
@@ -1553,14 +1515,15 @@ body {
   }
   .menu_détails_entrées ul, .menu_détails_plats ul, .menu_détails_desserts ul {
     padding: 0;
-    width: 100vw;
+    max-width: 500px;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 20px;
   }
   .menu_détails_entrées ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
     background-color: white;
-    width: 95%;
+    width: 15%;
+    max-width: none;
     margin: auto;
     list-style-type: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
@@ -1586,6 +1549,7 @@ body {
   }
 
   .title_menu {
+    width: 100vw;
     height: 100%;
   }
 
@@ -1698,17 +1662,18 @@ body {
     height: 68vh;
   }
   .menu_détails_entrées_plus ul {
+    max-height: 360px;
     padding: 0;
     width: 100vw;
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
     padding-top: 30px;
-    padding-bottom: 10px;
+    padding-bottom: 0px;
   }
   .menu_détails_entrées_plus ul li {
     background-color: white;
     width: 95%;
-    max-width: 950px;
+    max-width: 760px;
     margin: auto;
     list-style-type: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
@@ -1722,12 +1687,18 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  .menus-plus-position {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+  }
+
   .menu_détails_entrées_plus {
-    margin-top: 0px;
+    margin-top: 55px;
   }
   .menu_détails_entrées_plus h2 {
     margin: auto;
-    background-color: pink;
   }
   .menu_détails_entrées_plus h2::after {
     position: absolute;
@@ -1740,11 +1711,13 @@ body {
   .menu_détails_entrées_plus ul {
     padding: 0;
     width: 100vw;
+    max-width: 500px;
     margin: auto;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 10px;
+    padding-bottom: 0px;
   }
   .menu_détails_entrées_plus ul li {
+    max-width: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
     border-radius: 15px;
     margin-bottom: 15px;
@@ -2033,6 +2006,16 @@ body {
   padding: 30px 0px 20px 20px;
 }
 
+@media screen and (min-width: 1024px) {
+  .menus-position {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    max-width: 1500px;
+    max-height: 830px;
+    margin: auto;
+  }
+}
 /*carte menu format portable pour menu1,3,4*/
 /*carte menu format portable pour la page 2*/
 /*carte menu format tablette dans les pages menu1,3,4*/
