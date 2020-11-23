@@ -14,8 +14,8 @@
     }
 }
 .loader {
-    border: 10px solid #141414;
-    border-top: 10px solid $color-primary;
+    border: 15px solid #363636;
+    border-top: 15px solid $color-primary;
     border-radius: 50%;
     width: 120px;
     height: 120px;
@@ -33,12 +33,12 @@
         opacity: 1;
      }
      10%{
-        border-top: 10px solid $color-secondary; 
+        border-top: 15px solid $color-secondary; 
      }
      90%{
         transform: rotate(360deg); 
         opacity: 1;
-        border-top: 10px solid $color-tertiary; 
+        border-top: 15px solid $color-tertiary; 
         
      }
     100% { 

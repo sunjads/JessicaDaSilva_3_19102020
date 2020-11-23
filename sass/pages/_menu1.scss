@@ -44,7 +44,7 @@ body{
 .title_menu {
     height: 10vh;
     position: relative;
-    & h1{
+    & h2{
         font-family: 'Shrikhand', cursive;
         font-size: 1.9em;
         padding-top: 20px;
@@ -59,6 +59,7 @@ body{
         font-size: 25px;  
     }
 }
+
 /* partie  entrées*/ 
 .menu_détails_entrées{
     @include slide-card-menu;
@@ -238,18 +239,10 @@ body{
         }
     }
     
-
 @media screen and (min-width: 1024px){
-    .menus-position{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: auto;
-    }
     .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts{
         @include slide-card-menu-desktop;
     }
-
     .description_menu{
         background-color: $grey-background;
         border-radius: 50px 50px 0px 0px;
@@ -259,6 +252,13 @@ body{
     .img-principale{
         height: 78vh;
     }
+    /*le contenant titre menu + coeur*/
+    .description_menu{
+    background-color: $grey-background;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: -50px;
+    height: max-content;
+}
     .title_menu{
         width: 100vw;
         height: 100%;
