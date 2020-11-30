@@ -1,6 +1,6 @@
 
 /* partie plats, entrées, desserts*/
-.menu_détails_entrées{
+.menu_details_entrees{
     @include slide-card-menu;
     animation: slide-menu 1.5s ease;
     & ul li {

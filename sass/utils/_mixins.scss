@@ -87,6 +87,7 @@
     margin-top: 0px;
     & h3{ 
         margin-top: 25px;
+        margin: auto;
     }
     & h3::after {
         position: absolute;
@@ -99,15 +100,13 @@
     & ul {
         padding: 0;
         width: 100vw;
-        max-width: 800px;
+        max-width: 576px;
         margin: auto;
         padding-top: 30px;
-        
     }
     & ul li{
         background-color: white;
         width: 95%;
-        max-width: 760px;
         margin: auto;
         list-style-type: none;
         box-shadow: rgb(218, 216, 216)1px 6px 15px 5px;
@@ -124,12 +123,14 @@
 /*carte menu format tablet dans la page 2*/
 @mixin slide-card-menu-plus-tablet{
     margin-top: 0px;
-    height: 68vh;
+    height: 65vh;
+    & h3{
+        margin: auto;
+    }
     & ul {
         max-height: 360px;
+        max-width: 576px;
         padding: 0;
-        width: 100vw;
-        max-width: 800px;
         margin: auto;
         padding-top: 30px;
         padding-bottom: 0px;
@@ -137,7 +138,6 @@
     & ul li{
         background-color: white;
         width: 95%;
-        max-width: 760px;
         margin: auto;
         list-style-type: none;
         box-shadow: rgb(218, 216, 216)1px 6px 15px 5px;
@@ -152,9 +152,9 @@
 }
 /*carte menu format desktop pour page1,3,4*/
 @mixin slide-card-menu-desktop{
-    padding-left: 50px;
+    padding-left: 0px;
     margin-top: 0px;
-    padding-top: 50px;
+    padding-top: 30px;
     & h3{
         width: 100vw;
         margin: auto;
@@ -168,6 +168,7 @@
         border-bottom: 5px $color-tertiary solid;
     }
     & ul {
+        max-width: 500px;
         padding: 0;
         margin: auto;
         padding-top: 30px;
@@ -175,8 +176,6 @@
     }
     & ul li{
         background-color: white;
-        width: 15%;
-        max-width: none;
         margin: auto;
         list-style-type: none;
         box-shadow: rgb(218, 216, 216)1px 6px 15px 5px;
@@ -189,22 +188,23 @@
 }
 /*carte menu format desktop dans la page 2*/
 @mixin slide-card-menu-plus-desktop{
-    margin-top: 55px;
+    margin-top: 5px;
     & h3{
+        padding-top: 60px;
         margin: auto;
     }
     & h3::after {
         position: absolute;
         content: ""; 
         left: 20px;
-        top: 85%;
+        top: 88%;
         width: 12%;
         border-bottom: 5px $color-tertiary solid;
     }
     & ul {
+        max-width: 500px;
         padding: 0;
-        width: 100vw;
-        padding-top: 10px;
+        padding-top: 12px;
         padding-bottom: 0px;
     }
     & ul li{

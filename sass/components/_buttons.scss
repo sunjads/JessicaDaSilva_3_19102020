@@ -10,11 +10,6 @@
     @include bouton-linear-gradient;
     margin-top: 30px;
 }
-.form-commander {
-  height: 25vh;
-  text-align: center;
-  padding:20px 0px;
-}
 
 /*Le numéro violet dans la page d'acceuil*/
 .purple-num{
@@ -39,6 +34,9 @@
     position:relative;
     z-index:1;
     cursor: pointer;
+    /*background-clip: content-box;
+    text-shadow: 1px 0 0 white;
+    text-emphasis-color: transparent;*/
     -webkit-text-stroke: 1px white;
   }
   & .fas{
@@ -46,23 +44,27 @@
     left:0;
     top:0;
     z-index:-1;
-    background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     opacity:0;
     transform: scale(0);
     transition: all 0.7s ease;
+    /*color: transparent;*/
+    background: linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /*background-clip: padding-box;*/
   }
   & .far:hover .fas{
     transform:scale(1);
-    opacity:4;
+    opacity:1;
+    transition: 0.5s ease;
   }
-  & .far:hover{
+  .far:hover{
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 0px white;
   }
+  
 }
 
 @media screen and (min-width: 768px){
@@ -93,18 +95,6 @@
       left:0;
       top:0;
       z-index:-1;
-      background: linear-gradient(#FF79DA, #9356DC);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    & .far:hover .fas{
-      transform:scale(1);
-      opacity:4;
-    }
-    & .far:hover{
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 0px white;
     }
   }
 }

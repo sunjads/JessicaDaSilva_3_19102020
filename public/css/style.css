@@ -82,12 +82,6 @@
   border: none;
 }
 
-.form-commander {
-  height: 25vh;
-  text-align: center;
-  padding: 20px 0px;
-}
-
 /*Le numéro violet dans la page d'acceuil*/
 .purple-num {
   border-radius: 40px 40px;
@@ -113,6 +107,9 @@
   position: relative;
   z-index: 1;
   cursor: pointer;
+  /*background-clip: content-box;
+  text-shadow: 1px 0 0 white;
+  text-emphasis-color: transparent;*/
   -webkit-text-stroke: 1px white;
 }
 .container .fas {
@@ -120,16 +117,19 @@
   left: 0;
   top: 0;
   z-index: -1;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   opacity: 0;
   transform: scale(0);
   transition: all 0.7s ease;
+  /*color: transparent;*/
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*background-clip: padding-box;*/
 }
 .container .far:hover .fas {
   transform: scale(1);
-  opacity: 4;
+  opacity: 1;
+  transition: 0.5s ease;
 }
 .container .far:hover {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -171,18 +171,6 @@
     left: 0;
     top: 0;
     z-index: -1;
-    background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .container .far:hover .fas {
-    transform: scale(1);
-    opacity: 4;
-  }
-  .container .far:hover {
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0px white;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -448,6 +436,13 @@ footer ul li .fas {
 }
 .form-explorer {
   padding: 25px 0px 0px 0px;
+}
+
+.form-commander {
+  height: 25vh;
+  width: 100vw;
+  text-align: center;
+  padding: 20px 0px;
 }
 
 /*partie description ohmyfood*/
@@ -958,12 +953,6 @@ footer ul li .fas {
   border: none;
 }
 
-.form-commander {
-  height: 25vh;
-  text-align: center;
-  padding: 20px 0px;
-}
-
 /*Le numéro violet dans la page d'acceuil*/
 .purple-num {
   border-radius: 40px 40px;
@@ -989,6 +978,9 @@ footer ul li .fas {
   position: relative;
   z-index: 1;
   cursor: pointer;
+  /*background-clip: content-box;
+  text-shadow: 1px 0 0 white;
+  text-emphasis-color: transparent;*/
   -webkit-text-stroke: 1px white;
 }
 .container .fas {
@@ -996,16 +988,19 @@ footer ul li .fas {
   left: 0;
   top: 0;
   z-index: -1;
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   opacity: 0;
   transform: scale(0);
   transition: all 0.7s ease;
+  /*color: transparent;*/
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /*background-clip: padding-box;*/
 }
 .container .far:hover .fas {
   transform: scale(1);
-  opacity: 4;
+  opacity: 1;
+  transition: 0.5s ease;
 }
 .container .far:hover {
   background: linear-gradient(#FF79DA, #9356DC);
@@ -1047,18 +1042,6 @@ footer ul li .fas {
     left: 0;
     top: 0;
     z-index: -1;
-    background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  .container .far:hover .fas {
-    transform: scale(1);
-    opacity: 4;
-  }
-  .container .far:hover {
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0px white;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1159,20 +1142,20 @@ body {
 }
 
 /* partie  entrées*/
-.menu_détails_entrées {
+.menu_details_entrees {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
   animation: slide-menu 2s ease;
   position: relative;
 }
-.menu_détails_entrées h3 {
+.menu_details_entrees h3 {
   font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
 }
-.menu_détails_entrées h3::after {
+.menu_details_entrees h3::after {
   position: absolute;
   content: "";
   left: 20px;
@@ -1180,13 +1163,13 @@ body {
   width: 12%;
   border-bottom: 5px #99E2D0 solid;
 }
-.menu_détails_entrées ul {
+.menu_details_entrees ul {
   padding: 0;
   width: 100vw;
   margin: auto;
   padding-top: 15px;
 }
-.menu_détails_entrées ul li {
+.menu_details_entrees ul li {
   background-color: white;
   width: 95%;
   height: 12vh;
@@ -1197,11 +1180,11 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
 }
-.menu_détails_entrées h4 {
+.menu_details_entrees h4 {
   padding: 12px 7px 0px 7px;
 }
 
-.menu_détails_entrées ul li {
+.menu_details_entrees ul li {
   position: relative;
   overflow: hidden;
 }
@@ -1225,21 +1208,21 @@ body {
   left: 25%;
 }
 
-.menu_détails_entrées ul li:hover .green-check {
+.menu_details_entrees ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
 }
 
-.menu_détails_entrées ul li:hover .green-check .fas {
+.menu_details_entrees ul li:hover .green-check .fas {
   transform: rotate(360deg);
   transition-duration: 0.5s;
 }
 
-.menu_détails_entrées ul li:hover .menu_prix {
+.menu_details_entrees ul li:hover .menu_prix {
   width: 75%;
 }
 
-.menu_détails_entrées ul li:hover .menu_prix p {
+.menu_details_entrees ul li:hover .menu_prix p {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -1263,20 +1246,20 @@ body {
 }
 
 /*partie plats*/
-.menu_détails_plats {
+.menu_details_plats {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
   animation: slide-menu 2.5s ease;
   transition-delay: 1000ms;
 }
-.menu_détails_plats h3 {
+.menu_details_plats h3 {
   font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
 }
-.menu_détails_plats h3::after {
+.menu_details_plats h3::after {
   position: absolute;
   content: "";
   left: 20px;
@@ -1284,13 +1267,13 @@ body {
   width: 12%;
   border-bottom: 5px #99E2D0 solid;
 }
-.menu_détails_plats ul {
+.menu_details_plats ul {
   padding: 0;
   width: 100vw;
   margin: auto;
   padding-top: 15px;
 }
-.menu_détails_plats ul li {
+.menu_details_plats ul li {
   background-color: white;
   width: 95%;
   height: 12vh;
@@ -1301,30 +1284,30 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
 }
-.menu_détails_plats h4 {
+.menu_details_plats h4 {
   padding: 12px 7px 0px 7px;
 }
 
-.menu_détails_plats ul li {
+.menu_details_plats ul li {
   position: relative;
   overflow: hidden;
 }
 
-.menu_détails_plats ul li:hover .green-check {
+.menu_details_plats ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
 }
 
-.menu_détails_plats ul li:hover .green-check .fas {
+.menu_details_plats ul li:hover .green-check .fas {
   transform: rotate(360deg);
   transition-duration: 0.5s;
 }
 
-.menu_détails_plats ul li:hover .menu_prix {
+.menu_details_plats ul li:hover .menu_prix {
   width: 75%;
 }
 
-.menu_détails_plats ul li:hover .menu_prix p {
+.menu_details_plats ul li:hover .menu_prix p {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -1332,20 +1315,20 @@ body {
 }
 
 /*partie desserts*/
-.menu_détails_desserts {
+.menu_details_desserts {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
   animation: slide-menu 3s ease;
   transition-delay: 1000ms;
 }
-.menu_détails_desserts h3 {
+.menu_details_desserts h3 {
   font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
 }
-.menu_détails_desserts h3::after {
+.menu_details_desserts h3::after {
   position: absolute;
   content: "";
   left: 20px;
@@ -1353,13 +1336,13 @@ body {
   width: 12%;
   border-bottom: 5px #99E2D0 solid;
 }
-.menu_détails_desserts ul {
+.menu_details_desserts ul {
   padding: 0;
   width: 100vw;
   margin: auto;
   padding-top: 15px;
 }
-.menu_détails_desserts ul li {
+.menu_details_desserts ul li {
   background-color: white;
   width: 95%;
   height: 12vh;
@@ -1370,30 +1353,30 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
 }
-.menu_détails_desserts h4 {
+.menu_details_desserts h4 {
   padding: 12px 7px 0px 7px;
 }
 
-.menu_détails_desserts ul li {
+.menu_details_desserts ul li {
   position: relative;
   overflow: hidden;
 }
 
-.menu_détails_desserts ul li:hover .green-check {
+.menu_details_desserts ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
 }
 
-.menu_détails_desserts ul li:hover .green-check .fas {
+.menu_details_desserts ul li:hover .green-check .fas {
   transform: rotate(360deg);
   transition-duration: 0.5s;
 }
 
-.menu_détails_desserts ul li:hover .menu_prix {
+.menu_details_desserts ul li:hover .menu_prix {
   width: 75%;
 }
 
-.menu_détails_desserts ul li:hover .menu_prix p {
+.menu_details_desserts ul li:hover .menu_prix p {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -1415,14 +1398,15 @@ body {
 }
 /*format tablette*/
 @media screen and (min-width: 768px) {
-  .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts {
+  .menu_details_entrees, .menu_details_plats, .menu_details_desserts {
     background-color: #f1f1f1;
     margin-top: 0px;
   }
-  .menu_détails_entrées h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
+  .menu_details_entrees h3, .menu_details_plats h3, .menu_details_desserts h3 {
     margin-top: 25px;
+    margin: auto;
   }
-  .menu_détails_entrées h3::after, .menu_détails_plats h3::after, .menu_détails_desserts h3::after {
+  .menu_details_entrees h3::after, .menu_details_plats h3::after, .menu_details_desserts h3::after {
     position: absolute;
     content: "";
     left: 20px;
@@ -1430,17 +1414,16 @@ body {
     width: 12%;
     border-bottom: 5px #99E2D0 solid;
   }
-  .menu_détails_entrées ul, .menu_détails_plats ul, .menu_détails_desserts ul {
+  .menu_details_entrees ul, .menu_details_plats ul, .menu_details_desserts ul {
     padding: 0;
     width: 100vw;
-    max-width: 800px;
+    max-width: 576px;
     margin: auto;
     padding-top: 30px;
   }
-  .menu_détails_entrées ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
+  .menu_details_entrees ul li, .menu_details_plats ul li, .menu_details_desserts ul li {
     background-color: white;
     width: 95%;
-    max-width: 760px;
     margin: auto;
     list-style-type: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
@@ -1448,7 +1431,7 @@ body {
     font-size: 0.9em;
     margin-bottom: 15px;
   }
-  .menu_détails_entrées h4, .menu_détails_plats h4, .menu_détails_desserts h4 {
+  .menu_details_entrees h4, .menu_details_plats h4, .menu_details_desserts h4 {
     padding: 12px 7px 0px 7px;
     font-size: 1.4em;
   }
@@ -1502,16 +1485,16 @@ body {
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
-  .menu_détails_entrées, .menu_détails_plats, .menu_détails_desserts {
-    padding-left: 50px;
+  .menu_details_entrees, .menu_details_plats, .menu_details_desserts {
+    padding-left: 0px;
     margin-top: 0px;
-    padding-top: 50px;
+    padding-top: 30px;
   }
-  .menu_détails_entrées h3, .menu_détails_plats h3, .menu_détails_desserts h3 {
+  .menu_details_entrees h3, .menu_details_plats h3, .menu_details_desserts h3 {
     width: 100vw;
     margin: auto;
   }
-  .menu_détails_entrées h3::after, .menu_détails_plats h3::after, .menu_détails_desserts h3::after {
+  .menu_details_entrees h3::after, .menu_details_plats h3::after, .menu_details_desserts h3::after {
     position: absolute;
     content: "";
     left: 20px;
@@ -1519,23 +1502,22 @@ body {
     width: 12%;
     border-bottom: 5px #99E2D0 solid;
   }
-  .menu_détails_entrées ul, .menu_détails_plats ul, .menu_détails_desserts ul {
+  .menu_details_entrees ul, .menu_details_plats ul, .menu_details_desserts ul {
+    max-width: 500px;
     padding: 0;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 20px;
   }
-  .menu_détails_entrées ul li, .menu_détails_plats ul li, .menu_détails_desserts ul li {
+  .menu_details_entrees ul li, .menu_details_plats ul li, .menu_details_desserts ul li {
     background-color: white;
-    width: 15%;
-    max-width: none;
     margin: auto;
     list-style-type: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
     border-radius: 15px;
     margin-bottom: 15px;
   }
-  .menu_détails_entrées h4, .menu_détails_plats h4, .menu_détails_desserts h4 {
+  .menu_details_entrees h4, .menu_details_plats h4, .menu_details_desserts h4 {
     padding: 12px 7px 0px 7px;
   }
 
@@ -1544,6 +1526,9 @@ body {
     border-radius: 50px 50px 0px 0px;
     margin-top: -100px;
     height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .img-principale {
@@ -1578,8 +1563,13 @@ body {
     font-size: 38px;
   }
 }
+@media screen and (min-width: 1600px) {
+  .menu_details_entrees, .menu_details_entrees_plus, .menu_details_plats, .menu_details_desserts {
+    margin-right: 5px;
+  }
+}
 /*partie plats, entrées, desserts*/
-.menu_détails_entrées_plus {
+.menu_details_entrees_plus {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
@@ -1587,13 +1577,13 @@ body {
   max-height: 515px;
   position: relative;
 }
-.menu_détails_entrées_plus h3 {
+.menu_details_entrees_plus h3 {
   font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
 }
-.menu_détails_entrées_plus h3::after {
+.menu_details_entrees_plus h3::after {
   position: absolute;
   content: "";
   left: 20px;
@@ -1601,13 +1591,13 @@ body {
   width: 12%;
   border-bottom: 5px #99E2D0 solid;
 }
-.menu_détails_entrées_plus ul {
+.menu_details_entrees_plus ul {
   padding: 0;
   width: 100vw;
   margin: auto;
   padding-top: 15px;
 }
-.menu_détails_entrées_plus ul li {
+.menu_details_entrees_plus ul li {
   background-color: white;
   width: 95%;
   height: 12vh;
@@ -1618,11 +1608,11 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
 }
-.menu_détails_entrées_plus h4 {
+.menu_details_entrees_plus h4 {
   padding: 12px 7px 0px 7px;
 }
 
-.menu_détails_entrées_plus ul li {
+.menu_details_entrees_plus ul li {
   position: relative;
   overflow: hidden;
 }
@@ -1645,21 +1635,21 @@ body {
   left: 25%;
 }
 
-.menu_détails_entrées_plus ul li:hover .green-check {
+.menu_details_entrees_plus ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
 }
 
-.menu_détails_entrées_plus ul li:hover .green-check .fas {
+.menu_details_entrees_plus ul li:hover .green-check .fas {
   transform: rotate(360deg);
   transition-duration: 0.5s;
 }
 
-.menu_détails_entrées_plus ul li:hover .menu_prix {
+.menu_details_entrees_plus ul li:hover .menu_prix {
   width: 75%;
 }
 
-.menu_détails_entrées_plus ul li:hover .menu_prix p {
+.menu_details_entrees_plus ul li:hover .menu_prix p {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -1667,23 +1657,24 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .menu_détails_entrées_plus {
+  .menu_details_entrees_plus {
     margin-top: 0px;
-    height: 68vh;
+    height: 65vh;
   }
-  .menu_détails_entrées_plus ul {
+  .menu_details_entrees_plus h3 {
+    margin: auto;
+  }
+  .menu_details_entrees_plus ul {
     max-height: 360px;
+    max-width: 576px;
     padding: 0;
-    width: 100vw;
-    max-width: 800px;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 0px;
   }
-  .menu_détails_entrées_plus ul li {
+  .menu_details_entrees_plus ul li {
     background-color: white;
     width: 95%;
-    max-width: 760px;
     margin: auto;
     list-style-type: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
@@ -1691,40 +1682,41 @@ body {
     font-size: 0.9em;
     margin-bottom: 15px;
   }
-  .menu_détails_entrées_plus h4 {
+  .menu_details_entrees_plus h4 {
     padding: 12px 7px 0px 7px;
     font-size: 1.4em;
   }
 }
 @media screen and (min-width: 1024px) {
-  .menu_détails_entrées_plus {
+  .menu_details_entrees_plus {
     padding-left: 50px;
-    margin-top: 55px;
+    margin-top: 5px;
   }
-  .menu_détails_entrées_plus h3 {
+  .menu_details_entrees_plus h3 {
+    padding-top: 60px;
     margin: auto;
   }
-  .menu_détails_entrées_plus h3::after {
+  .menu_details_entrees_plus h3::after {
     position: absolute;
     content: "";
     left: 20px;
-    top: 85%;
+    top: 88%;
     width: 12%;
     border-bottom: 5px #99E2D0 solid;
   }
-  .menu_détails_entrées_plus ul {
+  .menu_details_entrees_plus ul {
+    max-width: 500px;
     padding: 0;
-    width: 100vw;
-    padding-top: 10px;
+    padding-top: 12px;
     padding-bottom: 0px;
   }
-  .menu_détails_entrées_plus ul li {
+  .menu_details_entrees_plus ul li {
     max-width: none;
     box-shadow: #dad8d8 1px 6px 15px 5px;
     border-radius: 15px;
     margin-bottom: 15px;
   }
-  .menu_détails_entrées_plus p {
+  .menu_details_entrees_plus p {
     font-size: 1.2em;
   }
 }
@@ -1736,20 +1728,20 @@ body {
 /*carte menu format desktop dans la page 2*/
 /*bouton linear gradient*/
 /* partie plats, entrées, desserts*/
-.menu_détails_entrées {
+.menu_details_entrees {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
   animation: slide-menu 1.5s ease;
   position: relative;
 }
-.menu_détails_entrées h3 {
+.menu_details_entrees h3 {
   font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
 }
-.menu_détails_entrées h3::after {
+.menu_details_entrees h3::after {
   position: absolute;
   content: "";
   left: 20px;
@@ -1757,13 +1749,13 @@ body {
   width: 12%;
   border-bottom: 5px #99E2D0 solid;
 }
-.menu_détails_entrées ul {
+.menu_details_entrees ul {
   padding: 0;
   width: 100vw;
   margin: auto;
   padding-top: 15px;
 }
-.menu_détails_entrées ul li {
+.menu_details_entrees ul li {
   background-color: white;
   width: 95%;
   height: 12vh;
@@ -1774,11 +1766,11 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
 }
-.menu_détails_entrées h4 {
+.menu_details_entrees h4 {
   padding: 12px 7px 0px 7px;
 }
 
-.menu_détails_entrées ul li {
+.menu_details_entrees ul li {
   position: relative;
   overflow: hidden;
 }
@@ -1801,21 +1793,21 @@ body {
   left: 25%;
 }
 
-.menu_détails_entrées ul li:hover .green-check {
+.menu_details_entrees ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
 }
 
-.menu_détails_entrées ul li:hover .green-check .fas {
+.menu_details_entrees ul li:hover .green-check .fas {
   transform: rotate(360deg);
   transition-duration: 0.5s;
 }
 
-.menu_détails_entrées ul li:hover .menu_prix {
+.menu_details_entrees ul li:hover .menu_prix {
   width: 75%;
 }
 
-.menu_détails_entrées ul li:hover .menu_prix p {
+.menu_details_entrees ul li:hover .menu_prix p {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -1823,20 +1815,20 @@ body {
 }
 
 /*partie plats*/
-.menu_détails_plats {
+.menu_details_plats {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
   animation: slide-menu 2.5s ease;
   transition-delay: 1000ms;
 }
-.menu_détails_plats h3 {
+.menu_details_plats h3 {
   font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
 }
-.menu_détails_plats h3::after {
+.menu_details_plats h3::after {
   position: absolute;
   content: "";
   left: 20px;
@@ -1844,13 +1836,13 @@ body {
   width: 12%;
   border-bottom: 5px #99E2D0 solid;
 }
-.menu_détails_plats ul {
+.menu_details_plats ul {
   padding: 0;
   width: 100vw;
   margin: auto;
   padding-top: 15px;
 }
-.menu_détails_plats ul li {
+.menu_details_plats ul li {
   background-color: white;
   width: 95%;
   height: 12vh;
@@ -1861,30 +1853,30 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
 }
-.menu_détails_plats h4 {
+.menu_details_plats h4 {
   padding: 12px 7px 0px 7px;
 }
 
-.menu_détails_plats ul li {
+.menu_details_plats ul li {
   position: relative;
   overflow: hidden;
 }
 
-.menu_détails_plats ul li:hover .green-check {
+.menu_details_plats ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
 }
 
-.menu_détails_plats ul li:hover .green-check .fas {
+.menu_details_plats ul li:hover .green-check .fas {
   transform: rotate(360deg);
   transition-duration: 0.5s;
 }
 
-.menu_détails_plats ul li:hover .menu_prix {
+.menu_details_plats ul li:hover .menu_prix {
   width: 75%;
 }
 
-.menu_détails_plats ul li:hover .menu_prix p {
+.menu_details_plats ul li:hover .menu_prix p {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -1892,20 +1884,20 @@ body {
 }
 
 /*partie desserts*/
-.menu_détails_desserts {
+.menu_details_desserts {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
   animation: slide-menu 3s ease;
   transition-delay: 1000ms;
 }
-.menu_détails_desserts h3 {
+.menu_details_desserts h3 {
   font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
 }
-.menu_détails_desserts h3::after {
+.menu_details_desserts h3::after {
   position: absolute;
   content: "";
   left: 20px;
@@ -1913,13 +1905,13 @@ body {
   width: 12%;
   border-bottom: 5px #99E2D0 solid;
 }
-.menu_détails_desserts ul {
+.menu_details_desserts ul {
   padding: 0;
   width: 100vw;
   margin: auto;
   padding-top: 15px;
 }
-.menu_détails_desserts ul li {
+.menu_details_desserts ul li {
   background-color: white;
   width: 95%;
   height: 12vh;
@@ -1930,30 +1922,30 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
 }
-.menu_détails_desserts h4 {
+.menu_details_desserts h4 {
   padding: 12px 7px 0px 7px;
 }
 
-.menu_détails_desserts ul li {
+.menu_details_desserts ul li {
   position: relative;
   overflow: hidden;
 }
 
-.menu_détails_desserts ul li:hover .green-check {
+.menu_details_desserts ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
 }
 
-.menu_détails_desserts ul li:hover .green-check .fas {
+.menu_details_desserts ul li:hover .green-check .fas {
   transform: rotate(360deg);
   transition-duration: 0.5s;
 }
 
-.menu_détails_desserts ul li:hover .menu_prix {
+.menu_details_desserts ul li:hover .menu_prix {
   width: 75%;
 }
 
-.menu_détails_desserts ul li:hover .menu_prix p {
+.menu_details_desserts ul li:hover .menu_prix p {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -1961,19 +1953,19 @@ body {
 }
 
 /* partie plats, entrées, desserts*/
-.menu_détails_entrées {
+.menu_details_entrees {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
   animation: slide-menu 1.5s ease;
 }
-.menu_détails_entrées h3 {
+.menu_details_entrees h3 {
   font-weight: lighter;
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
 }
-.menu_détails_entrées h3::after {
+.menu_details_entrees h3::after {
   position: absolute;
   content: "";
   left: 20px;
@@ -1981,13 +1973,13 @@ body {
   width: 12%;
   border-bottom: 5px #99E2D0 solid;
 }
-.menu_détails_entrées ul {
+.menu_details_entrees ul {
   padding: 0;
   width: 100vw;
   margin: auto;
   padding-top: 15px;
 }
-.menu_détails_entrées ul li {
+.menu_details_entrees ul li {
   background-color: white;
   width: 95%;
   height: 12vh;
@@ -1998,13 +1990,13 @@ body {
   border-radius: 15px;
   margin-bottom: 15px;
 }
-.menu_détails_entrées h4 {
+.menu_details_entrees h4 {
   padding: 12px 7px 0px 7px;
 }
-.menu_détails_entrées ul li {
+.menu_details_entrees ul li {
   box-shadow: #dad8d8 1px 3px 5px 2px;
 }
-.menu_détails_entrées h2 {
+.menu_details_entrees h2 {
   padding: 30px 0px 20px 20px;
 }
 
