@@ -63,7 +63,7 @@ body{
 /* partie  entrées*/ 
 .menu_details_entrees{
     @include slide-card-menu;
-    animation: slide-menu 2s ease;
+    animation: slide-menu 1s ease;
     position: relative;
 }
 .menu_details_entrees ul li{
@@ -122,8 +122,8 @@ body{
 /*partie plats*/
 .menu_details_plats{
     @include slide-card-menu;
-    animation: slide-menu 2.5s ease;
-    transition-delay: 1000ms;
+    animation: slide-menu 2s ease;
+
 }
 .menu_details_plats ul li{
     position: relative;
@@ -149,8 +149,7 @@ body{
 /*partie desserts*/
 .menu_details_desserts{
     @include slide-card-menu;
-    animation: slide-menu 3s ease;
-    transition-delay: 1000ms;
+    animation: slide-menu 2.5s ease;
 }
 .menu_details_desserts ul li{
     position: relative;

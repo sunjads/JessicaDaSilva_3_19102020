@@ -184,7 +184,7 @@
     width: 5px;
     padding: 5px 15px 18px 8px;
     position: absolute;
-    left: -14%;
+    left: -16%;
     top: 25%;
   }
 
@@ -233,7 +233,7 @@
   animation: spin 850ms linear;
   position: absolute;
   top: 50%;
-  left: 40%;
+  left: 35%;
   opacity: 0;
 }
 
@@ -471,6 +471,8 @@ footer ul li .fas {
 }
 #section_fonctionnement ul {
   width: 100vw;
+  max-width: 519px;
+  margin: auto;
   padding-left: 50px;
 }
 #section_fonctionnement ul li {
@@ -668,6 +670,7 @@ footer ul li .fas {
     padding: 30px 0px 20px 40px;
   }
   #section_fonctionnement ul {
+    max-width: none;
     width: 100vw;
     padding-left: 50px;
   }
@@ -769,21 +772,21 @@ footer ul li .fas {
     padding: 30px 0px 20px 40px;
   }
   #section_fonctionnement ul {
+    display: flex;
+    justify-content: space-between;
     width: 100vw;
-    padding-left: 50px;
-    max-width: 1034px;
+    padding-left: 0px;
     max-height: 221px;
     margin: auto;
   }
   #section_fonctionnement ul li {
     background-color: #f1f1f1;
     list-style-type: none;
-    width: 60%;
+    width: 30%;
     height: 9vh;
     margin: auto;
     padding-top: 7px;
     margin-bottom: 25px;
-    max-width: 590px;
     max-height: 57px;
   }
 
@@ -861,6 +864,15 @@ footer ul li .fas {
   }
   .nom_coeur :nth-child(3) {
     padding: 0px 0px 0px 10px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #section_fonctionnement ul {
+    max-width: 1440px;
+  }
+  #section_fonctionnement ul li {
+    max-width: 432px;
+    max-height: 57px;
   }
 }
 /*carte menu format portable pour menu1,3,4*/
@@ -1055,7 +1067,7 @@ footer ul li .fas {
     width: 5px;
     padding: 5px 15px 18px 8px;
     position: absolute;
-    left: -14%;
+    left: -16%;
     top: 25%;
   }
 
@@ -1146,7 +1158,7 @@ body {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
-  animation: slide-menu 2s ease;
+  animation: slide-menu 1s ease;
   position: relative;
 }
 .menu_details_entrees h3 {
@@ -1250,8 +1262,7 @@ body {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
-  animation: slide-menu 2.5s ease;
-  transition-delay: 1000ms;
+  animation: slide-menu 2s ease;
 }
 .menu_details_plats h3 {
   font-weight: lighter;
@@ -1319,8 +1330,7 @@ body {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
-  animation: slide-menu 3s ease;
-  transition-delay: 1000ms;
+  animation: slide-menu 2.5s ease;
 }
 .menu_details_desserts h3 {
   font-weight: lighter;
