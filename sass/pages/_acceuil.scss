@@ -33,6 +33,7 @@
         list-style-type: none;
         width: 90%;
         height: 9vh;
+        max-height:58px;
         border-radius: 20px;
         box-shadow: rgb(211, 209, 209)1px 6px 12px 0px;
         padding-top: 7px;
@@ -70,7 +71,7 @@
     }
 }
 
-/*partie vignette*/
+/*partie vignette des menus*/
 #section_restaurant{
     background-color: $grey-background;
     width: 100vw;
@@ -95,6 +96,7 @@
     background-color: white;
     border-radius: 15px 15px;
     width: 80vw;
+    max-width: 357px;
     height: 30vh;
     margin: auto;
     margin-bottom: 25px;
@@ -148,19 +150,23 @@
 #background1 {
     background-image: url("../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
     @include background-nouveau;
+    max-width: 357px;
 }
 
 #background2{
     background-image: url("../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
     @include background-nouveau;
+    max-width: 357px;
 }
 #background3{
     background-image: url("../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
     @include background-sans-nouveau;
+    max-width: 357px;
 }
 #background4{
     background-image: url("../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
     @include background-sans-nouveau;
+    max-width: 357px;
 }
 
 /*format desktop*/

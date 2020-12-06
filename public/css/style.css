@@ -122,9 +122,9 @@
   transition: all 0.7s ease;
   /*color: transparent;*/
   background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
+  /*background-clip: text;
   -webkit-text-fill-color: transparent;
-  /*background-clip: padding-box;*/
+  background-clip: padding-box;*/
 }
 .container .far:hover .fas {
   transform: scale(1);
@@ -135,7 +135,7 @@
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0px white;
+  -webkit-text-stroke: 1px white;
 }
 
 @media screen and (min-width: 768px) {
@@ -225,7 +225,7 @@
   }
 }
 .loader {
-  border: 15px solid #363636;
+  border: 15px solid #202020;
   border-top: 15px solid #9356DC;
   border-radius: 50%;
   width: 120px;
@@ -281,7 +281,7 @@ header {
 }
 header img {
   width: 45%;
-  height: 26%;
+  height: 35%;
   margin: auto;
 }
 header .paris_belleville {
@@ -480,6 +480,7 @@ footer ul li .fas {
   list-style-type: none;
   width: 90%;
   height: 9vh;
+  max-height: 58px;
   border-radius: 20px;
   box-shadow: #d3d1d1 1px 6px 12px 0px;
   padding-top: 7px;
@@ -516,7 +517,7 @@ footer ul li .fas {
   font-size: 20px;
 }
 
-/*partie vignette*/
+/*partie vignette des menus*/
 #section_restaurant {
   background-color: #f1f1f1;
   width: 100vw;
@@ -542,6 +543,7 @@ footer ul li .fas {
   background-color: white;
   border-radius: 15px 15px;
   width: 80vw;
+  max-width: 357px;
   height: 30vh;
   margin: auto;
   margin-bottom: 25px;
@@ -600,6 +602,7 @@ footer ul li .fas {
   height: 22vh;
   position: relative;
   border-radius: 15px 15px 0px 0px;
+  max-width: 357px;
 }
 #background1 p {
   font-size: 0.9em;
@@ -622,6 +625,7 @@ footer ul li .fas {
   height: 22vh;
   position: relative;
   border-radius: 15px 15px 0px 0px;
+  max-width: 357px;
 }
 #background2 p {
   font-size: 0.9em;
@@ -643,6 +647,7 @@ footer ul li .fas {
   width: 80vw;
   height: 22vh;
   border-radius: 15px 15px 0px 0px;
+  max-width: 357px;
 }
 #background3 p {
   visibility: hidden;
@@ -654,6 +659,7 @@ footer ul li .fas {
   width: 80vw;
   height: 22vh;
   border-radius: 15px 15px 0px 0px;
+  max-width: 357px;
 }
 #background4 p {
   visibility: hidden;
@@ -1005,9 +1011,9 @@ footer ul li .fas {
   transition: all 0.7s ease;
   /*color: transparent;*/
   background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
+  /*background-clip: text;
   -webkit-text-fill-color: transparent;
-  /*background-clip: padding-box;*/
+  background-clip: padding-box;*/
 }
 .container .far:hover .fas {
   transform: scale(1);
@@ -1018,7 +1024,7 @@ footer ul li .fas {
   background: linear-gradient(#FF79DA, #9356DC);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0px white;
+  -webkit-text-stroke: 1px white;
 }
 
 @media screen and (min-width: 768px) {
@@ -1125,7 +1131,7 @@ body {
   height: 100%;
 }
 
-/*le contenant titre menu + coeur*/
+/*le contenant titre du menu + coeur*/
 .description_menu {
   background-color: #f1f1f1;
   border-radius: 50px 50px 0px 0px;
@@ -1178,6 +1184,7 @@ body {
 .menu_details_entrees ul {
   padding: 0;
   width: 100vw;
+  max-width: 500px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1193,7 +1200,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_entrees h4 {
-  padding: 12px 7px 0px 7px;
+  padding: 12px 7px 0px 20px;
 }
 
 .menu_details_entrees ul li {
@@ -1223,6 +1230,9 @@ body {
 .menu_details_entrees ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
+  position: absolute;
+  top: 0%;
+  left: 101%;
 }
 
 .menu_details_entrees ul li:hover .green-check .fas {
@@ -1230,28 +1240,29 @@ body {
   transition-duration: 0.5s;
 }
 
-.menu_details_entrees ul li:hover .menu_prix {
-  width: 75%;
-}
-
-.menu_details_entrees ul li:hover .menu_prix p {
+.menu_details_entrees ul li:hover .menu_prix p:nth-child(1) {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-left: 5px;
+}
+
+.menu_details_entrees ul li:hover .menu_prix p:nth-child(2) {
+  width: 20%;
 }
 
 /* descriptif des plats - h3 et p*/
 .menu_prix {
   height: 5vh;
-  margin: 5px 20px 15px 10px;
-  padding: 0px 0px 10px 0px;
+  margin: 5px 0px 15px 0px;
+  padding: 0px 10px 10px 15px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
 }
-.menu_prix p {
+.menu_prix p:nth-child(1) {
   font-weight: 400;
+  width: 85%;
 }
 .menu_prix .leprix {
   font-weight: bold;
@@ -1262,7 +1273,7 @@ body {
   background-color: #f1f1f1;
   margin-top: 0px;
   height: max-content;
-  animation: slide-menu 2s ease;
+  animation: slide-menu 2s ease-out;
 }
 .menu_details_plats h3 {
   font-weight: lighter;
@@ -1281,6 +1292,7 @@ body {
 .menu_details_plats ul {
   padding: 0;
   width: 100vw;
+  max-width: 500px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1296,7 +1308,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_plats h4 {
-  padding: 12px 7px 0px 7px;
+  padding: 12px 7px 0px 20px;
 }
 
 .menu_details_plats ul li {
@@ -1307,6 +1319,9 @@ body {
 .menu_details_plats ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
+  position: absolute;
+  top: 0%;
+  left: 101%;
 }
 
 .menu_details_plats ul li:hover .green-check .fas {
@@ -1318,11 +1333,17 @@ body {
   width: 75%;
 }
 
-.menu_details_plats ul li:hover .menu_prix p {
+.menu_details_plats ul li:hover .menu_prix p:nth-child(1) {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-left: 5px;
+}
+
+.menu_details_plats ul li:hover .menu_prix p:nth-child(2) {
+  padding-left: 0px;
+  width: 20%;
 }
 
 /*partie desserts*/
@@ -1349,6 +1370,7 @@ body {
 .menu_details_desserts ul {
   padding: 0;
   width: 100vw;
+  max-width: 500px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1364,7 +1386,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_desserts h4 {
-  padding: 12px 7px 0px 7px;
+  padding: 12px 7px 0px 20px;
 }
 
 .menu_details_desserts ul li {
@@ -1375,6 +1397,9 @@ body {
 .menu_details_desserts ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
+  position: absolute;
+  top: 0%;
+  left: 101%;
 }
 
 .menu_details_desserts ul li:hover .green-check .fas {
@@ -1386,11 +1411,17 @@ body {
   width: 75%;
 }
 
-.menu_details_desserts ul li:hover .menu_prix p {
+.menu_details_desserts ul li:hover .menu_prix p:nth-child(1) {
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-left: 5px;
+}
+
+.menu_details_desserts ul li:hover .menu_prix p:nth-child(2) {
+  padding-left: 0px;
+  width: 20%;
 }
 
 @keyframes slide-menu {
@@ -1415,6 +1446,7 @@ body {
   .menu_details_entrees h3, .menu_details_plats h3, .menu_details_desserts h3 {
     margin-top: 25px;
     margin: auto;
+    font-size: 1.5em;
   }
   .menu_details_entrees h3::after, .menu_details_plats h3::after, .menu_details_desserts h3::after {
     position: absolute;
@@ -1427,7 +1459,6 @@ body {
   .menu_details_entrees ul, .menu_details_plats ul, .menu_details_desserts ul {
     padding: 0;
     width: 100vw;
-    max-width: 576px;
     margin: auto;
     padding-top: 30px;
   }
@@ -1442,8 +1473,17 @@ body {
     margin-bottom: 15px;
   }
   .menu_details_entrees h4, .menu_details_plats h4, .menu_details_desserts h4 {
-    padding: 12px 7px 0px 7px;
+    padding: 12px 7px 0px 20px;
     font-size: 1.4em;
+  }
+
+  /* descriptif des plats - h3 et p*/
+  .menu_prix p:nth-child(1) {
+    font-size: 1.2em;
+  }
+  .menu_prix .leprix {
+    font-weight: bold;
+    font-size: 1.2em;
   }
 
   .header_menu {
@@ -1513,22 +1553,17 @@ body {
     border-bottom: 5px #99E2D0 solid;
   }
   .menu_details_entrees ul, .menu_details_plats ul, .menu_details_desserts ul {
-    max-width: 500px;
     padding: 0;
     margin: auto;
     padding-top: 30px;
     padding-bottom: 20px;
   }
   .menu_details_entrees ul li, .menu_details_plats ul li, .menu_details_desserts ul li {
-    background-color: white;
     margin: auto;
-    list-style-type: none;
-    box-shadow: #dad8d8 1px 6px 15px 5px;
-    border-radius: 15px;
     margin-bottom: 15px;
   }
   .menu_details_entrees h4, .menu_details_plats h4, .menu_details_desserts h4 {
-    padding: 12px 7px 0px 7px;
+    padding: 12px 7px 0px 20px;
   }
 
   .description_menu {
@@ -1604,6 +1639,7 @@ body {
 .menu_details_entrees_plus ul {
   padding: 0;
   width: 100vw;
+  max-width: 500px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1619,7 +1655,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_entrees_plus h4 {
-  padding: 12px 7px 0px 7px;
+  padding: 12px 7px 0px 20px;
 }
 
 .menu_details_entrees_plus ul li {
@@ -1648,6 +1684,9 @@ body {
 .menu_details_entrees_plus ul li:hover .green-check {
   transform: translate(-100%);
   transition-duration: 0.5s;
+  position: absolute;
+  top: 0%;
+  left: 101%;
 }
 
 .menu_details_entrees_plus ul li:hover .green-check .fas {
@@ -1666,17 +1705,20 @@ body {
   text-overflow: ellipsis;
 }
 
+.menu_details_entrees_plus ul li:hover .menu_prix p:nth-child(2) {
+  padding-left: 0px;
+  width: 20%;
+}
+
 @media screen and (min-width: 768px) {
   .menu_details_entrees_plus {
     margin-top: 0px;
-    height: 65vh;
   }
   .menu_details_entrees_plus h3 {
     margin: auto;
+    font-size: 1.5em;
   }
   .menu_details_entrees_plus ul {
-    max-height: 360px;
-    max-width: 576px;
     padding: 0;
     margin: auto;
     padding-top: 30px;
@@ -1693,13 +1735,12 @@ body {
     margin-bottom: 15px;
   }
   .menu_details_entrees_plus h4 {
-    padding: 12px 7px 0px 7px;
+    padding: 12px 7px 0px 20px;
     font-size: 1.4em;
   }
 }
 @media screen and (min-width: 1024px) {
   .menu_details_entrees_plus {
-    padding-left: 50px;
     margin-top: 5px;
   }
   .menu_details_entrees_plus h3 {
@@ -1715,7 +1756,6 @@ body {
     border-bottom: 5px #99E2D0 solid;
   }
   .menu_details_entrees_plus ul {
-    max-width: 500px;
     padding: 0;
     padding-top: 12px;
     padding-bottom: 0px;
@@ -1762,6 +1802,7 @@ body {
 .menu_details_entrees ul {
   padding: 0;
   width: 100vw;
+  max-width: 500px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1777,7 +1818,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_entrees h4 {
-  padding: 12px 7px 0px 7px;
+  padding: 12px 7px 0px 20px;
 }
 
 .menu_details_entrees ul li {
@@ -1849,6 +1890,7 @@ body {
 .menu_details_plats ul {
   padding: 0;
   width: 100vw;
+  max-width: 500px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1864,7 +1906,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_plats h4 {
-  padding: 12px 7px 0px 7px;
+  padding: 12px 7px 0px 20px;
 }
 
 .menu_details_plats ul li {
@@ -1918,6 +1960,7 @@ body {
 .menu_details_desserts ul {
   padding: 0;
   width: 100vw;
+  max-width: 500px;
   margin: auto;
   padding-top: 15px;
 }
@@ -1933,7 +1976,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_desserts h4 {
-  padding: 12px 7px 0px 7px;
+  padding: 12px 7px 0px 20px;
 }
 
 .menu_details_desserts ul li {
@@ -1986,6 +2029,7 @@ body {
 .menu_details_entrees ul {
   padding: 0;
   width: 100vw;
+  max-width: 500px;
   margin: auto;
   padding-top: 15px;
 }
@@ -2001,7 +2045,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_entrees h4 {
-  padding: 12px 7px 0px 7px;
+  padding: 12px 7px 0px 20px;
 }
 .menu_details_entrees ul li {
   box-shadow: #dad8d8 1px 3px 5px 2px;

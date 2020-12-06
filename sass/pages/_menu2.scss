@@ -30,6 +30,9 @@
 .menu_details_entrees_plus ul li:hover .green-check{
   transform: translate(-100%);
   transition-duration: 0.5s;
+  position: absolute;
+  top: 0%;
+  left: 101%;
 }
 .menu_details_entrees_plus ul li:hover .green-check .fas{
   transform: rotate(360deg);
@@ -44,6 +47,10 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.menu_details_entrees_plus ul li:hover .menu_prix p:nth-child(2){
+  padding-left: 0px;
+  width: 20%;
+}
 @media screen and (min-width: 768px){
     .menu_details_entrees_plus{
       @include  slide-card-menu-plus-tablet ;
@@ -51,7 +58,6 @@
 }
 @media screen and (min-width: 1024px){
     .menu_details_entrees_plus{
-      padding-left: 50px;
       @include  slide-card-menu-plus-desktop ;
     }
 }

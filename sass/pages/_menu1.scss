@@ -33,7 +33,7 @@ body{
         height: 100%;
     }
 }
-/*le contenant titre menu + coeur*/
+/*le contenant titre du menu + coeur*/
 .description_menu{
     background-color: $grey-background;
     border-radius: 50px 50px 0px 0px;
@@ -87,42 +87,49 @@ body{
     top: 30%;
     left: 25%;
 }
+
 .menu_details_entrees ul li:hover .green-check{
     transform: translate(-100%);
     transition-duration: 0.5s;
+    position: absolute;
+    top: 0%;
+    left: 101%;
 }
 .menu_details_entrees ul li:hover .green-check .fas{
     transform: rotate(360deg);
     transition-duration: 0.5s;
 } 
-.menu_details_entrees ul li:hover .menu_prix{
-    width: 75%;
-}
-.menu_details_entrees ul li:hover .menu_prix p{
+
+.menu_details_entrees ul li:hover .menu_prix p:nth-child(1){
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-left: 5px;
+}
+.menu_details_entrees ul li:hover .menu_prix p:nth-child(2){
+    width: 20%;
 }
 /* descriptif des plats - h3 et p*/
 .menu_prix {
     height: 5vh;
-    margin: 5px 20px 15px 10px;
-    padding: 0px 0px 10px 0px;
+    margin: 5px 0px 15px 0px;
+    padding: 0px 10px 10px 15px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    & p{
+    justify-content: space-around;
+    & p:nth-child(1){
         font-weight:400;
+        width: 85%;
     }
     & .leprix{
         font-weight: bold;
     }
 }
+
 /*partie plats*/
 .menu_details_plats{
     @include slide-card-menu;
-    animation: slide-menu 2s ease;
+    animation: slide-menu 2s ease-out;
 
 }
 .menu_details_plats ul li{
@@ -132,6 +139,9 @@ body{
 .menu_details_plats ul li:hover .green-check{
     transform: translate(-100%);
     transition-duration: 0.5s;
+    position: absolute;
+    top: 0%;
+    left: 101%;
 }
 .menu_details_plats ul li:hover .green-check .fas{
     transform: rotate(360deg);
@@ -140,11 +150,16 @@ body{
 .menu_details_plats ul li:hover .menu_prix{
     width: 75%;
 }
-.menu_details_plats ul li:hover .menu_prix p{
+.menu_details_plats ul li:hover .menu_prix p:nth-child(1){
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-left: 5px;
+}
+.menu_details_plats ul li:hover .menu_prix p:nth-child(2){
+    padding-left: 0px;
+    width: 20%;
 }
 /*partie desserts*/
 .menu_details_desserts{
@@ -158,6 +173,9 @@ body{
 .menu_details_desserts ul li:hover .green-check{
     transform: translate(-100%);
     transition-duration: 0.5s;
+    position: absolute;
+    top: 0%;
+    left: 101%;
 }
 .menu_details_desserts ul li:hover .green-check .fas{
     transform: rotate(360deg);
@@ -166,13 +184,17 @@ body{
 .menu_details_desserts ul li:hover .menu_prix{
     width: 75%;
 }
-.menu_details_desserts ul li:hover .menu_prix p{
+.menu_details_desserts ul li:hover .menu_prix p:nth-child(1){
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    padding-left: 5px;
 }
- 
+.menu_details_desserts ul li:hover .menu_prix p:nth-child(2){
+    padding-left: 0px;
+    width: 20%;
+}
 @keyframes slide-menu{
     0%{
         transform: translate(0,5%);
@@ -192,6 +214,16 @@ body{
     .menu_details_entrees, .menu_details_plats, .menu_details_desserts{
         @include slide-card-menu-tablet;
     } 
+    /* descriptif des plats - h3 et p*/
+    .menu_prix {
+    & p:nth-child(1){
+        font-size: 1.2em;  
+    }
+    & .leprix{
+        font-weight: bold;
+        font-size: 1.2em;  
+    }
+}
     .header_menu{
         width: 100vw;
         height: 12vh;

@@ -49,9 +49,9 @@
     transition: all 0.7s ease;
     /*color: transparent;*/
     background: linear-gradient(#FF79DA, #9356DC);
-    -webkit-background-clip: text;
+    /*background-clip: text;
     -webkit-text-fill-color: transparent;
-    /*background-clip: padding-box;*/
+    background-clip: padding-box;*/
   }
   & .far:hover .fas{
     transform:scale(1);
@@ -62,7 +62,7 @@
     background: linear-gradient(#FF79DA, #9356DC);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 0px white;
+    -webkit-text-stroke: 1px white;
   }
   
 }
