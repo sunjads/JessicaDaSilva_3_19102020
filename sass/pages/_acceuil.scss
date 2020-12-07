@@ -117,6 +117,7 @@
 /*descriptif des vignettes + le coeur*/
 .nom_coeur{
     height: 10vh;
+    max-height: 76px;
     display: grid;
     grid-template-columns:  25% 25% 25% 25%;
     grid-template-rows: 25% 25% 25% 25% ;
@@ -143,7 +144,7 @@
     & :nth-child(3){
         grid-column-start: 4;
         grid-column-end: 5;
-        grid-row-start: 2;
+        grid-row-start: 1;
         grid-row-end:3;
     }  
 }

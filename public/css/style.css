@@ -98,44 +98,63 @@
 
 /* le bouton coeur qui se remplie en hover */
 .container {
-  width: 10vw;
-  height: 10vh;
+  width: 10px;
+  font-size: 22px;
+  position: relative;
+}
+
+.far {
+  color: black;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+
+/*fill heart*/
+.fill-heart {
+  position: relative;
+  left: 146%;
+  top: 29%;
+  border-radius: 1px;
+  display: inline-block;
+  height: 10px;
+  transform: rotate(-45deg) scale(0);
+  transition: all 0.4s ease-in-out;
+  width: 10px;
+}
+
+.fill-heart:before,
+.fill-heart:after {
+  content: "";
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.fill-heart:before {
+  top: -5px;
+  left: 0;
+}
+
+.fill-heart:after {
+  left: 5px;
+  top: 0;
   overflow: hidden;
 }
-.container .far {
-  font-size: 19px;
-  position: relative;
+
+.container:hover .fill-heart {
   z-index: 1;
-  cursor: pointer;
-  /*background-clip: content-box;
-  text-shadow: 1px 0 0 white;
-  text-emphasis-color: transparent;*/
-  -webkit-text-stroke: 1px white;
+  transform: rotate(-45deg) scale(1.2);
+  background: linear-gradient(45deg, #FF79DA 20%, #9356DC);
 }
-.container .fas {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  opacity: 0;
-  transform: scale(0);
-  transition: all 0.7s ease;
-  /*color: transparent;*/
-  background: linear-gradient(#FF79DA, #9356DC);
-  /*background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: padding-box;*/
+
+.container:hover .fill-heart:before {
+  background: linear-gradient(45deg, #FF79DA, #9356DC 75%);
 }
-.container .far:hover .fas {
-  transform: scale(1);
-  opacity: 1;
-  transition: 0.5s ease;
-}
-.container .far:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px white;
+
+.container:hover .fill-heart:after {
+  background: linear-gradient(45deg, #FF79DA, #9356DC 75%);
 }
 
 @media screen and (min-width: 768px) {
@@ -158,22 +177,20 @@
     top: 25%;
   }
 
-  /* le bouton coeur qui se remplie en hover */
-  .container {
-    width: 5vw;
-    height: 5vh;
-  }
-  .container .far {
-    font-size: 21px;
-  }
-  .container .fas {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
+  /*fill heart*/
+  .fill-heart {
+    position: relative;
+    left: 147%;
+    top: 31%;
+    border-radius: 1px;
+    display: inline-block;
+    height: 10px;
+    transform: rotate(-45deg) scale(0);
+    transition: all 0.4s ease-in-out;
+    width: 10px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) and (min-width: 1024px) {
   /*Le numéro violet dans la page d'acceuil*/
   .purple-num {
     border-radius: 40px 40px;
@@ -188,18 +205,11 @@
     top: 25%;
   }
 
-  /* le bouton coeur qui se remplie en hover */
-  .container {
-    width: 4vw;
-    height: 7vh;
-    overflow: hidden;
-  }
-  .container .far {
-    font-size: 21px;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    -webkit-text-stroke: 1px white;
+  .far {
+    color: black;
+    position: absolute;
+    left: -50%;
+    top: 6%;
   }
 
   #bouton, #bouton-commander {
@@ -564,6 +574,7 @@ footer ul li .fas {
 /*descriptif des vignettes + le coeur*/
 .nom_coeur {
   height: 10vh;
+  max-height: 76px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 25% 25% 25% 25%;
@@ -591,7 +602,7 @@ footer ul li .fas {
 .nom_coeur :nth-child(3) {
   grid-column-start: 4;
   grid-column-end: 5;
-  grid-row-start: 2;
+  grid-row-start: 1;
   grid-row-end: 3;
 }
 
@@ -987,44 +998,63 @@ footer ul li .fas {
 
 /* le bouton coeur qui se remplie en hover */
 .container {
-  width: 10vw;
-  height: 10vh;
+  width: 10px;
+  font-size: 22px;
+  position: relative;
+}
+
+.far {
+  color: black;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+}
+
+/*fill heart*/
+.fill-heart {
+  position: relative;
+  left: 146%;
+  top: 29%;
+  border-radius: 1px;
+  display: inline-block;
+  height: 10px;
+  transform: rotate(-45deg) scale(0);
+  transition: all 0.4s ease-in-out;
+  width: 10px;
+}
+
+.fill-heart:before,
+.fill-heart:after {
+  content: "";
+  border-radius: 50%;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+}
+
+.fill-heart:before {
+  top: -5px;
+  left: 0;
+}
+
+.fill-heart:after {
+  left: 5px;
+  top: 0;
   overflow: hidden;
 }
-.container .far {
-  font-size: 19px;
-  position: relative;
+
+.container:hover .fill-heart {
   z-index: 1;
-  cursor: pointer;
-  /*background-clip: content-box;
-  text-shadow: 1px 0 0 white;
-  text-emphasis-color: transparent;*/
-  -webkit-text-stroke: 1px white;
+  transform: rotate(-45deg) scale(1.2);
+  background: linear-gradient(45deg, #FF79DA 20%, #9356DC);
 }
-.container .fas {
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  opacity: 0;
-  transform: scale(0);
-  transition: all 0.7s ease;
-  /*color: transparent;*/
-  background: linear-gradient(#FF79DA, #9356DC);
-  /*background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: padding-box;*/
+
+.container:hover .fill-heart:before {
+  background: linear-gradient(45deg, #FF79DA, #9356DC 75%);
 }
-.container .far:hover .fas {
-  transform: scale(1);
-  opacity: 1;
-  transition: 0.5s ease;
-}
-.container .far:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 1px white;
+
+.container:hover .fill-heart:after {
+  background: linear-gradient(45deg, #FF79DA, #9356DC 75%);
 }
 
 @media screen and (min-width: 768px) {
@@ -1047,22 +1077,20 @@ footer ul li .fas {
     top: 25%;
   }
 
-  /* le bouton coeur qui se remplie en hover */
-  .container {
-    width: 5vw;
-    height: 5vh;
-  }
-  .container .far {
-    font-size: 21px;
-  }
-  .container .fas {
-    position: absolute;
-    left: 0;
-    top: 0;
-    z-index: -1;
+  /*fill heart*/
+  .fill-heart {
+    position: relative;
+    left: 147%;
+    top: 31%;
+    border-radius: 1px;
+    display: inline-block;
+    height: 10px;
+    transform: rotate(-45deg) scale(0);
+    transition: all 0.4s ease-in-out;
+    width: 10px;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) and (min-width: 1024px) {
   /*Le numéro violet dans la page d'acceuil*/
   .purple-num {
     border-radius: 40px 40px;
@@ -1077,18 +1105,11 @@ footer ul li .fas {
     top: 25%;
   }
 
-  /* le bouton coeur qui se remplie en hover */
-  .container {
-    width: 4vw;
-    height: 7vh;
-    overflow: hidden;
-  }
-  .container .far {
-    font-size: 21px;
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    -webkit-text-stroke: 1px white;
+  .far {
+    color: black;
+    position: absolute;
+    left: -50%;
+    top: 6%;
   }
 
   #bouton, #bouton-commander {
