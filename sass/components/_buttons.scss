@@ -101,16 +101,8 @@
 .fill-heart {
   position: relative;
   left: 147%;
-  top: 31%;
-  border-radius: 1px;
-  display: inline-block;
-  height: 10px;
-  transform: rotate(-45deg) scale(0);
-  transition: all 0.4s ease-in-out;
-  width: 10px;
+  top: 29%;
 }
-
-
 
 @media screen and (min-width: 1024px){
   /*Le numéro violet dans la page d'acceuil*/
@@ -130,7 +122,7 @@
     color: rgb(0, 0, 0);
     position: absolute;
     left: -50%;
-    top: 6%;
+    top: 3%;
 }
 #bouton, #bouton-commander {
   @include bouton-linear-gradient-desktop;

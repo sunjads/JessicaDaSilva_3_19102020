@@ -181,13 +181,7 @@
   .fill-heart {
     position: relative;
     left: 147%;
-    top: 31%;
-    border-radius: 1px;
-    display: inline-block;
-    height: 10px;
-    transform: rotate(-45deg) scale(0);
-    transition: all 0.4s ease-in-out;
-    width: 10px;
+    top: 29%;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
@@ -209,7 +203,7 @@
     color: black;
     position: absolute;
     left: -50%;
-    top: 6%;
+    top: 3%;
   }
 
   #bouton, #bouton-commander {
@@ -555,6 +549,7 @@ footer ul li .fas {
   width: 80vw;
   max-width: 357px;
   height: 30vh;
+  max-height: 285px;
   margin: auto;
   margin-bottom: 25px;
   display: flex;
@@ -1081,13 +1076,7 @@ footer ul li .fas {
   .fill-heart {
     position: relative;
     left: 147%;
-    top: 31%;
-    border-radius: 1px;
-    display: inline-block;
-    height: 10px;
-    transform: rotate(-45deg) scale(0);
-    transition: all 0.4s ease-in-out;
-    width: 10px;
+    top: 29%;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
@@ -1109,7 +1098,7 @@ footer ul li .fas {
     color: black;
     position: absolute;
     left: -50%;
-    top: 6%;
+    top: 3%;
   }
 
   #bouton, #bouton-commander {
