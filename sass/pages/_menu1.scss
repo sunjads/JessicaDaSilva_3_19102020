@@ -120,7 +120,7 @@ body{
     display: flex;
     justify-content: space-evenly;
     margin: 0px 25px 0px 10px;
-    padding-top: 5px;
+    padding-top: 3px;
     & p:nth-child(1){
         font-weight:400;
         width: 85%;
@@ -216,6 +216,18 @@ body{
     .menu_details_entrees, .menu_details_plats, .menu_details_desserts{
         @include slide-card-menu-tablet;
     } 
+    .menu_details_plats ul li:hover .menu_prix {
+        margin: 0px 25px 0px 20px;
+    }
+    .menu_details_entrees ul li:hover .menu_prix {
+        margin: 0px 25px 0px 20px;
+    }
+    .menu_details_desserts ul li:hover .menu_prix {
+        margin: 0px 25px 0px 20px;
+    }
+    .menu_details_entrees_plus ul li:hover .menu_prix {
+        margin: 0px 25px 0px 20px;
+    }
     .description_menu{
         background-color: $grey-background;
         border-radius: 50px 50px 0px 0px;
@@ -223,7 +235,7 @@ body{
         height: max-content;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: center;
     }
     /*le contenant titre menu + coeur*/
     .description_menu{
@@ -252,11 +264,11 @@ body{
     /* descriptif des plats - h3 et p*/
     .menu_prix {
     & p:nth-child(1){
-        font-size: 1em ;
+        font-size: 1.1em ;
     }
     & .leprix{
         font-weight: bold;
-        font-size: 1em;  
+        font-size: 1.1em;  
     }
 }
     .header_menu{
