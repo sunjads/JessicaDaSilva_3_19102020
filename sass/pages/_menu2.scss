@@ -38,18 +38,21 @@
   transform: rotate(360deg);
   transition-duration: 0.5s;
 } 
-.menu_details_entrees_plus ul li:hover .menu_prix{
+.menu_details_entrees_plus ul li:hover .menu_prix {
+  margin: 0px 25px 0px 16px;
   width: 75%;
 }
-.menu_details_entrees_plus ul li:hover .menu_prix p{
-  width: 100%;
+.menu_details_entrees_plus ul li:hover .menu_prix p:nth-child(1){
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 18px;
+  
 }
 .menu_details_entrees_plus ul li:hover .menu_prix p:nth-child(2){
-  padding-left: 0px;
-  width: 20%;
+  width: 15%;
+  padding-right: 0;
+  
 }
 @media screen and (min-width: 768px){
     .menu_details_entrees_plus{

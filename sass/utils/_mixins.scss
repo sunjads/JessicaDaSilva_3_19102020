@@ -10,6 +10,7 @@
         padding: 30px 0px 20px 20px; 
         position: relative;
         max-width: 425px;
+        margin: auto;
     }
     & h3::after {
         position: absolute;
@@ -22,14 +23,14 @@
     & ul {
         padding: 0;
         width: 100vw;
-        max-width: 500px;
+        max-width: 357px;
         margin: auto;
         padding-top: 15px;
     }
     & ul li{
         background-color: white;
         width: 95%;
-        height: 12vh;
+        height: 15vh;
         max-height: 75px;
         margin: auto;
         list-style-type: none;
@@ -38,7 +39,7 @@
         margin-bottom:15px;
     }
     & h4{
-        padding: 12px 7px 0px 20px;
+        padding: 12px 7px 0px 15px;
     }
 }
 
@@ -52,6 +53,7 @@
         padding: 30px 0px 20px 20px; 
         position: relative;
         max-width: 425px;
+        margin: auto;
     }
     & h3::after {
         position: absolute;
@@ -64,14 +66,14 @@
     & ul {
         padding: 0;
         width: 100vw;
-        max-width: 500px;
+        max-width: 357px;
         margin: auto;
         padding-top: 15px;
     }
     & ul li{
         background-color: white;
         width: 95%;
-        height: 12vh;
+        height: 15vh;
         max-height: 75px;
         margin: auto;
         list-style-type: none;
@@ -80,7 +82,7 @@
         margin-bottom:15px;
     }
     & h4{
-        padding: 12px 7px 0px 20px;
+        padding: 12px 7px 0px 15px;
     }
 }
 /*carte menu format tablette dans les pages menu1,3,4*/
@@ -90,7 +92,7 @@
     & h3{ 
         margin-top: 25px;
         margin: auto;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     & h3::after {
         position: absolute;
@@ -118,7 +120,7 @@
     }
     & h4{
         padding: 12px 7px 0px 20px;
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     
 }
@@ -128,12 +130,12 @@
    
     & h3{
         margin: auto;
-        font-size: 1.5em;
+        font-size: 1.3em;
     }
     & ul {
         padding: 0;
         margin: auto;
-        padding-top: 30px;
+        padding-top: 15px;
         padding-bottom: 0px;
     }
     & ul li{
@@ -148,19 +150,14 @@
     }
     & h4{
         padding: 12px 7px 0px 20px;
-
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 }
 /*carte menu format desktop pour page1,3,4*/
 @mixin slide-card-menu-desktop{
-    padding-left: 0px;
+    
     margin-top: 0px;
     padding-top: 30px;
-    & h3{
-        width: 100vw;
-        margin: auto;
-    }
     & h3::after {
         position: absolute;
         content: ""; 
@@ -222,6 +219,7 @@
     height: 7vh;
     width: 55vw;
     max-width: 308px;
+    max-height: 60px;
     border-radius:30px;
     border: none;
     box-shadow: 0px 5px 5px 1px rgb(216, 214, 214);
@@ -240,7 +238,7 @@
     &:hover{
         outline: none;
         border: none;
-        background: linear-gradient( rgb(255, 178, 243),rgb(206, 82, 255));
+        background: linear-gradient( #e785e0,#be78e0);
         box-shadow: 0px 4px 4px rgba(34,62,66,.5);
         -webkit-transition: box-shadow 1s ease;
         transition: box-shadow 1s ease;

@@ -14,6 +14,7 @@
   height: 7vh;
   width: 55vw;
   max-width: 308px;
+  max-height: 60px;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
@@ -34,7 +35,7 @@
 #bouton:hover {
   outline: none;
   border: none;
-  background: linear-gradient(#ffb2f3, #ce52ff);
+  background: linear-gradient(#e785e0, #be78e0);
   box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
   -webkit-transition: box-shadow 1s ease;
   transition: box-shadow 1s ease;
@@ -51,6 +52,7 @@
   height: 7vh;
   width: 55vw;
   max-width: 308px;
+  max-height: 60px;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
@@ -72,7 +74,7 @@
 #bouton-commander:hover {
   outline: none;
   border: none;
-  background: linear-gradient(#ffb2f3, #ce52ff);
+  background: linear-gradient(#e785e0, #be78e0);
   box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
   -webkit-transition: box-shadow 1s ease;
   transition: box-shadow 1s ease;
@@ -114,7 +116,7 @@
 .fill-heart {
   position: relative;
   left: 146%;
-  top: 29%;
+  top: 30%;
   border-radius: 1px;
   display: inline-block;
   height: 10px;
@@ -181,7 +183,7 @@
   .fill-heart {
     position: relative;
     left: 147%;
-    top: 29%;
+    top: 31%;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
@@ -203,7 +205,7 @@
     color: black;
     position: absolute;
     left: -50%;
-    top: 3%;
+    top: 5%;
   }
 
   #bouton, #bouton-commander {
@@ -213,7 +215,7 @@
   }
 }
 #lapage {
-  animation: transition-loading 1.2s linear;
+  animation: transition-loading 1s linear;
   opacity: 1;
 }
 
@@ -272,7 +274,7 @@
   .loader {
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
   }
 }
 header {
@@ -570,6 +572,7 @@ footer ul li .fas {
 .nom_coeur {
   height: 10vh;
   max-height: 76px;
+  max-width: 357px;
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 25% 25% 25% 25%;
@@ -909,6 +912,7 @@ footer ul li .fas {
   height: 7vh;
   width: 55vw;
   max-width: 308px;
+  max-height: 60px;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
@@ -929,7 +933,7 @@ footer ul li .fas {
 #bouton:hover {
   outline: none;
   border: none;
-  background: linear-gradient(#ffb2f3, #ce52ff);
+  background: linear-gradient(#e785e0, #be78e0);
   box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
   -webkit-transition: box-shadow 1s ease;
   transition: box-shadow 1s ease;
@@ -946,6 +950,7 @@ footer ul li .fas {
   height: 7vh;
   width: 55vw;
   max-width: 308px;
+  max-height: 60px;
   border-radius: 30px;
   border: none;
   box-shadow: 0px 5px 5px 1px #d8d6d6;
@@ -967,7 +972,7 @@ footer ul li .fas {
 #bouton-commander:hover {
   outline: none;
   border: none;
-  background: linear-gradient(#ffb2f3, #ce52ff);
+  background: linear-gradient(#e785e0, #be78e0);
   box-shadow: 0px 4px 4px rgba(34, 62, 66, 0.5);
   -webkit-transition: box-shadow 1s ease;
   transition: box-shadow 1s ease;
@@ -1009,7 +1014,7 @@ footer ul li .fas {
 .fill-heart {
   position: relative;
   left: 146%;
-  top: 29%;
+  top: 30%;
   border-radius: 1px;
   display: inline-block;
   height: 10px;
@@ -1076,7 +1081,7 @@ footer ul li .fas {
   .fill-heart {
     position: relative;
     left: 147%;
-    top: 29%;
+    top: 31%;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
@@ -1098,7 +1103,7 @@ footer ul li .fas {
     color: black;
     position: absolute;
     left: -50%;
-    top: 3%;
+    top: 5%;
   }
 
   #bouton, #bouton-commander {
@@ -1182,6 +1187,7 @@ body {
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
+  margin: auto;
 }
 .menu_details_entrees h3::after {
   position: absolute;
@@ -1194,14 +1200,14 @@ body {
 .menu_details_entrees ul {
   padding: 0;
   width: 100vw;
-  max-width: 500px;
+  max-width: 357px;
   margin: auto;
   padding-top: 15px;
 }
 .menu_details_entrees ul li {
   background-color: white;
   width: 95%;
-  height: 12vh;
+  height: 15vh;
   max-height: 75px;
   margin: auto;
   list-style-type: none;
@@ -1210,7 +1216,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_entrees h4 {
-  padding: 12px 7px 0px 20px;
+  padding: 12px 7px 0px 15px;
 }
 
 .menu_details_entrees ul li {
@@ -1250,25 +1256,29 @@ body {
   transition-duration: 0.5s;
 }
 
+.menu_details_entrees ul li:hover .menu_prix {
+  margin: 0px 25px 0px 16px;
+}
+
 .menu_details_entrees ul li:hover .menu_prix p:nth-child(1) {
-  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-left: 5px;
+  padding-right: 18px;
 }
 
 .menu_details_entrees ul li:hover .menu_prix p:nth-child(2) {
-  width: 20%;
+  width: 15%;
+  padding-right: 0;
 }
 
 /* descriptif des plats - h3 et p*/
 .menu_prix {
   height: 5vh;
-  margin: 5px 0px 15px 0px;
-  padding: 0px 10px 10px 15px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  margin: 0px 25px 0px 10px;
+  padding-top: 5px;
 }
 .menu_prix p:nth-child(1) {
   font-weight: 400;
@@ -1290,6 +1300,7 @@ body {
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
+  margin: auto;
 }
 .menu_details_plats h3::after {
   position: absolute;
@@ -1302,14 +1313,14 @@ body {
 .menu_details_plats ul {
   padding: 0;
   width: 100vw;
-  max-width: 500px;
+  max-width: 357px;
   margin: auto;
   padding-top: 15px;
 }
 .menu_details_plats ul li {
   background-color: white;
   width: 95%;
-  height: 12vh;
+  height: 15vh;
   max-height: 75px;
   margin: auto;
   list-style-type: none;
@@ -1318,7 +1329,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_plats h4 {
-  padding: 12px 7px 0px 20px;
+  padding: 12px 7px 0px 15px;
 }
 
 .menu_details_plats ul li {
@@ -1340,20 +1351,19 @@ body {
 }
 
 .menu_details_plats ul li:hover .menu_prix {
-  width: 75%;
+  margin: 0px 25px 0px 16px;
 }
 
 .menu_details_plats ul li:hover .menu_prix p:nth-child(1) {
-  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-left: 5px;
+  padding-right: 18px;
 }
 
 .menu_details_plats ul li:hover .menu_prix p:nth-child(2) {
-  padding-left: 0px;
-  width: 20%;
+  width: 15%;
+  padding-right: 0;
 }
 
 /*partie desserts*/
@@ -1368,6 +1378,7 @@ body {
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
+  margin: auto;
 }
 .menu_details_desserts h3::after {
   position: absolute;
@@ -1380,14 +1391,14 @@ body {
 .menu_details_desserts ul {
   padding: 0;
   width: 100vw;
-  max-width: 500px;
+  max-width: 357px;
   margin: auto;
   padding-top: 15px;
 }
 .menu_details_desserts ul li {
   background-color: white;
   width: 95%;
-  height: 12vh;
+  height: 15vh;
   max-height: 75px;
   margin: auto;
   list-style-type: none;
@@ -1396,7 +1407,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_desserts h4 {
-  padding: 12px 7px 0px 20px;
+  padding: 12px 7px 0px 15px;
 }
 
 .menu_details_desserts ul li {
@@ -1418,20 +1429,19 @@ body {
 }
 
 .menu_details_desserts ul li:hover .menu_prix {
-  width: 75%;
+  margin: 0px 25px 0px 16px;
 }
 
 .menu_details_desserts ul li:hover .menu_prix p:nth-child(1) {
-  width: 100%;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding-left: 5px;
+  padding-right: 18px;
 }
 
 .menu_details_desserts ul li:hover .menu_prix p:nth-child(2) {
-  padding-left: 0px;
-  width: 20%;
+  width: 15%;
+  padding-right: 0;
 }
 
 @keyframes slide-menu {
@@ -1456,7 +1466,7 @@ body {
   .menu_details_entrees h3, .menu_details_plats h3, .menu_details_desserts h3 {
     margin-top: 25px;
     margin: auto;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   .menu_details_entrees h3::after, .menu_details_plats h3::after, .menu_details_desserts h3::after {
     position: absolute;
@@ -1484,16 +1494,54 @@ body {
   }
   .menu_details_entrees h4, .menu_details_plats h4, .menu_details_desserts h4 {
     padding: 12px 7px 0px 20px;
-    font-size: 1.4em;
+    font-size: 1.2em;
+  }
+
+  .description_menu {
+    background-color: #f1f1f1;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: -100px;
+    height: max-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  /*le contenant titre menu + coeur*/
+  .description_menu {
+    background-color: #f1f1f1;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: -50px;
+    height: max-content;
+  }
+
+  .title_menu {
+    width: 100vw;
+    height: 100%;
+  }
+
+  .title_menu h1 {
+    font-family: "Shrikhand", cursive;
+    font-size: 2.5em;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    padding-left: 60px;
+  }
+
+  .title_menu .far {
+    position: absolute;
+    top: 28%;
+    left: 92%;
+    font-size: 38px;
   }
 
   /* descriptif des plats - h3 et p*/
   .menu_prix p:nth-child(1) {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .menu_prix .leprix {
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1em;
   }
 
   .header_menu {
@@ -1546,13 +1594,8 @@ body {
 }
 @media screen and (min-width: 768px) and (min-width: 1024px) {
   .menu_details_entrees, .menu_details_plats, .menu_details_desserts {
-    padding-left: 0px;
     margin-top: 0px;
     padding-top: 30px;
-  }
-  .menu_details_entrees h3, .menu_details_plats h3, .menu_details_desserts h3 {
-    width: 100vw;
-    margin: auto;
   }
   .menu_details_entrees h3::after, .menu_details_plats h3::after, .menu_details_desserts h3::after {
     position: absolute;
@@ -1575,50 +1618,11 @@ body {
   .menu_details_entrees h4, .menu_details_plats h4, .menu_details_desserts h4 {
     padding: 12px 7px 0px 20px;
   }
-
-  .description_menu {
-    background-color: #f1f1f1;
-    border-radius: 50px 50px 0px 0px;
-    margin-top: -100px;
-    height: max-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .img-principale {
+  .menu_details_entrees .img-principale, .menu_details_plats .img-principale, .menu_details_desserts .img-principale {
     height: 78vh;
   }
-
-  /*le contenant titre menu + coeur*/
-  .description_menu {
-    background-color: #f1f1f1;
-    border-radius: 50px 50px 0px 0px;
-    margin-top: -50px;
-    height: max-content;
-  }
-
-  .title_menu {
-    width: 100vw;
-    height: 100%;
-  }
-
-  .title_menu h1 {
-    font-family: "Shrikhand", cursive;
-    font-size: 2.5em;
-    padding-top: 20px;
-    padding-bottom: 25px;
-    padding-left: 60px;
-  }
-
-  .title_menu .far {
-    position: absolute;
-    top: 28%;
-    left: 92%;
-    font-size: 38px;
-  }
 }
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 768px) and (min-width: 1600px) {
   .menu_details_entrees, .menu_details_entrees_plus, .menu_details_plats, .menu_details_desserts {
     margin-right: 5px;
   }
@@ -1637,6 +1641,7 @@ body {
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
+  margin: auto;
 }
 .menu_details_entrees_plus h3::after {
   position: absolute;
@@ -1649,14 +1654,14 @@ body {
 .menu_details_entrees_plus ul {
   padding: 0;
   width: 100vw;
-  max-width: 500px;
+  max-width: 357px;
   margin: auto;
   padding-top: 15px;
 }
 .menu_details_entrees_plus ul li {
   background-color: white;
   width: 95%;
-  height: 12vh;
+  height: 15vh;
   max-height: 75px;
   margin: auto;
   list-style-type: none;
@@ -1665,7 +1670,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_entrees_plus h4 {
-  padding: 12px 7px 0px 20px;
+  padding: 12px 7px 0px 15px;
 }
 
 .menu_details_entrees_plus ul li {
@@ -1705,19 +1710,20 @@ body {
 }
 
 .menu_details_entrees_plus ul li:hover .menu_prix {
+  margin: 0px 25px 0px 16px;
   width: 75%;
 }
 
-.menu_details_entrees_plus ul li:hover .menu_prix p {
-  width: 100%;
+.menu_details_entrees_plus ul li:hover .menu_prix p:nth-child(1) {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-right: 18px;
 }
 
 .menu_details_entrees_plus ul li:hover .menu_prix p:nth-child(2) {
-  padding-left: 0px;
-  width: 20%;
+  width: 15%;
+  padding-right: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -1726,12 +1732,12 @@ body {
   }
   .menu_details_entrees_plus h3 {
     margin: auto;
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
   .menu_details_entrees_plus ul {
     padding: 0;
     margin: auto;
-    padding-top: 30px;
+    padding-top: 15px;
     padding-bottom: 0px;
   }
   .menu_details_entrees_plus ul li {
@@ -1746,7 +1752,7 @@ body {
   }
   .menu_details_entrees_plus h4 {
     padding: 12px 7px 0px 20px;
-    font-size: 1.4em;
+    font-size: 1.2em;
   }
 }
 @media screen and (min-width: 1024px) {
@@ -1800,6 +1806,7 @@ body {
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
+  margin: auto;
 }
 .menu_details_entrees h3::after {
   position: absolute;
@@ -1812,14 +1819,14 @@ body {
 .menu_details_entrees ul {
   padding: 0;
   width: 100vw;
-  max-width: 500px;
+  max-width: 357px;
   margin: auto;
   padding-top: 15px;
 }
 .menu_details_entrees ul li {
   background-color: white;
   width: 95%;
-  height: 12vh;
+  height: 15vh;
   max-height: 75px;
   margin: auto;
   list-style-type: none;
@@ -1828,7 +1835,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_entrees h4 {
-  padding: 12px 7px 0px 20px;
+  padding: 12px 7px 0px 15px;
 }
 
 .menu_details_entrees ul li {
@@ -1888,6 +1895,7 @@ body {
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
+  margin: auto;
 }
 .menu_details_plats h3::after {
   position: absolute;
@@ -1900,14 +1908,14 @@ body {
 .menu_details_plats ul {
   padding: 0;
   width: 100vw;
-  max-width: 500px;
+  max-width: 357px;
   margin: auto;
   padding-top: 15px;
 }
 .menu_details_plats ul li {
   background-color: white;
   width: 95%;
-  height: 12vh;
+  height: 15vh;
   max-height: 75px;
   margin: auto;
   list-style-type: none;
@@ -1916,7 +1924,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_plats h4 {
-  padding: 12px 7px 0px 20px;
+  padding: 12px 7px 0px 15px;
 }
 
 .menu_details_plats ul li {
@@ -1958,6 +1966,7 @@ body {
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
+  margin: auto;
 }
 .menu_details_desserts h3::after {
   position: absolute;
@@ -1970,14 +1979,14 @@ body {
 .menu_details_desserts ul {
   padding: 0;
   width: 100vw;
-  max-width: 500px;
+  max-width: 357px;
   margin: auto;
   padding-top: 15px;
 }
 .menu_details_desserts ul li {
   background-color: white;
   width: 95%;
-  height: 12vh;
+  height: 15vh;
   max-height: 75px;
   margin: auto;
   list-style-type: none;
@@ -1986,7 +1995,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_desserts h4 {
-  padding: 12px 7px 0px 20px;
+  padding: 12px 7px 0px 15px;
 }
 
 .menu_details_desserts ul li {
@@ -2027,6 +2036,7 @@ body {
   padding: 30px 0px 20px 20px;
   position: relative;
   max-width: 425px;
+  margin: auto;
 }
 .menu_details_entrees h3::after {
   position: absolute;
@@ -2039,14 +2049,14 @@ body {
 .menu_details_entrees ul {
   padding: 0;
   width: 100vw;
-  max-width: 500px;
+  max-width: 357px;
   margin: auto;
   padding-top: 15px;
 }
 .menu_details_entrees ul li {
   background-color: white;
   width: 95%;
-  height: 12vh;
+  height: 15vh;
   max-height: 75px;
   margin: auto;
   list-style-type: none;
@@ -2055,7 +2065,7 @@ body {
   margin-bottom: 15px;
 }
 .menu_details_entrees h4 {
-  padding: 12px 7px 0px 20px;
+  padding: 12px 7px 0px 15px;
 }
 .menu_details_entrees ul li {
   box-shadow: #dad8d8 1px 3px 5px 2px;

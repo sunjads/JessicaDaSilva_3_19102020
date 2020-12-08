@@ -99,24 +99,28 @@ body{
     transform: rotate(360deg);
     transition-duration: 0.5s;
 } 
-
+.menu_details_entrees ul li:hover .menu_prix {
+    margin: 0px 25px 0px 16px;
+}
 .menu_details_entrees ul li:hover .menu_prix p:nth-child(1){
-    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-left: 5px;
+    padding-right: 18px;
+    
 }
 .menu_details_entrees ul li:hover .menu_prix p:nth-child(2){
-    width: 20%;
+    width: 15%;
+    padding-right: 0;
+    
 }
 /* descriptif des plats - h3 et p*/
 .menu_prix {
     height: 5vh;
-    margin: 5px 0px 15px 0px;
-    padding: 0px 10px 10px 15px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    margin: 0px 25px 0px 10px;
+    padding-top: 5px;
     & p:nth-child(1){
         font-weight:400;
         width: 85%;
@@ -147,19 +151,18 @@ body{
     transform: rotate(360deg);
     transition-duration: 0.5s;
 } 
-.menu_details_plats ul li:hover .menu_prix{
-    width: 75%;
+.menu_details_plats ul li:hover .menu_prix {
+    margin: 0px 25px 0px 16px;
 }
 .menu_details_plats ul li:hover .menu_prix p:nth-child(1){
-    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-left: 5px;
+    padding-right: 18px;
 }
 .menu_details_plats ul li:hover .menu_prix p:nth-child(2){
-    padding-left: 0px;
-    width: 20%;
+    width: 15%;
+    padding-right: 0;
 }
 /*partie desserts*/
 .menu_details_desserts{
@@ -181,19 +184,18 @@ body{
     transform: rotate(360deg);
     transition-duration: 0.5s;
 } 
-.menu_details_desserts ul li:hover .menu_prix{
-    width: 75%;
+.menu_details_desserts ul li:hover .menu_prix {
+    margin: 0px 25px 0px 16px;
 }
 .menu_details_desserts ul li:hover .menu_prix p:nth-child(1){
-    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    padding-left: 5px;
+    padding-right: 18px;
 }
 .menu_details_desserts ul li:hover .menu_prix p:nth-child(2){
-    padding-left: 0px;
-    width: 20%;
+    width: 15%;
+    padding-right: 0;
 }
 @keyframes slide-menu{
     0%{
@@ -214,14 +216,47 @@ body{
     .menu_details_entrees, .menu_details_plats, .menu_details_desserts{
         @include slide-card-menu-tablet;
     } 
+    .description_menu{
+        background-color: $grey-background;
+        border-radius: 50px 50px 0px 0px;
+        margin-top: -100px;
+        height: max-content;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    /*le contenant titre menu + coeur*/
+    .description_menu{
+        background-color: $grey-background;
+        border-radius: 50px 50px 0px 0px;
+        margin-top: -50px;
+        height: max-content;
+    }
+    .title_menu{
+        width: 100vw;
+        height: 100%;
+    }
+    .title_menu h1{
+        font-family: 'Shrikhand', cursive;
+        font-size:2.5em;
+        padding-top: 20px;
+        padding-bottom: 25px;
+        padding-left: 60px;
+    }  
+    .title_menu .far {
+        position: absolute;
+        top: 28%;
+        left: 92%;
+        font-size: 38px;  
+    }
     /* descriptif des plats - h3 et p*/
     .menu_prix {
     & p:nth-child(1){
-        font-size: 1.2em;  
+        font-size: 1em ;
     }
     & .leprix{
         font-weight: bold;
-        font-size: 1.2em;  
+        font-size: 1em;  
     }
 }
     .header_menu{
@@ -273,47 +308,15 @@ body{
 @media screen and (min-width: 1024px){
     .menu_details_entrees, .menu_details_plats, .menu_details_desserts{
         @include slide-card-menu-desktop;
-    }
-    .description_menu{
-        background-color: $grey-background;
-        border-radius: 50px 50px 0px 0px;
-        margin-top: -100px;
-        height: max-content;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
     .img-principale{
         height: 78vh;
     }
-    /*le contenant titre menu + coeur*/
-    .description_menu{
-    background-color: $grey-background;
-    border-radius: 50px 50px 0px 0px;
-    margin-top: -50px;
-    height: max-content;
 }
-    .title_menu{
-        width: 100vw;
-        height: 100%;
-    }
-    .title_menu h1{
-            font-family: 'Shrikhand', cursive;
-            font-size:2.5em;
-            padding-top: 20px;
-            padding-bottom: 25px;
-            padding-left: 60px;
-        }  
-    .title_menu .far {
-            position: absolute;
-            top: 28%;
-            left: 92%;
-            font-size: 38px;  
-        }
-    }
 }
+
 @media screen and (min-width:1600px){
     .menu_details_entrees,.menu_details_entrees_plus, .menu_details_plats, .menu_details_desserts{
     margin-right: 5px;
     }
+}
 }
